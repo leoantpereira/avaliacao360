@@ -7,9 +7,12 @@
 return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
     'name' => 'Avaliação de Desempenho 360º',
-    
+    'language' => 'pt_br',
+    'sourceLanguage' => 'pt_br',
+    'charset' => 'utf-8',
+    'theme' => 'front',
     'aliases' => array(
-        'bootstrap' => realpath(__DIR__.'/../extensions/yiibooster')
+        'bootstrap' => realpath(__DIR__ . '/../extensions/yiibooster')
     ),
     // preloading 'log' component
     'preload' => array('log', 'bootstrap'),
@@ -19,15 +22,15 @@ return array(
         'application.components.*',
     ),
     'modules' => array(
-    // uncomment the following to enable the Gii tool
-    /*
-      'gii'=>array(
-      'class'=>'system.gii.GiiModule',
-      'password'=>'Enter Your Password Here',
-      // If removed, Gii defaults to localhost only. Edit carefully to taste.
-      'ipFilters'=>array('127.0.0.1','::1'),
-      ),
-     */
+        'gii' => array(
+            'class' => 'system.gii.GiiModule',
+            'password' => '123',
+            'generatorPaths' => array(// para gerar a partir das classes do yiibooster
+                'bootstrap.gii',
+            ),
+            // If removed, Gii defaults to localhost only. Edit carefully to taste.
+            'ipFilters' => array('127.0.0.1', '::1'),
+        ),
     ),
     // application components
     'components' => array(
@@ -78,9 +81,9 @@ return array(
              */
             ),
         ),
-        'bootstrap'=>array(
-            'class'=>'bootstrap.components.Booster',
-            'fontAwesomeCss'=>true,
+        'bootstrap' => array(
+            'class' => 'bootstrap.components.Booster',
+            'fontAwesomeCss' => true,
         ),
     ),
     // application-level parameters that can be accessed

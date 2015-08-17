@@ -1,20 +1,46 @@
-<?php
-/* @var $this SiteController */
-
-$this->pageTitle=Yii::app()->name;
-?>
-
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
-
-<p>Congratulations! You have successfully created your Yii application.</p>
-
-<p>You may change the content of this page by modifying the following two files:</p>
-<ul>
-	<li>View file: <code><?php echo __FILE__; ?></code></li>
-	<li>Layout file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
-</ul>
-
-<p>For more details on how to further develop this application, please read
-the <a href="http://www.yiiframework.com/doc/">documentation</a>.
-Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
-should you have any questions.</p>
+<div class="row" id="conteudo">
+    <div class="col-xs-12" id="criador">
+        <h1 class="text-center">Criador</h1>
+        <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de 
+            impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido 
+            pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. 
+            Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração 
+            eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, 
+            quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente 
+            quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
+        </p>
+    </div>
+    <div class="col-xs-12" id="como-funciona">
+        <h1 class="text-center">Como funciona?</h1>   
+        <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de 
+            impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido 
+            pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. 
+            Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração 
+            eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, 
+            quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente 
+            quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
+        </p>
+    </div>
+    <div class="col-xs-12" id="contato">
+        <h1 class="text-center">Contato</h1>
+        <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de 
+            impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido 
+            pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. 
+            Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração 
+            eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, 
+            quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente 
+            quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
+        </p>
+    </div>
+    <div class="col-xs-12" id="cadastre-se">
+        <h1 class="text-center">Cadastre-se</h1>
+        <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de 
+            impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido 
+            pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. 
+            Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração 
+            eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, 
+            quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente 
+            quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
+        </p>
+    </div>
+</div>
