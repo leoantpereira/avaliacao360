@@ -1,0 +1,37 @@
+2015/08/17 02:16:47 [error] [exception.CException] exception 'CException' with message 'Alias "bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\php\yii\framework\YiiBase.php:322
+Stack trace:
+#0 C:\xampp\php\yii\framework\YiiBase.php(196): YiiBase::import('bootstrap.compo...', true)
+#1 C:\xampp\php\yii\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#2 C:\xampp\php\yii\framework\base\CModule.php(523): CModule->getComponent('bootstrap')
+#3 C:\xampp\php\yii\framework\base\CApplication.php(163): CModule->preloadComponents()
+#4 C:\xampp\php\yii\framework\YiiBase.php(125): CApplication->__construct('C:\\xampp\\htdocs...')
+#5 C:\xampp\php\yii\framework\YiiBase.php(98): YiiBase::createApplication('CWebApplication', 'C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\avaliacao360\app\index.php(13): YiiBase::createWebApplication('C:\\xampp\\htdocs...')
+#7 {main}
+REQUEST_URI=/avaliacao360/app/index.php
+---
+2015/08/17 02:20:39 [error] [exception.CException] exception 'CException' with message 'Alias "bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\php\yii\framework\YiiBase.php:322
+Stack trace:
+#0 C:\xampp\php\yii\framework\YiiBase.php(196): YiiBase::import('bootstrap.compo...', true)
+#1 C:\xampp\php\yii\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#2 C:\xampp\php\yii\framework\base\CModule.php(523): CModule->getComponent('bootstrap')
+#3 C:\xampp\php\yii\framework\base\CApplication.php(163): CModule->preloadComponents()
+#4 C:\xampp\php\yii\framework\YiiBase.php(125): CApplication->__construct('C:\\xampp\\htdocs...')
+#5 C:\xampp\php\yii\framework\YiiBase.php(98): YiiBase::createApplication('CWebApplication', 'C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\avaliacao360\app\index.php(13): YiiBase::createWebApplication('C:\\xampp\\htdocs...')
+#7 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=site/login
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php
+---
+2015/08/17 02:20:43 [error] [exception.CException] exception 'CException' with message 'Alias "bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\php\yii\framework\YiiBase.php:322
+Stack trace:
+#0 C:\xampp\php\yii\framework\YiiBase.php(196): YiiBase::import('bootstrap.compo...', true)
+#1 C:\xampp\php\yii\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#2 C:\xampp\php\yii\framework\base\CModule.php(523): CModule->getComponent('bootstrap')
+#3 C:\xampp\php\yii\framework\base\CApplication.php(163): CModule->preloadComponents()
+#4 C:\xampp\php\yii\framework\YiiBase.php(125): CApplication->__construct('C:\\xampp\\htdocs...')
+#5 C:\xampp\php\yii\framework\YiiBase.php(98): YiiBase::createApplication('CWebApplication', 'C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\avaliacao360\app\index.php(13): YiiBase::createWebApplication('C:\\xampp\\htdocs...')
+#7 {main}
+REQUEST_URI=/avaliacao360/app/
+---
