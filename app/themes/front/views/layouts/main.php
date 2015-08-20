@@ -15,11 +15,8 @@
         <![endif]-->
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>
     </head>
-
     <body>
-
         <div class="container-fluid" id="page">
-
             <div class="row" id="cabecalho">
                 <div class="col-xs-4" id="logo">AVALIAÇÃO 360º</div>
                 <div class="col-xs-8" id="menu">
@@ -67,31 +64,16 @@
                     ?>
                 </div><!-- menu -->
             </div>
-            <div class="row" id="slide">
+
+            <?php if (isset($this->breadcrumbs)): ?>
                 <?php
-                $this->widget(
-                        'booster.widgets.TbCarousel', array(
-                    'items' => array(
-                        array(
-                            'image' => (Yii::app()->request->baseUrl . '/images/slide01.jpg'),
-                            'label' => 'First Thumbnail label',
-                            'caption' => 'First Caption.'
-                        ),
-                        array(
-                            'image' => (Yii::app()->request->baseUrl . '/images/slide02.jpg'),
-                            'label' => 'Second Thumbnail label',
-                            'caption' => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'
-                        ),
-                        array(
-                            'image' => (Yii::app()->request->baseUrl . '/images/slide03.jpg'),
-                            'label' => 'Third Thumbnail label',
-                            'caption' => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'
-                        ),
-                    ),
-                        )
-                );
-                ?>
-            </div>
+                $this->widget('booster.widgets.TbBreadcrumbs', array(
+                    'links' => $this->breadcrumbs,
+                    'homeLink' => 'Início'
+                ));
+                ?><!-- breadcrumbs -->
+            <?php endif ?>
+
             <?php echo $content; ?>
 
             <div class="clear"></div>

@@ -1,53 +1,43 @@
-<?php
-/* @var $this SiteController */
-/* @var $model LoginForm */
-/* @var $form CActiveForm  */
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <title><?php echo CHtml::encode($this->pageTitle); ?></title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-md-offset-4 col-lg-3 col-lg-offset-4">
+                    <?php
+                    $form = $this->beginWidget(
+                            'booster.widgets.TbActiveForm', array(
+                        'id' => 'verticalForm',
+                        'htmlOptions' => array('class' => 'well'), // for inset effect
+                            )
+                    );
 
-$this->pageTitle=Yii::app()->name . ' - Login';
-$this->breadcrumbs=array(
-	'Login',
-);
-?>
+                    echo $form->textFieldGroup($model, 'email');
+                    echo $form->passwordFieldGroup($model, 'senha');
+                    echo $form->checkboxGroup($model, 'lembrarMe');
+                    $this->widget(
+                            'booster.widgets.TbButton', array('buttonType' => 'submit', 'label' => 'Login')
+                    );
 
-<h1>Login</h1>
-
-<p>Please fill out the following form with your login credentials:</p>
-
-<div class="form">
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'login-form',
-	'enableClientValidation'=>true,
-	'clientOptions'=>array(
-		'validateOnSubmit'=>true,
-	),
-)); ?>
-
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username'); ?>
-		<?php echo $form->error($model,'username'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password'); ?>
-		<?php echo $form->error($model,'password'); ?>
-		<p class="hint">
-			Hint: You may login with <kbd>demo</kbd>/<kbd>demo</kbd> or <kbd>admin</kbd>/<kbd>admin</kbd>.
-		</p>
-	</div>
-
-	<div class="row rememberMe">
-		<?php echo $form->checkBox($model,'rememberMe'); ?>
-		<?php echo $form->label($model,'rememberMe'); ?>
-		<?php echo $form->error($model,'rememberMe'); ?>
-	</div>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Login'); ?>
-	</div>
-
-<?php $this->endWidget(); ?>
-</div><!-- form -->
+                    $this->endWidget();
+                    unset($form);
+                    ?>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
