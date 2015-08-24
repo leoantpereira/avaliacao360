@@ -8,7 +8,7 @@
 class UserIdentity extends CUserIdentity {
 
     private $_id;
-    
+
     /**
      * Authenticates a user.
      * The example implementation makes sure if the username and password
@@ -21,7 +21,7 @@ class UserIdentity extends CUserIdentity {
         $funcionario = new Funcionario();
 
         $funcLogado = $funcionario->pesqPorEmail($this->username);
-        
+
         if ($funcLogado === null) { // usuário inválido
             $this->errorCode = self::ERROR_USERNAME_INVALID;
             $this->errorMessage = 'E-mail inválido.';
@@ -34,6 +34,10 @@ class UserIdentity extends CUserIdentity {
         }
 
         return !$this->errorCode;
+    }
+    
+    public function getId(){
+        return $this->_id;
     }
 
 }

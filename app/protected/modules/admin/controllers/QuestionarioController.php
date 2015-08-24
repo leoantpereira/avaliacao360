@@ -1,19 +1,12 @@
 <?php
 
-require_once 'Funcoes.php';
-
-class FuncionarioController extends Controller {
+class QuestionarioController extends Controller {
 
     /**
      * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
      * using two-column layout. See 'protected/views/layouts/column2.php'.
      */
-    public $funcoes;
-    public $erros = array();
-
-    public function init() {
-        $this->funcoes = new Funcoes();
-    }
+    public $layout = '//layouts/column2';
 
     /**
      * @return array action filters
@@ -64,31 +57,15 @@ class FuncionarioController extends Controller {
      * If creation is successful, the browser will be redirected to the 'view' page.
      */
     public function actionCreate() {
-        $model = new Funcionario;
+        $model = new Questionario;
 
         // Uncomment the following line if AJAX validation is needed
-        //$this->performAjaxValidation($model);
+        // $this->performAjaxValidation($model);
 
-        if (isset($_POST['Funcionario'])) {
-            $model->attributes = $_POST['Funcionario'];
-            $funcLogado = $_SESSION['funcLogado'];
-            $model->empresa_id = $funcLogado->empresa_id;
-            $model->foto = CUploadedFile::getInstance($model, 'foto');
-
-            if ($model->validate()) {
-                $model->verificaSenhasCadastro($model);
-                if ($model->pesqPorEmail($model->email)) {
-                    $model->addError('email', 'E-mail já existe.');
-                }
-                if (!$model->getErrors()) {
-                    if ($model->foto) {
-                        $model->salvaImagem($model);
-                    }
-                    if ($model->save()) {
-                        $this->redirect(array('view', 'id' => $model->id));
-                    }
-                }
-            }
+        if (isset($_POST['Questionario'])) {
+            $model->attributes = $_POST['Questionario'];
+            if ($model->save())
+                $this->redirect(array('view', 'id' => $model->id));
         }
 
         $this->render('create', array(
@@ -107,8 +84,8 @@ class FuncionarioController extends Controller {
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
 
-        if (isset($_POST['Funcionario'])) {
-            $model->attributes = $_POST['Funcionario'];
+        if (isset($_POST['Questionario'])) {
+            $model->attributes = $_POST['Questionario'];
             if ($model->save())
                 $this->redirect(array('view', 'id' => $model->id));
         }
@@ -139,7 +116,7 @@ class FuncionarioController extends Controller {
      * Lists all models.
      */
     public function actionIndex() {
-        $dataProvider = new CActiveDataProvider('Funcionario');
+        $dataProvider = new CActiveDataProvider('Questionario');
         $this->render('index', array(
             'dataProvider' => $dataProvider,
         ));
@@ -149,10 +126,10 @@ class FuncionarioController extends Controller {
      * Manages all models.
      */
     public function actionAdmin() {
-        $model = new Funcionario('search');
+        $model = new Questionario('search');
         $model->unsetAttributes();  // clear any default values
-        if (isset($_GET['Funcionario']))
-            $model->attributes = $_GET['Funcionario'];
+        if (isset($_GET['Questionario']))
+            $model->attributes = $_GET['Questionario'];
 
         $this->render('admin', array(
             'model' => $model,
@@ -165,7 +142,7 @@ class FuncionarioController extends Controller {
      * @param integer the ID of the model to be loaded
      */
     public function loadModel($id) {
-        $model = Funcionario::model()->findByPk($id);
+        $model = Questionario::model()->findByPk($id);
         if ($model === null)
             throw new CHttpException(404, 'The requested page does not exist.');
         return $model;
@@ -176,7 +153,7 @@ class FuncionarioController extends Controller {
      * @param CModel the model to be validated
      */
     protected function performAjaxValidation($model) {
-        if (isset($_POST['ajax']) && $_POST['ajax'] === 'funcionario-form') {
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'questionario-form') {
             echo CActiveForm::validate($model);
             Yii::app()->end();
         }

@@ -1,19 +1,12 @@
 <?php
 
-require_once 'Funcoes.php';
-
-class FuncionarioController extends Controller {
+class EmpresaController extends Controller {
 
     /**
      * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
      * using two-column layout. See 'protected/views/layouts/column2.php'.
      */
-    public $funcoes;
-    public $erros = array();
-
-    public function init() {
-        $this->funcoes = new Funcoes();
-    }
+    public $layout = '//layouts/column1';
 
     /**
      * @return array action filters
@@ -32,7 +25,7 @@ class FuncionarioController extends Controller {
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('index', 'view'),
+                'actions' => array('index', 'view', 'create'),
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -64,31 +57,17 @@ class FuncionarioController extends Controller {
      * If creation is successful, the browser will be redirected to the 'view' page.
      */
     public function actionCreate() {
-        $model = new Funcionario;
+        $model = new Empresa;
 
         // Uncomment the following line if AJAX validation is needed
-        //$this->performAjaxValidation($model);
+        // $this->performAjaxValidation($model);
 
-        if (isset($_POST['Funcionario'])) {
-            $model->attributes = $_POST['Funcionario'];
-            $funcLogado = $_SESSION['funcLogado'];
-            $model->empresa_id = $funcLogado->empresa_id;
-            $model->foto = CUploadedFile::getInstance($model, 'foto');
+        if (isset($_POST['Empresa'])) {
+            $model->attributes = $_POST['Empresa'];
+            //if ($model->save())
+            $_SESSION['empresa'] = $model;
 
-            if ($model->validate()) {
-                $model->verificaSenhasCadastro($model);
-                if ($model->pesqPorEmail($model->email)) {
-                    $model->addError('email', 'E-mail já existe.');
-                }
-                if (!$model->getErrors()) {
-                    if ($model->foto) {
-                        $model->salvaImagem($model);
-                    }
-                    if ($model->save()) {
-                        $this->redirect(array('view', 'id' => $model->id));
-                    }
-                }
-            }
+            $this->redirect(array('endereco/create'));
         }
 
         $this->render('create', array(
@@ -104,11 +83,11 @@ class FuncionarioController extends Controller {
     public function actionUpdate($id) {
         $model = $this->loadModel($id);
 
-        // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($model);
+// Uncomment the following line if AJAX validation is needed
+// $this->performAjaxValidation($model);
 
-        if (isset($_POST['Funcionario'])) {
-            $model->attributes = $_POST['Funcionario'];
+        if (isset($_POST['Empresa'])) {
+            $model->attributes = $_POST['Empresa'];
             if ($model->save())
                 $this->redirect(array('view', 'id' => $model->id));
         }
@@ -125,10 +104,10 @@ class FuncionarioController extends Controller {
      */
     public function actionDelete($id) {
         if (Yii::app()->request->isPostRequest) {
-            // we only allow deletion via POST request
+// we only allow deletion via POST request
             $this->loadModel($id)->delete();
 
-            // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
             if (!isset($_GET['ajax']))
                 $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
         } else
@@ -139,7 +118,7 @@ class FuncionarioController extends Controller {
      * Lists all models.
      */
     public function actionIndex() {
-        $dataProvider = new CActiveDataProvider('Funcionario');
+        $dataProvider = new CActiveDataProvider('Empresa');
         $this->render('index', array(
             'dataProvider' => $dataProvider,
         ));
@@ -149,10 +128,10 @@ class FuncionarioController extends Controller {
      * Manages all models.
      */
     public function actionAdmin() {
-        $model = new Funcionario('search');
+        $model = new Empresa('search');
         $model->unsetAttributes();  // clear any default values
-        if (isset($_GET['Funcionario']))
-            $model->attributes = $_GET['Funcionario'];
+        if (isset($_GET['Empresa']))
+            $model->attributes = $_GET['Empresa'];
 
         $this->render('admin', array(
             'model' => $model,
@@ -165,7 +144,7 @@ class FuncionarioController extends Controller {
      * @param integer the ID of the model to be loaded
      */
     public function loadModel($id) {
-        $model = Funcionario::model()->findByPk($id);
+        $model = Empresa::model()->findByPk($id);
         if ($model === null)
             throw new CHttpException(404, 'The requested page does not exist.');
         return $model;
@@ -176,7 +155,7 @@ class FuncionarioController extends Controller {
      * @param CModel the model to be validated
      */
     protected function performAjaxValidation($model) {
-        if (isset($_POST['ajax']) && $_POST['ajax'] === 'funcionario-form') {
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'empresa-form') {
             echo CActiveForm::validate($model);
             Yii::app()->end();
         }

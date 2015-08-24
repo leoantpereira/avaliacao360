@@ -82,8 +82,11 @@ class SiteController extends Controller {
         if (isset($_POST['LoginForm'])) {
             $model->attributes = $_POST['LoginForm'];
             // validate user input and redirect to the previous page if valid
-            if ($model->validate() && $model->login())
+            if ($model->validate() && $model->login()) {
+                $funcLogado = Funcionario::model()->findByPk($model->getIdentity()->getId());
+                $_SESSION['funcLogado'] = $funcLogado;
                 $this->redirect(Yii::app()->user->returnUrl);
+            }
         }
         // display the login form
         $this->render('login', array('model' => $model));

@@ -48,7 +48,7 @@
                                     ),
                                     array(
                                         'label' => 'Cadastre-se',
-                                        'url' => Yii::app()->createUrl('#cadastre-se'),
+                                        'url' => Yii::app()->createUrl('empresa/create'),
                                         'visible' => true,
                                     ),
                                     array(

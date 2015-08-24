@@ -1,15 +1,15 @@
 <?php
-$this->breadcrumbs=array(
-	'Funcionarios'=>array('index'),
-	'Create',
+$this->breadcrumbs = array(
+    'Funcionário' => array('index'),
+    'Cadastro',
 );
 
-$this->menu=array(
-array('label'=>'List Funcionario','url'=>array('index')),
-array('label'=>'Manage Funcionario','url'=>array('admin')),
+$this->menu = array(
+    array('label' => 'List Funcionario', 'url' => array('index')),
+    array('label' => 'Manage Funcionario', 'url' => array('admin')),
 );
 ?>
 
-<h1>Create Funcionario</h1>
+<h1>Cadastro de Funcionário</h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_form', array('model' => $model)); ?>

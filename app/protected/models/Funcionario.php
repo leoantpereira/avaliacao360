@@ -1,5 +1,10 @@
 <?php
 
+// variáveis globais referentes as permissões dos funcionário
+define('USER_CHEFE_DEPARTAMENTO', 1);
+define('USER_NORMAL', 2);
+define('USER_ADMIN', 3);
+
 /**
  * This is the model class for table "funcionario".
  *
@@ -20,9 +25,13 @@
  */
 class Funcionario extends CActiveRecord {
 
+    public $repetirSenha;
+    public $departamento; // colocada provisioriamente
+
     /**
      * @return string the associated database table name
      */
+
     public function tableName() {
         return 'funcionario';
     }
@@ -34,10 +43,14 @@ class Funcionario extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('nome, email, senha, permissao, empresa_id', 'required'),
+            array('nome, email, senha, permissao, empresa_id, repetirSenha', 'required'),
             array('permissao, empresa_id', 'numerical', 'integerOnly' => true),
             array('nome, email, foto', 'length', 'max' => 100),
+            array('email', 'email'),
+            array('permissao', 'numerical', 'min' => 1, 'tooSmall' => 'Selecione a permissão.'),
+            array('departamento', 'numerical', 'min' => 1, 'tooSmall' => 'Selecione o departamento.'),
             array('senha', 'length', 'max' => 10),
+            array('foto', 'file', 'types' => 'jpg, gif, png', 'allowEmpty' => true),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
             array('id, nome, email, senha, permissao, foto, empresa_id', 'safe', 'on' => 'search'),
@@ -63,11 +76,11 @@ class Funcionario extends CActiveRecord {
      */
     public function attributeLabels() {
         return array(
-            'id' => 'ID',
+            'id' => 'Número',
             'nome' => 'Nome',
-            'email' => 'Email',
+            'email' => 'E-mail',
             'senha' => 'Senha',
-            'permissao' => 'Permissao',
+            'permissao' => 'Permissão',
             'foto' => 'Foto',
             'empresa_id' => 'Empresa',
         );
@@ -127,6 +140,31 @@ class Funcionario extends CActiveRecord {
         $criteria->condition = 'email LIKE :email';
         $criteria->params = array(':email' => $email);
         return Funcionario::model()->find($criteria);
+    }
+
+    /**
+     * Verifica se o usuário digitou as senhas iguais nos dois campos na hora do cadastro.
+     * 
+     * @param Funcionario $model Funcionário
+     */
+    public function verificaSenhasCadastro($model) {
+        if (isset($model->senha)) {
+            if ($model->senha != $model->repetirSenha) {
+                $model->addError('repetirSenha', 'Senhas não conferem.');
+            }
+        }
+    }
+
+    public function salvaImagem($model) {
+        $path = Yii::getPathOfAlias('webroot') . '/images/funcionarios/';
+        $numeros = '0123456789';
+        $arquivo = explode(".", $model->foto->getName());
+        $nomeFoto = $arquivo[0];
+        $extensaoFoto = $arquivo[1];
+
+        $nomeArquivo = str_shuffle($nomeFoto . $numeros).'.'.$extensaoFoto;
+        $model->foto->saveAs($path . $nomeArquivo);
+        $model->foto = $nomeArquivo;
     }
 
     /**
