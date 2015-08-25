@@ -49,7 +49,7 @@ class Funcionario extends CActiveRecord {
             array('email', 'email'),
             array('permissao', 'numerical', 'min' => 1, 'tooSmall' => 'Selecione a permissão.'),
             array('departamento', 'numerical', 'min' => 1, 'tooSmall' => 'Selecione o departamento.'),
-            array('senha', 'length', 'max' => 10),
+            array('senha', 'length', 'min' => 6, 'max' => 10),
             array('foto', 'file', 'types' => 'jpg, gif, png', 'allowEmpty' => true),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
@@ -156,13 +156,16 @@ class Funcionario extends CActiveRecord {
     }
 
     public function salvaImagem($model) {
-        $path = Yii::getPathOfAlias('webroot') . '/images/funcionarios/';
+        $path = Yii::getPathOfAlias('webroot') . '/images/funcionarios/' . $model->empresa->cnpj . '/';
+        if (!file_exists($path)) {
+            mkdir($path);
+        }
         $numeros = '0123456789';
         $arquivo = explode(".", $model->foto->getName());
         $nomeFoto = $arquivo[0];
         $extensaoFoto = $arquivo[1];
 
-        $nomeArquivo = str_shuffle($nomeFoto . $numeros).'.'.$extensaoFoto;
+        $nomeArquivo = str_shuffle($nomeFoto . $numeros) . '.' . $extensaoFoto;
         $model->foto->saveAs($path . $nomeArquivo);
         $model->foto = $nomeArquivo;
     }

@@ -150,9 +150,6 @@
                 <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
-                        <li class="active">
-                            <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Home</a>
-                        </li>
                         <li>
                             <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Gráficos</a>
                         </li>
@@ -160,7 +157,21 @@
                             <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tabelas</a>
                         </li>
                         <li>
-                            <a href="<?php echo Yii::app()->createUrl('admin/questionario'); ?>"><i class="fa fa-fw fa-edit"></i> Questionários</a>
+                            <a href="javascript:;" data-toggle="collapse" data-target="#questionarios"><i class="fa fa-fw fa-edit"></i> Questionários <i class="fa fa-fw fa-caret-down"></i></a>
+                            <ul id="questionarios" class="collapse">
+                                <li>
+                                    <a href="<?php echo Yii::app()->createUrl('admin/questionario/create'); ?>">Cadastrar Questionário</a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo Yii::app()->createUrl('admin/questao/create'); ?>">Cadastrar Questão</a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo Yii::app()->createUrl('admin/questionario/#'); ?>">Responder</a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo Yii::app()->createUrl('admin/questionario/admin'); ?>">Gerenciar</a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
@@ -175,7 +186,7 @@
                                     <a href="<?php echo Yii::app()->createUrl('admin/funcionario/create'); ?>">Cadastrar</a>
                                 </li>
                                 <li>
-                                    <a href="#">Administrar</a>
+                                    <a href="<?php echo Yii::app()->createUrl('admin/funcionario/admin'); ?>">Administrar</a>
                                 </li>
                             </ul>
                         </li>
@@ -212,10 +223,10 @@
         <!-- /#wrapper -->
 
         <!-- jQuery -->
-        <!-- <script src="js/jquery.js"></script> -->
+        <!-- <script src="js/themes/sb-admin/jquery.js"></script> -->
 
         <!-- Bootstrap Core JavaScript -->
-        <!-- <script src="js/bootstrap.min.js"></script> -->
+        <!-- <script src="js/themes/sb-admin/bootstrap.min.js"></script> -->
 
         <!-- Morris Charts JavaScript -->
         <script src="js/themes/sb-admin/plugins/morris/raphael.min.js"></script>

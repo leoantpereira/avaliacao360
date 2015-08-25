@@ -1,15 +1,14 @@
 <?php
-$this->breadcrumbs=array(
-	'Questionarios'=>array('index'),
-	'Create',
+$this->breadcrumbs = array(
+    'Questionários' => array('index'),
+    'Cadastro',
 );
 
-$this->menu=array(
-array('label'=>'List Questionario','url'=>array('index')),
-array('label'=>'Manage Questionario','url'=>array('admin')),
+$this->menu = array(
+    array('label' => 'Gerenciar Questionários', 'url' => array('admin')),
 );
 ?>
 
-<h1>Create Questionario</h1>
+<h1>Cadastro de Questionário</h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_form', array('model' => $model)); ?>

@@ -52,8 +52,8 @@ class Questionario extends CActiveRecord {
      */
     public function attributeLabels() {
         return array(
-            'id' => 'ID',
-            'descricao' => 'Descricao',
+            'id' => 'Número',
+            'descricao' => 'Descrição',
         );
     }
 
@@ -80,6 +80,17 @@ class Questionario extends CActiveRecord {
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));
+    }
+
+    public static function findAllDescricao() {
+        $questionarios = Questionario::model()->findAll();
+        $descricoes = array();
+
+        foreach ($questionarios as $questionario) {
+            $descricoes[$questionario->id] = $questionario->descricao;
+        }
+
+        return $descricoes;
     }
 
     /**

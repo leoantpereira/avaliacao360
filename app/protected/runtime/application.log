@@ -1812,3 +1812,604 @@ in C:\xampp\htdocs\avaliacao360\app\index.php (13)
 2015/08/24 16:52:18 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
 in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (73)
 in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/08/24 17:02:28 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (73)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/08/24 17:02:28 [error] [php] move_uploaded_file(C:/xampp/htdocs/avaliacao360/app/images/funcionarios/22532373000146/21376e84t9e105r.png): failed to open stream: No such file or directory (C:\xampp\php\yii\framework\web\CUploadedFile.php:198)
+Stack trace:
+#0 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php(85): Funcionario->salvaImagem()
+#1 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): FuncionarioController->actionCreate()
+#2 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): FuncionarioController->runAction()
+#4 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): FuncionarioController->filterAccessControl()
+#7 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\php\yii\framework\web\CController.php(265): FuncionarioController->runActionWithFilters()
+#10 C:\xampp\php\yii\framework\web\CWebApplication.php(282): FuncionarioController->run()
+#11 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/create
+in C:\xampp\htdocs\avaliacao360\app\protected\models\Funcionario.php (166)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (85)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/08/24 17:10:16 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (73)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/08/24 17:10:44 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (73)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/08/24 17:10:56 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (73)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/08/24 17:10:56 [error] [php] mkdir(): File exists (C:\xampp\htdocs\avaliacao360\app\protected\models\Funcionario.php:160)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): FuncionarioController->actionCreate()
+#1 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): FuncionarioController->runAction()
+#3 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): FuncionarioController->filterAccessControl()
+#6 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\php\yii\framework\web\CController.php(265): FuncionarioController->runActionWithFilters()
+#9 C:\xampp\php\yii\framework\web\CWebApplication.php(282): FuncionarioController->run()
+#10 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/create
+in C:\xampp\htdocs\avaliacao360\app\protected\models\Funcionario.php (160)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (85)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/08/24 17:14:38 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (73)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/08/24 17:34:08 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (73)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/08/24 17:34:17 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (73)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/08/24 17:34:22 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (73)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/08/24 17:34:32 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (73)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/08/24 18:15:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/funcionar...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/admin
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/funcionario/create
+---
+2015/08/24 18:20:09 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/funcionar...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/delete&id=18
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/funcionario/admin&Funcionario_sort=senha
+---
+2015/08/24 18:31:12 [error] [exception.CException] exception 'CException' with message 'O alias "booster.widgets.CPortlet" é inválido. Assegure-se de que ele aponta para um arquivo PHP existente.' in C:\xampp\php\yii\framework\YiiBase.php:322
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('booster.widgets...', true)
+#1 C:\xampp\php\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(FuncionarioController), 'booster.widgets...', Array)
+#2 C:\xampp\php\yii\framework\web\CBaseController.php(189): CBaseController->createWidget('booster.widgets...', Array)
+#3 C:\xampp\htdocs\avaliacao360\app\protected\views\layouts\column2.php(13): CBaseController->beginWidget('booster.widgets...', Array)
+#4 C:\xampp\php\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\php\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\php\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php(160): CController->render('admin', Array)
+#8 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): FuncionarioController->actionAdmin()
+#9 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/funcionar...')
+#19 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/admin
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/funcionario/update&id=1
+---
+2015/08/24 18:50:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/funcionar...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/delete
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/funcionario/view&id=1
+---
+2015/08/24 18:58:27 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/funcionar...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/delete&id=1
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/funcionario/admin
+---
+2015/08/24 19:05:26 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Invalid request. Please do not repeat this request again.' in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php:136
+Stack trace:
+#0 [internal function]: FuncionarioController->actionDelete('1')
+#1 C:\xampp\php\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(FuncionarioController), Array)
+#2 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(FuncionarioController), Object(ReflectionMethod), Array)
+#3 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#12 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/funcionar...')
+#13 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/delete&id=1
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/funcionario/admin
+---
+2015/08/24 19:05:35 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Invalid request. Please do not repeat this request again.' in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php:136
+Stack trace:
+#0 [internal function]: FuncionarioController->actionDelete('19')
+#1 C:\xampp\php\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(FuncionarioController), Array)
+#2 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(FuncionarioController), Object(ReflectionMethod), Array)
+#3 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#12 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/funcionar...')
+#13 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/delete&id=19
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/funcionario/admin
+---
+2015/08/24 19:39:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "admin/index".' in C:\xampp\php\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/index')
+#1 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/index
+---
+2015/08/24 19:46:08 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (74)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/08/24 19:46:16 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (74)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/08/24 19:46:45 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (74)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/08/24 19:59:57 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (74)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/08/24 22:31:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/questiona...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/questionario/admin
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/questionario
+---
+2015/08/24 22:38:49 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/questiona...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/questionario/admin
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/questionario/view&id=1
+---
+2015/08/24 22:40:15 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/questiona...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/questionario/admin
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/questionario/view&id=1
+---
+2015/08/24 22:40:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "admin/questao/create".' in C:\xampp\php\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/questao/c...')
+#1 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/questao/create
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/questionario/admin
+---
+2015/08/24 22:40:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "admin/questao/create".' in C:\xampp\php\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/questao/c...')
+#1 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/questao/create
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/questao/create
+---
+2015/08/25 13:26:35 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/questiona...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/questionario/admin
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/questionario/create
+---
+2015/08/25 13:32:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/questiona...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/questionario/delete&id=1
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/questionario/admin
+---
+2015/08/25 13:53:20 [error] [php] Undefined variable: questionarios (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\questao\_form.php:18)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(869): QuestaoController->renderFile()
+#1 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\questao\create.php(14): QuestaoController->renderPartial()
+#2 C:\xampp\php\yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\php\yii\framework\web\CBaseController.php(95): QuestaoController->renderInternal()
+#4 C:\xampp\php\yii\framework\web\CController.php(869): QuestaoController->renderFile()
+#5 C:\xampp\php\yii\framework\web\CController.php(782): QuestaoController->renderPartial()
+#6 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\QuestaoController.php(77): QuestaoController->render()
+#7 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): QuestaoController->actionCreate()
+#8 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): QuestaoController->runAction()
+#10 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): QuestaoController->filterAccessControl()
+#13 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\php\yii\framework\web\CController.php(265): QuestaoController->runActionWithFilters()
+#16 C:\xampp\php\yii\framework\web\CWebApplication.php(282): QuestaoController->run()
+#17 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/questao/create
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\questao\_form.php (18)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\questao\create.php (14)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\QuestaoController.php (77)
+2015/08/25 13:54:04 [error] [php] Invalid argument supplied for foreach() (C:\xampp\php\yii\framework\web\helpers\CHtml.php:2325)
+Stack trace:
+#0 unknown(0): TbActiveForm->dropDownList()
+#1 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(1293): call_user_func_array()
+#2 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(1152): TbActiveForm->verticalGroup()
+#3 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(627): TbActiveForm->customFieldGroupInternal()
+#4 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\questao\_form.php(23): TbActiveForm->dropDownListGroup()
+#5 C:\xampp\php\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\php\yii\framework\web\CBaseController.php(95): QuestaoController->renderInternal()
+#7 C:\xampp\php\yii\framework\web\CController.php(869): QuestaoController->renderFile()
+#8 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\questao\create.php(14): QuestaoController->renderPartial()
+#9 C:\xampp\php\yii\framework\web\CBaseController.php(126): require()
+#10 C:\xampp\php\yii\framework\web\CBaseController.php(95): QuestaoController->renderInternal()
+#11 C:\xampp\php\yii\framework\web\CController.php(869): QuestaoController->renderFile()
+#12 C:\xampp\php\yii\framework\web\CController.php(782): QuestaoController->renderPartial()
+#13 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\QuestaoController.php(77): QuestaoController->render()
+#14 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): QuestaoController->actionCreate()
+#15 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): QuestaoController->runAction()
+#17 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#19 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): QuestaoController->filterAccessControl()
+#20 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#21 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\php\yii\framework\web\CController.php(265): QuestaoController->runActionWithFilters()
+#23 C:\xampp\php\yii\framework\web\CWebApplication.php(282): QuestaoController->run()
+#24 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#25 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/questao/create
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php (1293)
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php (1152)
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php (627)
+2015/08/25 13:55:31 [error] [php] Undefined index: ADMINISTRATIVO (C:\xampp\htdocs\avaliacao360\app\protected\models\Questionario.php:90)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): QuestaoController->runAction()
+#2 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): QuestaoController->filterAccessControl()
+#5 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\php\yii\framework\web\CController.php(265): QuestaoController->runActionWithFilters()
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(282): QuestaoController->run()
+#9 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/questao/create
+in C:\xampp\htdocs\avaliacao360\app\protected\models\Questionario.php (90)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\QuestaoController.php (61)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/08/25 13:56:55 [error] [php] Invalid argument supplied for foreach() (C:\xampp\php\yii\framework\web\helpers\CHtml.php:2325)
+Stack trace:
+#0 unknown(0): TbActiveForm->dropDownList()
+#1 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(1293): call_user_func_array()
+#2 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(1152): TbActiveForm->verticalGroup()
+#3 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(627): TbActiveForm->customFieldGroupInternal()
+#4 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\questao\_form.php(23): TbActiveForm->dropDownListGroup()
+#5 C:\xampp\php\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\php\yii\framework\web\CBaseController.php(95): QuestaoController->renderInternal()
+#7 C:\xampp\php\yii\framework\web\CController.php(869): QuestaoController->renderFile()
+#8 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\questao\create.php(14): QuestaoController->renderPartial()
+#9 C:\xampp\php\yii\framework\web\CBaseController.php(126): require()
+#10 C:\xampp\php\yii\framework\web\CBaseController.php(95): QuestaoController->renderInternal()
+#11 C:\xampp\php\yii\framework\web\CController.php(869): QuestaoController->renderFile()
+#12 C:\xampp\php\yii\framework\web\CController.php(782): QuestaoController->renderPartial()
+#13 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\QuestaoController.php(77): QuestaoController->render()
+#14 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): QuestaoController->actionCreate()
+#15 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): QuestaoController->runAction()
+#17 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#19 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): QuestaoController->filterAccessControl()
+#20 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#21 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\php\yii\framework\web\CController.php(265): QuestaoController->runActionWithFilters()
+#23 C:\xampp\php\yii\framework\web\CWebApplication.php(282): QuestaoController->run()
+#24 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#25 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/questao/create
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php (1293)
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php (1152)
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php (627)
+2015/08/25 14:11:54 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`avaliacao360`.`questao`, CONSTRAINT `fk_questao_questionario1` FOREIGN KEY (`questionario_id`) REFERENCES `questionario` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). A declaração SQL executada foi: INSERT INTO `questao` (`questionario_id`, `pergunta`, `alternativa01`, `alternativa02`, `alternativa03`, `alternativa04`, `alternativa05`, `alternativaCorreta`, `resposta`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8).
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\QuestaoController.php (70)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/08/25 14:11:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`avaliacao360`.`questao`, CONSTRAINT `fk_questao_questionario1` FOREIGN KEY (`questionario_id`) REFERENCES `questionario` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `questao` (`questionario_id`, `pergunta`, `alternativa01`, `alternativa02`, `alternativa03`, `alternativa04`, `alternativa05`, `alternativaCorreta`, `resposta`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8)' in C:\xampp\php\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\php\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\QuestaoController.php(70): CActiveRecord->save()
+#3 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): QuestaoController->actionCreate()
+#4 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/questao/c...')
+#14 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/questao/create
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/questao/create
+---
+2015/08/25 14:14:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/questao/a...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/questao/admin
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/questao/view&id=2
+---
+2015/08/25 14:38:23 [error] [php] Undefined variable: data (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\questao\view.php:32)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(869): QuestaoController->renderFile()
+#1 C:\xampp\php\yii\framework\web\CController.php(782): QuestaoController->renderPartial()
+#2 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\QuestaoController.php(52): QuestaoController->render()
+#3 unknown(0): QuestaoController->actionView()
+#4 C:\xampp\php\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): QuestaoController->runAction()
+#8 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): QuestaoController->filterAccessControl()
+#11 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\php\yii\framework\web\CController.php(265): QuestaoController->runActionWithFilters()
+#14 C:\xampp\php\yii\framework\web\CWebApplication.php(282): QuestaoController->run()
+#15 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/questao/view&id=2
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\questao\view.php (32)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\QuestaoController.php (52)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/08/25 14:38:36 [error] [exception.CException] exception 'CException' with message 'A propriedade "Questao.questao" não está definida.' in C:\xampp\php\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('questao')
+#1 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\questao\view.php(32): CActiveRecord->__get('questao')
+#2 C:\xampp\php\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\php\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\php\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\php\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\QuestaoController.php(52): CController->render('view', Array)
+#7 [internal function]: QuestaoController->actionView('2')
+#8 C:\xampp\php\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(QuestaoController), Array)
+#9 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(QuestaoController), Object(ReflectionMethod), Array)
+#10 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/questao/v...')
+#20 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/questao/view&id=2
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/questao/create
+---
+2015/08/25 14:39:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/questao/a...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/questao/admin
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/questao/view&id=2
+---
+2015/08/25 14:41:46 [error] [php] Undefined variable: questionarios (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\questao\_form.php:18)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(869): QuestaoController->renderFile()
+#1 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\questao\update.php(18): QuestaoController->renderPartial()
+#2 C:\xampp\php\yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\php\yii\framework\web\CBaseController.php(95): QuestaoController->renderInternal()
+#4 C:\xampp\php\yii\framework\web\CController.php(869): QuestaoController->renderFile()
+#5 C:\xampp\php\yii\framework\web\CController.php(782): QuestaoController->renderPartial()
+#6 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\QuestaoController.php(102): QuestaoController->render()
+#7 unknown(0): QuestaoController->actionUpdate()
+#8 C:\xampp\php\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): QuestaoController->runAction()
+#12 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): QuestaoController->filterAccessControl()
+#15 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\php\yii\framework\web\CController.php(265): QuestaoController->runActionWithFilters()
+#18 C:\xampp\php\yii\framework\web\CWebApplication.php(282): QuestaoController->run()
+#19 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/questao/update&id=2
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\questao\_form.php (18)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\questao\update.php (18)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\QuestaoController.php (102)
+2015/08/25 14:51:31 [error] [php] Undefined variable: options (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\questao\_form.php:24)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(869): QuestaoController->renderFile()
+#1 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\questao\create.php(14): QuestaoController->renderPartial()
+#2 C:\xampp\php\yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\php\yii\framework\web\CBaseController.php(95): QuestaoController->renderInternal()
+#4 C:\xampp\php\yii\framework\web\CController.php(869): QuestaoController->renderFile()
+#5 C:\xampp\php\yii\framework\web\CController.php(782): QuestaoController->renderPartial()
+#6 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\QuestaoController.php(80): QuestaoController->render()
+#7 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): QuestaoController->actionCreate()
+#8 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): QuestaoController->runAction()
+#10 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): QuestaoController->filterAccessControl()
+#13 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\php\yii\framework\web\CController.php(265): QuestaoController->runActionWithFilters()
+#16 C:\xampp\php\yii\framework\web\CWebApplication.php(282): QuestaoController->run()
+#17 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/questao/create
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\questao\_form.php (24)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\questao\create.php (14)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\QuestaoController.php (80)

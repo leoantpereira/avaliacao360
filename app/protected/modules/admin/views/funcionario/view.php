@@ -1,29 +1,27 @@
 <?php
-$this->breadcrumbs=array(
-	'Funcionarios'=>array('index'),
-	$model->id,
+$this->breadcrumbs = array(
+    'Funcionário' => array('index'),
+    $model->id,
 );
 
-$this->menu=array(
-array('label'=>'List Funcionario','url'=>array('index')),
-array('label'=>'Create Funcionario','url'=>array('create')),
-array('label'=>'Update Funcionario','url'=>array('update','id'=>$model->id)),
-array('label'=>'Delete Funcionario','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-array('label'=>'Manage Funcionario','url'=>array('admin')),
+$this->menu = array(
+    array('label' => 'Cadastrar Novo', 'url' => array('create')),
+    array('label' => 'Alterar', 'url' => array('update', 'id' => $model->id)),
+    array('label' => 'Excluir', 'url' => '#', 'linkOptions' => array('submit' => array('delete', 'id' => $model->id), 'confirm' => 'Tem certeza que seja excluir este funcionário?')),
+    array('label' => 'Gerenciar Funcionários', 'url' => array('admin')),
 );
 ?>
 
-<h1>View Funcionario #<?php echo $model->id; ?></h1>
+<h1>Visualiação de Funcionário</h1>
 
-<?php $this->widget('booster.widgets.TbDetailView',array(
-'data'=>$model,
-'attributes'=>array(
-		'id',
-		'nome',
-		'email',
-		'senha',
-		'permissao',
-		'foto',
-		'empresa_id',
-),
-)); ?>
+<?php
+$this->widget('booster.widgets.TbDetailView', array(
+    'data' => $model,
+    'attributes' => array(
+        'id',
+        'nome',
+        'email',
+        'foto',
+    ),
+));
+?>

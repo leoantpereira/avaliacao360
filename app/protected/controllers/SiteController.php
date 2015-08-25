@@ -85,7 +85,7 @@ class SiteController extends Controller {
             if ($model->validate() && $model->login()) {
                 $funcLogado = Funcionario::model()->findByPk($model->getIdentity()->getId());
                 $_SESSION['funcLogado'] = $funcLogado;
-                $this->redirect(Yii::app()->user->returnUrl);
+                $this->redirect(Yii::app()->createUrl('admin'));
             }
         }
         // display the login form

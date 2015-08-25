@@ -5,8 +5,7 @@ $this->breadcrumbs = array(
 );
 
 $this->menu = array(
-    array('label' => 'List Funcionario', 'url' => array('index')),
-    array('label' => 'Manage Funcionario', 'url' => array('admin')),
+    array('label' => 'Gerenciar Funcionários', 'url' => array('admin')),
 );
 ?>
 

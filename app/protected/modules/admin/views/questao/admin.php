@@ -1,11 +1,11 @@
 <?php
 $this->breadcrumbs = array(
-    'Funcionário' => array('index'),
-    'Gerenciar',
+    'Questões' => array('index'),
+    'Gerenciamento',
 );
 
 $this->menu = array(
-    array('label' => 'Cadastrar Novo', 'url' => array('create')),
+    array('label' => 'Cadastrar Nova', 'url' => array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -14,7 +14,7 @@ $('.search-form').toggle();
 return false;
 });
 $('.search-form form').submit(function(){
-$.fn.yiiGridView.update('funcionario-grid', {
+$.fn.yiiGridView.update('questao-grid', {
 data: $(this).serialize()
 });
 return false;
@@ -22,9 +22,9 @@ return false;
 ");
 ?>
 
-<h1>Gerenciamento de Funcionários</h1>
+<h1>Gerenciamento de Questões</h1>
 
-<?php echo CHtml::link('Pesquisa avançada', '#', array('class' => 'search-button btn')); ?>
+<?php echo CHtml::link('Pesquisa Avançada', '#', array('class' => 'search-button btn')); ?>
 <div class="search-form" style="display:none">
     <?php
     $this->renderPartial('_search', array(
@@ -35,13 +35,13 @@ return false;
 
 <?php
 $this->widget('booster.widgets.TbGridView', array(
-    'id' => 'funcionario-grid',
+    'id' => 'questao-grid',
     'dataProvider' => $model->search(),
     'filter' => $model,
     'columns' => array(
         'id',
-        'nome',
-        'email',
+        'pergunta',
+        'questionario_id',
         array(
             'class' => 'booster.widgets.TbButtonColumn',
         ),

@@ -1,18 +1,17 @@
 <?php
-$this->breadcrumbs=array(
-	'Funcionarios'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
-	'Update',
+$this->breadcrumbs = array(
+    'Funcionário' => array('index'),
+    $model->id => array('view', 'id' => $model->id),
+    'Alteração',
 );
 
-	$this->menu=array(
-	array('label'=>'List Funcionario','url'=>array('index')),
-	array('label'=>'Create Funcionario','url'=>array('create')),
-	array('label'=>'View Funcionario','url'=>array('view','id'=>$model->id)),
-	array('label'=>'Manage Funcionario','url'=>array('admin')),
-	);
-	?>
+$this->menu = array(
+    array('label' => 'Cadastrar Novo', 'url' => array('create')),
+    array('label' => 'Visualizar', 'url' => array('view', 'id' => $model->id)),
+    array('label' => 'Gerenciar', 'url' => array('admin')),
+);
+?>
 
-	<h1>Update Funcionario <?php echo $model->id; ?></h1>
+<h1>Alteração de Funcionário</h1>
 
-<?php echo $this->renderPartial('_form',array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_form', array('model' => $model)); ?>

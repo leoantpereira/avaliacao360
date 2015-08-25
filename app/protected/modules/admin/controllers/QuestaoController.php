@@ -1,6 +1,6 @@
 <?php
 
-class QuestionarioController extends Controller {
+class QuestaoController extends Controller {
 
     /**
      * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -57,19 +57,26 @@ class QuestionarioController extends Controller {
      * If creation is successful, the browser will be redirected to the 'view' page.
      */
     public function actionCreate() {
-        $model = new Questionario;
+        $model = new Questao;
+        $questionarios = Questionario::findAllDescricao();
+        // adiciona o item selecione na primeira posição do array
+        array_unshift($questionarios, 'Selecione');
 
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
 
-        if (isset($_POST['Questionario'])) {
-            $model->attributes = $_POST['Questionario'];
+        if (isset($_POST['Questao'])) {
+            $model->attributes = $_POST['Questao'];
+            // converte id questionário de string para integer
+            $model->questionario_id = intval($model->questionario_id);
+            
             if ($model->save())
                 $this->redirect(array('view', 'id' => $model->id));
         }
 
         $this->render('create', array(
             'model' => $model,
+            'questionarios' => $questionarios,
         ));
     }
 
@@ -80,18 +87,23 @@ class QuestionarioController extends Controller {
      */
     public function actionUpdate($id) {
         $model = $this->loadModel($id);
+        $allQuestionarios = Questionario::findAllDescricao();
+        // adiciona o item selecione na primeira posição do array
+        $questSelecionado = array($allQuestionarios[$model->questionario_id]);
+
 
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
 
-        if (isset($_POST['Questionario'])) {
-            $model->attributes = $_POST['Questionario'];
+        if (isset($_POST['Questao'])) {
+            $model->attributes = $_POST['Questao'];
             if ($model->save())
                 $this->redirect(array('view', 'id' => $model->id));
         }
 
         $this->render('update', array(
             'model' => $model,
+            'questionarios' => $questSelecionado,
         ));
     }
 
@@ -102,10 +114,10 @@ class QuestionarioController extends Controller {
      */
     public function actionDelete($id) {
         if (Yii::app()->request->isPostRequest) {
-            // we only allow deletion via POST request
+// we only allow deletion via POST request
             $this->loadModel($id)->delete();
 
-            // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
             if (!isset($_GET['ajax']))
                 $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
         } else
@@ -116,7 +128,7 @@ class QuestionarioController extends Controller {
      * Lists all models.
      */
     public function actionIndex() {
-        $dataProvider = new CActiveDataProvider('Questionario');
+        $dataProvider = new CActiveDataProvider('Questao');
         $this->render('index', array(
             'dataProvider' => $dataProvider,
         ));
@@ -126,10 +138,10 @@ class QuestionarioController extends Controller {
      * Manages all models.
      */
     public function actionAdmin() {
-        $model = new Questionario('search');
+        $model = new Questao('search');
         $model->unsetAttributes();  // clear any default values
-        if (isset($_GET['Questionario']))
-            $model->attributes = $_GET['Questionario'];
+        if (isset($_GET['Questao']))
+            $model->attributes = $_GET['Questao'];
 
         $this->render('admin', array(
             'model' => $model,
@@ -142,7 +154,7 @@ class QuestionarioController extends Controller {
      * @param integer the ID of the model to be loaded
      */
     public function loadModel($id) {
-        $model = Questionario::model()->findByPk($id);
+        $model = Questao::model()->findByPk($id);
         if ($model === null)
             throw new CHttpException(404, 'The requested page does not exist.');
         return $model;
@@ -153,7 +165,7 @@ class QuestionarioController extends Controller {
      * @param CModel the model to be validated
      */
     protected function performAjaxValidation($model) {
-        if (isset($_POST['ajax']) && $_POST['ajax'] === 'questionario-form') {
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'questao-form') {
             echo CActiveForm::validate($model);
             Yii::app()->end();
         }

@@ -1,18 +1,17 @@
 <?php
-$this->breadcrumbs=array(
-	'Questionarios'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
-	'Update',
+$this->breadcrumbs = array(
+    'Questionários' => array('index'),
+    $model->id => array('view', 'id' => $model->id),
+    'Alteração',
 );
 
-	$this->menu=array(
-	array('label'=>'List Questionario','url'=>array('index')),
-	array('label'=>'Create Questionario','url'=>array('create')),
-	array('label'=>'View Questionario','url'=>array('view','id'=>$model->id)),
-	array('label'=>'Manage Questionario','url'=>array('admin')),
-	);
-	?>
+$this->menu = array(
+    array('label' => 'Cadastrar Novo', 'url' => array('create')),
+    array('label' => 'Visualizar', 'url' => array('view', 'id' => $model->id)),
+    array('label' => 'Gerenciamento de Questionários', 'url' => array('admin')),
+);
+?>
 
-	<h1>Update Questionario <?php echo $model->id; ?></h1>
+<h1>Alteração de Questionário</h1>
 
-<?php echo $this->renderPartial('_form',array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_form', array('model' => $model)); ?>
