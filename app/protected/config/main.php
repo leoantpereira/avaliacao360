@@ -32,7 +32,7 @@ return array(
             'ipFilters' => array('127.0.0.1', '::1'),
         ),
         'admin' => array(
-            //'theme' => 'sb-admin',
+        //'theme' => 'sb-admin',
         ),
     ),
     // application components
@@ -52,9 +52,12 @@ return array(
           ),
           ),
          */
-        'db' => array(
-            'connectionString' => 'sqlite:' . dirname(__FILE__) . '/../data/testdrive.db',
-        ),
+        /**
+          'db' => array(
+          'connectionString' => 'sqlite:' . dirname(__FILE__) . '/../data/testdrive.db',
+          ),
+         * 
+         */
         // uncomment the following to use a MySQL database
         'db' => array(
             'connectionString' => 'mysql:host=localhost;dbname=avaliacao360',
@@ -62,6 +65,10 @@ return array(
             'username' => 'root',
             'password' => '1234',
             'charset' => 'utf8',
+        ),
+        'authManager' => array(
+            'class' => 'CDbAuthManager',
+            'connectionID' => 'db',
         ),
         'errorHandler' => array(
             // use 'site/error' action to display errors

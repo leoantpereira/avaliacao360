@@ -126,20 +126,17 @@ class Funcionario extends CActiveRecord {
         return parent::model($className);
     }
 
-    /**
-     * Pesquisa pelo campo 'e-mail' (nome de usuário de login) da tabela Funcionario.
-     * 
-     * @param String $email
-     * @return Funcionario Retorna o funcionario que contém o campo 'email' informado.
-     * Caso não encontre retorna null.
-     */
-    public function pesqPorEmail($email) {
-        $criteria = new CDbCriteria();
+    public static function pesqTodosNomes($idEmpresa) {
+        $funcionarios = Funcionario::model()->findAllByAttributes(array(
+            'empresa_id' => $idEmpresa,
+        ));
+        $nomesTodosFunc = array('Selecione');
 
-        $criteria->select = '*';
-        $criteria->condition = 'email LIKE :email';
-        $criteria->params = array(':email' => $email);
-        return Funcionario::model()->find($criteria);
+        foreach ($funcionarios as $func) {
+            $nomesTodosFunc[$func->id] = $func->id . ' - ' . $func->nome;
+        }
+        
+        return $nomesTodosFunc;
     }
 
     /**

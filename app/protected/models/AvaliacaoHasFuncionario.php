@@ -1,27 +1,27 @@
 <?php
 
 /**
- * This is the model class for table "avaliacao".
+ * This is the model class for table "avaliacao_has_funcionario".
  *
- * The followings are the available columns in table 'avaliacao':
- * @property integer $id
- * @property integer $idAvaliador
- * @property integer $questionario_id
+ * The followings are the available columns in table 'avaliacao_has_funcionario':
+ * @property integer $idAvaliacao
+ * @property integer $idFuncAvaliado
+ * @property integer $idQuestao
+ * @property string $resposta
+ * @property string $dataHora
  *
  * The followings are the available model relations:
- * @property Funcionario $idAvaliador0
- * @property Questionario $questionario
- * @property AvaliacaoHasFuncionario[] $avaliacaoHasFuncionarios
+ * @property Avaliacao $idAvaliacao0
+ * @property Funcionario $idFuncAvaliado0
+ * @property Questao $idQuestao0
  */
-class Avaliacao extends CActiveRecord {
-    
-    public $funcAvaliados;
+class AvaliacaoHasFuncionario extends CActiveRecord {
 
     /**
      * @return string the associated database table name
      */
     public function tableName() {
-        return 'avaliacao';
+        return 'avaliacao_has_funcionario';
     }
 
     /**
@@ -31,13 +31,12 @@ class Avaliacao extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('idAvaliador, questionario_id, funcAvaliados', 'required'),
-            array('idAvaliador, questionario_id', 'numerical', 'integerOnly' => true),
-            array('idAvaliador', 'numerical', 'min' => 1, 'tooSmall' => 'Selecione o avaliador.'),
-            array('questionario_id', 'numerical', 'min' => 1, 'tooSmall' => 'Selecione o questionário.'),
+            array('idAvaliacao, idFuncAvaliado, idQuestao', 'required'),
+            array('idAvaliacao, idFuncAvaliado, idQuestao', 'numerical', 'integerOnly' => true),
+            array('resposta', 'length', 'max' => 1),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('id, idAvaliador, questionario_id', 'safe', 'on' => 'search'),
+            array('idAvaliacao, idFuncAvaliado, idQuestao, resposta, dataHora', 'safe', 'on' => 'search'),
         );
     }
 
@@ -48,9 +47,9 @@ class Avaliacao extends CActiveRecord {
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'idAvaliador0' => array(self::BELONGS_TO, 'Funcionario', 'idAvaliador'),
-            'questionario' => array(self::BELONGS_TO, 'Questionario', 'questionario_id'),
-            'avaliacaoHasFuncionarios' => array(self::HAS_MANY, 'AvaliacaoHasFuncionario', 'idAvaliacao'),
+            'idAvaliacao0' => array(self::BELONGS_TO, 'Avaliacao', 'idAvaliacao'),
+            'idFuncAvaliado0' => array(self::BELONGS_TO, 'Funcionario', 'idFuncAvaliado'),
+            'idQuestao0' => array(self::BELONGS_TO, 'Questao', 'idQuestao'),
         );
     }
 
@@ -59,10 +58,11 @@ class Avaliacao extends CActiveRecord {
      */
     public function attributeLabels() {
         return array(
-            'id' => 'Número',
-            'idAvaliador' => 'Avaliador',
-            'questionario_id' => 'Questionario',
-            'funcAvaliados' => 'Funcionários Avaliados',
+            'idAvaliacao' => 'Id Avaliacao',
+            'idFuncAvaliado' => 'Id Func Avaliado',
+            'idQuestao' => 'Id Questao',
+            'resposta' => 'Resposta',
+            'dataHora' => 'Data Hora',
         );
     }
 
@@ -83,9 +83,11 @@ class Avaliacao extends CActiveRecord {
 
         $criteria = new CDbCriteria;
 
-        $criteria->compare('id', $this->id);
-        $criteria->compare('idAvaliador', $this->idAvaliador);
-        $criteria->compare('questionario_id', $this->questionario_id);
+        $criteria->compare('idAvaliacao', $this->idAvaliacao);
+        $criteria->compare('idFuncAvaliado', $this->idFuncAvaliado);
+        $criteria->compare('idQuestao', $this->idQuestao);
+        $criteria->compare('resposta', $this->resposta, true);
+        $criteria->compare('dataHora', $this->dataHora, true);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
@@ -96,7 +98,7 @@ class Avaliacao extends CActiveRecord {
      * Returns the static model of the specified AR class.
      * Please note that you should have this exact method in all your CActiveRecord descendants!
      * @param string $className active record class name.
-     * @return Avaliacao the static model class
+     * @return AvaliacaoHasFuncionario the static model class
      */
     public static function model($className = __CLASS__) {
         return parent::model($className);

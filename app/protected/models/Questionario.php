@@ -6,10 +6,12 @@
  * The followings are the available columns in table 'questionario':
  * @property integer $id
  * @property string $descricao
+ * @property integer $empresa_id
  *
  * The followings are the available model relations:
  * @property Avaliacao[] $avaliacaos
  * @property Questao[] $questaos
+ * @property Empresa $empresa
  */
 class Questionario extends CActiveRecord {
 
@@ -27,11 +29,12 @@ class Questionario extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('descricao', 'required'),
+            array('descricao, empresa_id', 'required'),
+            array('empresa_id', 'numerical', 'integerOnly' => true),
             array('descricao', 'length', 'max' => 500),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('id, descricao', 'safe', 'on' => 'search'),
+            array('id, descricao, empresa_id', 'safe', 'on' => 'search'),
         );
     }
 
@@ -44,6 +47,7 @@ class Questionario extends CActiveRecord {
         return array(
             'avaliacaos' => array(self::HAS_MANY, 'Avaliacao', 'questionario_id'),
             'questaos' => array(self::HAS_MANY, 'Questao', 'questionario_id'),
+            'empresa' => array(self::BELONGS_TO, 'Empresa', 'empresa_id'),
         );
     }
 
@@ -54,6 +58,7 @@ class Questionario extends CActiveRecord {
         return array(
             'id' => 'Número',
             'descricao' => 'Descrição',
+            'empresa_id' => 'Empresa',
         );
     }
 
@@ -76,21 +81,11 @@ class Questionario extends CActiveRecord {
 
         $criteria->compare('id', $this->id);
         $criteria->compare('descricao', $this->descricao, true);
+        $criteria->compare('empresa_id', $this->empresa_id);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));
-    }
-
-    public static function findAllDescricao() {
-        $questionarios = Questionario::model()->findAll();
-        $descricoes = array();
-
-        foreach ($questionarios as $questionario) {
-            $descricoes[$questionario->id] = $questionario->descricao;
-        }
-
-        return $descricoes;
     }
 
     /**
@@ -101,6 +96,17 @@ class Questionario extends CActiveRecord {
      */
     public static function model($className = __CLASS__) {
         return parent::model($className);
+    }
+
+    public static function findAllDescricao() {
+        $questionarios = Questionario::model()->findAll();
+        $descricoes = array('Selecione');
+
+        foreach ($questionarios as $questionario) {
+            $descricoes[$questionario->id] = $questionario->descricao;
+        }
+
+        return $descricoes;
     }
 
 }

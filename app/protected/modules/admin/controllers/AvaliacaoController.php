@@ -1,6 +1,6 @@
 <?php
 
-class QuestionarioController extends Controller {
+class AvaliacaoController extends Controller {
 
     /**
      * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -57,21 +57,48 @@ class QuestionarioController extends Controller {
      * If creation is successful, the browser will be redirected to the 'view' page.
      */
     public function actionCreate() {
-        $model = new Questionario;     
+        $model = new Avaliacao;
+        $funcLogado = $_SESSION['funcLogado'];
+        $nomesTodosFunc = Funcionario::pesqTodosNomes($funcLogado->empresa_id);
+        $questionarios = Questionario::model()->findAllDescricao();
+
+        /** organiza o nomes dos funcionários a serem avaliados,
+         * retirando o primeiro elemento "selecione" e renumerando os 
+         * índices. * */
+        $nomesAvaliados = $nomesTodosFunc;
+        unset($nomesAvaliados[0]);
+        $nomesAvaliados = array_values($nomesAvaliados);
 
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
 
-        if (isset($_POST['Questionario'])) {
-            $model->attributes = $_POST['Questionario'];
-            $funcLogado = $_SESSION['funcLogado'];
-            $model->empresa_id = $funcLogado->empresa_id;
-            if ($model->save())
+        if (isset($_POST['Avaliacao'])) {
+            $model->attributes = $_POST['Avaliacao'];
+
+            if ($model->save()) {
+                $funcAvaliadosSel = explode(',', $model->funcAvaliados);
+                $idFuncAvalSel = array();
+
+                foreach ($funcAvaliadosSel as $func) {
+                    $questoesQuestionario = Questao::model()->findAllByAttributes(array('questionario_id' => $model->questionario_id));
+                    
+                    foreach ($questoesQuestionario as $quest) {
+                        $avalHASfunc = new AvaliacaoHasFuncionario;
+                        $avalHASfunc->idFuncAvaliado = explode(' -', $func)[0];
+                        $avalHASfunc->idAvaliacao = $model->id;
+                        $avalHASfunc->idQuestao = $quest->id;
+                        $avalHASfunc->save();
+                    }
+                }
                 $this->redirect(array('view', 'id' => $model->id));
+            }
         }
 
         $this->render('create', array(
             'model' => $model,
+            'nomesTodosFunc' => $nomesTodosFunc,
+            'nomesAvaliados' => $nomesAvaliados,
+            'questionarios' => $questionarios,
         ));
     }
 
@@ -86,8 +113,8 @@ class QuestionarioController extends Controller {
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
 
-        if (isset($_POST['Questionario'])) {
-            $model->attributes = $_POST['Questionario'];
+        if (isset($_POST['Avaliacao'])) {
+            $model->attributes = $_POST['Avaliacao'];
             if ($model->save())
                 $this->redirect(array('view', 'id' => $model->id));
         }
@@ -118,7 +145,7 @@ class QuestionarioController extends Controller {
      * Lists all models.
      */
     public function actionIndex() {
-        $dataProvider = new CActiveDataProvider('Questionario');
+        $dataProvider = new CActiveDataProvider('Avaliacao');
         $this->render('index', array(
             'dataProvider' => $dataProvider,
         ));
@@ -128,10 +155,10 @@ class QuestionarioController extends Controller {
      * Manages all models.
      */
     public function actionAdmin() {
-        $model = new Questionario('search');
+        $model = new Avaliacao('search');
         $model->unsetAttributes();  // clear any default values
-        if (isset($_GET['Questionario']))
-            $model->attributes = $_GET['Questionario'];
+        if (isset($_GET['Avaliacao']))
+            $model->attributes = $_GET['Avaliacao'];
 
         $this->render('admin', array(
             'model' => $model,
@@ -144,7 +171,7 @@ class QuestionarioController extends Controller {
      * @param integer the ID of the model to be loaded
      */
     public function loadModel($id) {
-        $model = Questionario::model()->findByPk($id);
+        $model = Avaliacao::model()->findByPk($id);
         if ($model === null)
             throw new CHttpException(404, 'The requested page does not exist.');
         return $model;
@@ -155,7 +182,7 @@ class QuestionarioController extends Controller {
      * @param CModel the model to be validated
      */
     protected function performAjaxValidation($model) {
-        if (isset($_POST['ajax']) && $_POST['ajax'] === 'questionario-form') {
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'avaliacao-form') {
             echo CActiveForm::validate($model);
             Yii::app()->end();
         }

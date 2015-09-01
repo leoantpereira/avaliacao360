@@ -59,21 +59,17 @@ class QuestaoController extends Controller {
     public function actionCreate() {
         $model = new Questao;
         $questionarios = Questionario::findAllDescricao();
-        // adiciona o item selecione na primeira posição do array
-        array_unshift($questionarios, 'Selecione');
-
+        
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
-
         if (isset($_POST['Questao'])) {
             $model->attributes = $_POST['Questao'];
             // converte id questionário de string para integer
             $model->questionario_id = intval($model->questionario_id);
-            
+
             if ($model->save())
                 $this->redirect(array('view', 'id' => $model->id));
         }
-
         $this->render('create', array(
             'model' => $model,
             'questionarios' => $questionarios,
@@ -90,17 +86,13 @@ class QuestaoController extends Controller {
         $allQuestionarios = Questionario::findAllDescricao();
         // adiciona o item selecione na primeira posição do array
         $questSelecionado = array($allQuestionarios[$model->questionario_id]);
-
-
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
-
         if (isset($_POST['Questao'])) {
             $model->attributes = $_POST['Questao'];
             if ($model->save())
                 $this->redirect(array('view', 'id' => $model->id));
         }
-
         $this->render('update', array(
             'model' => $model,
             'questionarios' => $questSelecionado,
@@ -116,7 +108,6 @@ class QuestaoController extends Controller {
         if (Yii::app()->request->isPostRequest) {
 // we only allow deletion via POST request
             $this->loadModel($id)->delete();
-
 // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
             if (!isset($_GET['ajax']))
                 $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
@@ -142,7 +133,6 @@ class QuestaoController extends Controller {
         $model->unsetAttributes();  // clear any default values
         if (isset($_GET['Questao']))
             $model->attributes = $_GET['Questao'];
-
         $this->render('admin', array(
             'model' => $model,
         ));

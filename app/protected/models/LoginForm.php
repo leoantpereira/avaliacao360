@@ -20,6 +20,7 @@ class LoginForm extends CFormModel {
     public function rules() {
         return array(
             array('email, senha', 'required'),
+            array('email','email'),
             array('lembrarMe', 'boolean'),
             array('senha', 'authenticate'),
         );

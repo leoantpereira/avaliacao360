@@ -72,6 +72,7 @@ CREATE TABLE IF NOT EXISTS `avaliacao360`.`funcionario` (
   `empresa_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_funcionario_empresa1_idx` (`empresa_id` ASC),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC),
   CONSTRAINT `fk_funcionario_empresa1`
     FOREIGN KEY (`empresa_id`)
     REFERENCES `avaliacao360`.`empresa` (`id`)
@@ -86,7 +87,14 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `avaliacao360`.`questionario` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `descricao` VARCHAR(500) NOT NULL,
-  PRIMARY KEY (`id`))
+  `empresa_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_questionario_empresa1_idx` (`empresa_id` ASC),
+  CONSTRAINT `fk_questionario_empresa1`
+    FOREIGN KEY (`empresa_id`)
+    REFERENCES `avaliacao360`.`empresa` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -119,18 +127,11 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `avaliacao360`.`avaliacao` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `idFuncAvaliado` INT NOT NULL,
   `idAvaliador` INT NOT NULL,
   `questionario_id` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_avaliacao_funcionario1_idx` (`idFuncAvaliado` ASC),
   INDEX `fk_avaliacao_funcionario2_idx` (`idAvaliador` ASC),
   INDEX `fk_avaliacao_questionario1_idx` (`questionario_id` ASC),
-  CONSTRAINT `fk_avaliacao_funcionario1`
-    FOREIGN KEY (`idFuncAvaliado`)
-    REFERENCES `avaliacao360`.`funcionario` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
   CONSTRAINT `fk_avaliacao_funcionario2`
     FOREIGN KEY (`idAvaliador`)
     REFERENCES `avaliacao360`.`funcionario` (`id`)
@@ -200,6 +201,37 @@ CREATE TABLE IF NOT EXISTS `avaliacao360`.`funcionario_has_departamento` (
   CONSTRAINT `fk_funcionario_has_departamento_departamento1`
     FOREIGN KEY (`departamento_id`)
     REFERENCES `avaliacao360`.`departamento` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `avaliacao360`.`avaliacao_has_funcionario`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `avaliacao360`.`avaliacao_has_funcionario` (
+  `idAvaliacao` INT NOT NULL,
+  `idFuncAvaliado` INT NOT NULL,
+  `idQuestao` INT NOT NULL,
+  `resposta` VARCHAR(1) NULL,
+  `dataHora` DATETIME NULL,
+  PRIMARY KEY (`idAvaliacao`, `idFuncAvaliado`, `idQuestao`),
+  INDEX `fk_avaliacao_has_funcionario_funcionario1_idx` (`idFuncAvaliado` ASC),
+  INDEX `fk_avaliacao_has_funcionario_avaliacao1_idx` (`idAvaliacao` ASC),
+  INDEX `fk_avaliacao_has_funcionario_questao1_idx` (`idQuestao` ASC),
+  CONSTRAINT `fk_avaliacao_has_funcionario_avaliacao1`
+    FOREIGN KEY (`idAvaliacao`)
+    REFERENCES `avaliacao360`.`avaliacao` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_avaliacao_has_funcionario_funcionario1`
+    FOREIGN KEY (`idFuncAvaliado`)
+    REFERENCES `avaliacao360`.`funcionario` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_avaliacao_has_funcionario_questao1`
+    FOREIGN KEY (`idQuestao`)
+    REFERENCES `avaliacao360`.`questao` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

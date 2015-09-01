@@ -18,9 +18,7 @@ class UserIdentity extends CUserIdentity {
      * @return boolean whether authentication succeeds.
      */
     public function authenticate() {
-        $funcionario = new Funcionario();
-
-        $funcLogado = $funcionario->pesqPorEmail($this->username);
+        $funcLogado = Funcionario::model()->findByAttributes(array('email' => $this->username));
 
         if ($funcLogado === null) { // usuário inválido
             $this->errorCode = self::ERROR_USERNAME_INVALID;
@@ -35,8 +33,8 @@ class UserIdentity extends CUserIdentity {
 
         return !$this->errorCode;
     }
-    
-    public function getId(){
+
+    public function getId() {
         return $this->_id;
     }
 

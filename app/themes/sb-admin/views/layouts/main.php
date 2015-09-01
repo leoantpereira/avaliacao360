@@ -154,7 +154,12 @@
                             <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Gráficos</a>
                         </li>
                         <li>
-                            <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tabelas</a>
+                            <a href="javascript:;" data-toggle="collapse" data-target="#avaliacoes"><i class="fa fa-fw fa-table"></i> Avaliação de Desempenho<i class="fa fa-fw fa-caret-down"></i></a>
+                            <ul id="avaliacoes" class="collapse">
+                                <li>
+                                    <a href="<?php echo Yii::app()->createUrl('admin/avaliacao/create'); ?>">Cadastrar</a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <a href="javascript:;" data-toggle="collapse" data-target="#questionarios"><i class="fa fa-fw fa-edit"></i> Questionários <i class="fa fa-fw fa-caret-down"></i></a>
@@ -180,7 +185,7 @@
                             <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
                         </li>
                         <li>
-                            <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Funcionários <i class="fa fa-fw fa-caret-down"></i></a>
+                            <a href="javascript:;" data-toggle="collapse" data-target="#demo"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Funcionários <i class="fa fa-fw fa-caret-down"></i></a>
                             <ul id="demo" class="collapse">
                                 <li>
                                     <a href="<?php echo Yii::app()->createUrl('admin/funcionario/create'); ?>">Cadastrar</a>
@@ -229,9 +234,9 @@
         <!-- <script src="js/themes/sb-admin/bootstrap.min.js"></script> -->
 
         <!-- Morris Charts JavaScript -->
-        <script src="js/themes/sb-admin/plugins/morris/raphael.min.js"></script>
-        <script src="js/themes/sb-admin/plugins/morris/morris.min.js"></script>
-        <script src="js/themes/sb-admin/plugins/morris/morris-data.js"></script>
+        <!-- <script src="js/themes/sb-admin/plugins/morris/raphael.min.js"></script> -->
+        <!-- <script src="js/themes/sb-admin/plugins/morris/morris.min.js"></script> -->
+        <!-- <script src="js/themes/sb-admin/plugins/morris/morris-data.js"></script> -->
 
     </body>
 
