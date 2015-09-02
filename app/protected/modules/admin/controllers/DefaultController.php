@@ -21,7 +21,7 @@ class DefaultController extends Controller {
     public function accessRules() {
         return array(
             array('allow', // allow authenticated user
-                'actions' => array('index', 'create', 'update', 'delete'),
+                'actions' => array('index'),
                 'users' => array('@'),
             ),
             array('deny', // deny all users

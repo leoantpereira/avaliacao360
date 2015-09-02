@@ -3438,3 +3438,252 @@ Stack trace:
 REQUEST_URI=/avaliacao360/app/index.php?r=admin/avaliacao/create
 HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/avaliacao/create
 ---
+2015/09/02 12:45:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=site/login
+---
+2015/09/02 12:46:08 [error] [php] include(Funcoes.php): failed to open stream: No such file or directory (C:\xampp\php\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\AvaliacaoController.php(30): spl_autoload_call()
+#1 C:\xampp\php\yii\framework\web\CController.php(1144): AvaliacaoController->accessRules()
+#2 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): AvaliacaoController->filterAccessControl()
+#3 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#4 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#5 C:\xampp\php\yii\framework\web\CController.php(265): AvaliacaoController->runActionWithFilters()
+#6 C:\xampp\php\yii\framework\web\CWebApplication.php(282): AvaliacaoController->run()
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/avaliacao/create
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\AvaliacaoController.php (30)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/02 12:46:54 [error] [php] include_once(./Funcoes.php): failed to open stream: No such file or directory (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\AvaliacaoController.php:3)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CWebApplication.php(338): CWebApplication->createController()
+#1 C:\xampp\php\yii\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#2 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#3 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/avaliacao/create
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\AvaliacaoController.php (3)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\AvaliacaoController.php (3)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/02 12:47:02 [error] [php] Undefined variable: _SESSION (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\AvaliacaoController.php:32)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#1 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#2 C:\xampp\php\yii\framework\web\CController.php(265): AvaliacaoController->runActionWithFilters()
+#3 C:\xampp\php\yii\framework\web\CWebApplication.php(282): AvaliacaoController->run()
+#4 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/avaliacao/create
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\AvaliacaoController.php (32)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/02 12:50:27 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=site/login
+---
+2015/09/02 12:51:06 [error] [php] Undefined variable: _SESSION (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\AvaliacaoController.php:32)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#1 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#2 C:\xampp\php\yii\framework\web\CController.php(265): AvaliacaoController->runActionWithFilters()
+#3 C:\xampp\php\yii\framework\web\CWebApplication.php(282): AvaliacaoController->run()
+#4 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/avaliacao/create
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\AvaliacaoController.php (32)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/02 12:53:48 [error] [php] Undefined variable: _SESSION (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\AvaliacaoController.php:28)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#1 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#2 C:\xampp\php\yii\framework\web\CController.php(265): AvaliacaoController->runActionWithFilters()
+#3 C:\xampp\php\yii\framework\web\CWebApplication.php(282): AvaliacaoController->run()
+#4 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/avaliacao/create
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\AvaliacaoController.php (28)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/02 12:55:11 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/avaliacao...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/avaliacao/create
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin
+---
+2015/09/02 12:56:13 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/avaliacao...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/avaliacao/create
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin
+---
+2015/09/02 12:56:15 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/avaliacao...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/avaliacao/create
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin
+---
+2015/09/02 12:56:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/avaliacao...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/avaliacao/create
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/avaliacao/create
+---
+2015/09/03 00:59:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/departame...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/departamento/admin
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/departamento/create
+---
+2015/09/03 01:00:04 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/departame...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/departamento/admin
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/departamento/create
+---
+2015/09/03 01:03:25 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/departame...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/departamento/admin
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/departamento/view&id=2
+---
+2015/09/03 01:05:08 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/departame...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/departamento/update&id=2
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/departamento/view&id=2
+---
+2015/09/03 01:06:37 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/departame...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/departamento/create
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/departamento/update&id=2
+---

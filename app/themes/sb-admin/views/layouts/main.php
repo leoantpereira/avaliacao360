@@ -182,7 +182,15 @@
                             <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
                         </li>
                         <li>
-                            <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
+                            <a href="javascript:;" data-toggle="collapse" data-target="#departamentos"><span class="fa fa-fw fa-wrench" aria-hidden="true"></span> Departamentos<i class="fa fa-fw fa-caret-down"></i></a>
+                            <ul id="departamentos" class="collapse">
+                                <li>
+                                    <a href="<?php echo Yii::app()->createUrl('admin/departamento/create'); ?>">Cadastrar</a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo Yii::app()->createUrl('admin/departamento/admin'); ?>">Gerenciar</a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <a href="javascript:;" data-toggle="collapse" data-target="#demo"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Funcionários <i class="fa fa-fw fa-caret-down"></i></a>
@@ -191,7 +199,7 @@
                                     <a href="<?php echo Yii::app()->createUrl('admin/funcionario/create'); ?>">Cadastrar</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo Yii::app()->createUrl('admin/funcionario/admin'); ?>">Administrar</a>
+                                    <a href="<?php echo Yii::app()->createUrl('admin/funcionario/admin'); ?>">Gerenciar</a>
                                 </li>
                             </ul>
                         </li>

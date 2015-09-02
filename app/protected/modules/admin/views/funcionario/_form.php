@@ -58,9 +58,7 @@ echo $form->dropDownListGroup(
         'class' => 'col-sm-5',
     ),
     'widgetOptions' => array(
-        'data' => array(
-            'Selecione', 'Departamento 01', 'Departamento 02'
-        ),
+        'data' => $departamentos,
         'htmlOptions' => array(
         ),
     ),

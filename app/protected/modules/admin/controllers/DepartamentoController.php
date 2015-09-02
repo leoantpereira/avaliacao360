@@ -1,8 +1,6 @@
 <?php
-session_start();
-require_once 'Funcoes.php';
 
-class AvaliacaoController extends Controller {
+class DepartamentoController extends Controller {
 
     /**
      * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -25,12 +23,10 @@ class AvaliacaoController extends Controller {
      * @return array access control rules
      */
     public function accessRules() {
-        $empresa_id = $_SESSION['funcLogado']->empresa_id;
-        
         return array(
-            array('allow',
-                'actions' => array('index', 'create', 'admin', 'update', 'delete'),
-                'users' => Funcoes::pesqEmailFuncAdmin($empresa_id),
+            array('allow', // allow all users to perform 'index' and 'view' actions
+                'actions' => array('index', 'view', 'admin', 'update', 'delete', 'create'),
+                'users' => array('@'),
             ),
             array('deny', // deny all users
                 'users' => array('*'),
@@ -53,48 +49,21 @@ class AvaliacaoController extends Controller {
      * If creation is successful, the browser will be redirected to the 'view' page.
      */
     public function actionCreate() {
-        $model = new Avaliacao;
-        $funcLogado = $_SESSION['funcLogado'];
-        $nomesTodosFunc = Funcionario::pesqTodosNomes($funcLogado->empresa_id);
-        $questionarios = Questionario::model()->findAllDescricao();
-
-        /** organiza o nomes dos funcionários a serem avaliados,
-         * retirando o primeiro elemento "selecione" e renumerando os 
-         * índices. * */
-        $nomesAvaliados = $nomesTodosFunc;
-        unset($nomesAvaliados[0]);
-        $nomesAvaliados = array_values($nomesAvaliados);
+        $model = new Departamento;
+        $empresa_id = $_SESSION['funcLogado']->empresa_id;
 
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
 
-        if (isset($_POST['Avaliacao'])) {
-            $model->attributes = $_POST['Avaliacao'];
-
-            if ($model->save()) {
-                $funcAvaliadosSel = explode(',', $model->funcAvaliados);
-                $idFuncAvalSel = array();
-
-                foreach ($funcAvaliadosSel as $func) {
-                    $questoesQuestionario = Questao::model()->findAllByAttributes(array('questionario_id' => $model->questionario_id));
-
-                    foreach ($questoesQuestionario as $quest) {
-                        $avalHASfunc = new AvaliacaoHasFuncionario;
-                        $avalHASfunc->idFuncAvaliado = explode(' -', $func)[0];
-                        $avalHASfunc->idAvaliacao = $model->id;
-                        $avalHASfunc->idQuestao = $quest->id;
-                        $avalHASfunc->save();
-                    }
-                }
+        if (isset($_POST['Departamento'])) {
+            $model->attributes = $_POST['Departamento'];
+            $model->empresa_id = $empresa_id;
+            if ($model->save())
                 $this->redirect(array('view', 'id' => $model->id));
-            }
         }
 
         $this->render('create', array(
             'model' => $model,
-            'nomesTodosFunc' => $nomesTodosFunc,
-            'nomesAvaliados' => $nomesAvaliados,
-            'questionarios' => $questionarios,
         ));
     }
 
@@ -109,8 +78,8 @@ class AvaliacaoController extends Controller {
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
 
-        if (isset($_POST['Avaliacao'])) {
-            $model->attributes = $_POST['Avaliacao'];
+        if (isset($_POST['Departamento'])) {
+            $model->attributes = $_POST['Departamento'];
             if ($model->save())
                 $this->redirect(array('view', 'id' => $model->id));
         }
@@ -141,7 +110,7 @@ class AvaliacaoController extends Controller {
      * Lists all models.
      */
     public function actionIndex() {
-        $dataProvider = new CActiveDataProvider('Avaliacao');
+        $dataProvider = new CActiveDataProvider('Departamento');
         $this->render('index', array(
             'dataProvider' => $dataProvider,
         ));
@@ -151,10 +120,10 @@ class AvaliacaoController extends Controller {
      * Manages all models.
      */
     public function actionAdmin() {
-        $model = new Avaliacao('search');
+        $model = new Departamento('search');
         $model->unsetAttributes();  // clear any default values
-        if (isset($_GET['Avaliacao']))
-            $model->attributes = $_GET['Avaliacao'];
+        if (isset($_GET['Departamento']))
+            $model->attributes = $_GET['Departamento'];
 
         $this->render('admin', array(
             'model' => $model,
@@ -167,7 +136,7 @@ class AvaliacaoController extends Controller {
      * @param integer the ID of the model to be loaded
      */
     public function loadModel($id) {
-        $model = Avaliacao::model()->findByPk($id);
+        $model = Departamento::model()->findByPk($id);
         if ($model === null)
             throw new CHttpException(404, 'The requested page does not exist.');
         return $model;
@@ -178,7 +147,7 @@ class AvaliacaoController extends Controller {
      * @param CModel the model to be validated
      */
     protected function performAjaxValidation($model) {
-        if (isset($_POST['ajax']) && $_POST['ajax'] === 'avaliacao-form') {
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'departamento-form') {
             echo CActiveForm::validate($model);
             Yii::app()->end();
         }

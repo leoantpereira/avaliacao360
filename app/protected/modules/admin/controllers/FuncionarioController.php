@@ -66,6 +66,7 @@ class FuncionarioController extends Controller {
      */
     public function actionCreate() {
         $model = new Funcionario;
+        $departamentos = Departamento::model()->pesqTodosNomes($_SESSION['funcLogado']->empresa_id);
 
         // Uncomment the following line if AJAX validation is needed
         //$this->performAjaxValidation($model);
@@ -94,6 +95,7 @@ class FuncionarioController extends Controller {
 
         $this->render('create', array(
             'model' => $model,
+            'departamentos' => $departamentos,
         ));
     }
 
