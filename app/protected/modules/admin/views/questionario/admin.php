@@ -24,15 +24,6 @@ return false;
 
 <h1>Gerenciamento de Questionários</h1>
 
-<?php echo CHtml::link('Pesquisa Avançada', '#', array('class' => 'search-button btn')); ?>
-<div class="search-form" style="display:none">
-    <?php
-    $this->renderPartial('_search', array(
-        'model' => $model,
-    ));
-    ?>
-</div><!-- search-form -->
-
 <?php
 $this->widget('booster.widgets.TbGridView', array(
     'id' => 'questionario-grid',

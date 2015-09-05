@@ -24,17 +24,9 @@ class QuestaoController extends Controller {
      */
     public function accessRules() {
         return array(
-            array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('index', 'view', 'admin'),
-                'users' => array('*'),
-            ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('create', 'update'),
+                'actions' => array('create', 'index', 'view', 'admin', 'update'),
                 'users' => array('@'),
-            ),
-            array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete'),
-                'users' => array('admin'),
             ),
             array('deny', // deny all users
                 'users' => array('*'),
@@ -58,8 +50,8 @@ class QuestaoController extends Controller {
      */
     public function actionCreate() {
         $model = new Questao;
-        $questionarios = Questionario::findAllDescricao();
-        
+        $questionarios = Questionario::findAllDescricao($_SESSION['funcLogado']->empresa_id);
+
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
         if (isset($_POST['Questao'])) {
@@ -106,23 +98,13 @@ class QuestaoController extends Controller {
      */
     public function actionDelete($id) {
         if (Yii::app()->request->isPostRequest) {
-// we only allow deletion via POST request
+            // we only allow deletion via POST request
             $this->loadModel($id)->delete();
-// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+            // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
             if (!isset($_GET['ajax']))
                 $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
         } else
             throw new CHttpException(400, 'Invalid request. Please do not repeat this request again.');
-    }
-
-    /**
-     * Lists all models.
-     */
-    public function actionIndex() {
-        $dataProvider = new CActiveDataProvider('Questao');
-        $this->render('index', array(
-            'dataProvider' => $dataProvider,
-        ));
     }
 
     /**
@@ -131,6 +113,8 @@ class QuestaoController extends Controller {
     public function actionAdmin() {
         $model = new Questao('search');
         $model->unsetAttributes();  // clear any default values
+        $model->empresa_id = $_SESSION['funcLogado']->empresa_id;
+
         if (isset($_GET['Questao']))
             $model->attributes = $_GET['Questao'];
         $this->render('admin', array(
@@ -147,6 +131,8 @@ class QuestaoController extends Controller {
         $model = Questao::model()->findByPk($id);
         if ($model === null)
             throw new CHttpException(404, 'The requested page does not exist.');
+        else if ($model->questionario->empresa_id != $_SESSION['funcLogado']->empresa_id)
+            throw new CHttpException(401, 'Você não está autorizado a realizar esta operação.');
         return $model;
     }
 

@@ -20,6 +20,8 @@
  */
 class Questao extends CActiveRecord {
 
+    public $empresa_id;
+    
     /**
      * @return string the associated database table name
      */
@@ -102,7 +104,9 @@ class Questao extends CActiveRecord {
         $criteria->compare('alternativaCorreta', $this->alternativaCorreta, true);
         $criteria->compare('resposta', $this->resposta, true);
         $criteria->compare('questionario_id', $this->questionario_id);
-
+        $criteria->join = 'JOIN questionario AS q ON q.id = t.questionario_id';
+        $criteria->compare('empresa_id', $this->empresa_id);
+        
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));

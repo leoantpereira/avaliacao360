@@ -171,10 +171,13 @@
                                     <a href="<?php echo Yii::app()->createUrl('admin/questao/create'); ?>">Cadastrar Questão</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo Yii::app()->createUrl('admin/questionario/#'); ?>">Responder</a>
+                                    <a href="<?php echo Yii::app()->createUrl('admin/questionario/#'); ?>">Responder Questionário</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo Yii::app()->createUrl('admin/questionario/admin'); ?>">Gerenciar</a>
+                                    <a href="<?php echo Yii::app()->createUrl('admin/questionario/admin'); ?>">Gerenciar Questionários</a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo Yii::app()->createUrl('admin/questao/admin'); ?>">Gerenciar Questões</a>
                                 </li>
                             </ul>
                         </li>

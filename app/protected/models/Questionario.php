@@ -98,8 +98,10 @@ class Questionario extends CActiveRecord {
         return parent::model($className);
     }
 
-    public static function findAllDescricao() {
-        $questionarios = Questionario::model()->findAll();
+    public static function findAllDescricao($empresa_id) {
+        $questionarios = Questionario::model()->findAllByAttributes(array(
+            'empresa_id' => $empresa_id,
+        ));
         $descricoes = array('Selecione');
 
         foreach ($questionarios as $questionario) {
