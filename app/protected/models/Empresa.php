@@ -1,5 +1,9 @@
 <?php
 
+define('PESSOA_FISICA', 1);
+define('PESSOA_JURIDICA', 2);
+require_once 'class-valida-cpf-cnpj.php';
+
 /**
  * This is the model class for table "empresa".
  *
@@ -33,7 +37,7 @@ class Empresa extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('cnpj, razaoSocial, nomeFantasia, endereco_id', 'required'),
+            array('cnpj, razaoSocial, nomeFantasia', 'required'),
             array('endereco_id', 'numerical', 'integerOnly' => true),
             array('cnpj', 'length', 'max' => 14),
             array('razaoSocial, nomeFantasia', 'length', 'max' => 200),
@@ -69,7 +73,7 @@ class Empresa extends CActiveRecord {
             'telefone01' => 'Telefone',
             'telefone02' => 'Fax/Celular',
             'email' => 'E-mail',
-            'endereco_id' => 'Endereco',
+            'endereco_id' => 'Endereço',
         );
     }
 
@@ -112,6 +116,36 @@ class Empresa extends CActiveRecord {
      */
     public static function model($className = __CLASS__) {
         return parent::model($className);
+    }
+
+    public function validaCpfCnpj($model, $tipoPessoa) {
+        if ($tipoPessoa == PESSOA_FISICA) {
+            $cpf_cnpj = new ValidaCPFCNPJ($model->cpf);
+
+            if (!$cpf_cnpj->valida()) { // não validou
+                $model->addError('cpf', 'CPF inválido.');
+            } else {
+                $empresa = Empresa::model()->pesqPorCpf($model->cpf);
+
+                if ($empresa) { // se existir fornecedor com cpf...
+                    $model->addError('cpf', 'Já existe um fornecedor cadastrado com este CPF.');
+                }
+            }
+        } else if ($tipoPessoa == PESSOA_JURIDICA) {
+            $cpf_cnpj = new ValidaCPFCNPJ($model->cnpj);
+
+            if (!$cpf_cnpj->valida()) { // não validou
+                $model->addError('cnpj', 'CNPJ inválido.');
+            } else {
+                $empresa = Empresa::model()->findByAttributes(array(
+                    'cnpj' => $model->cnpj,
+                ));
+
+                if ($empresa) { // se existir fornecedor com cnpj...
+                    $model->addError('cnpj', 'Já existe um fornecedor cadastrado com este CNPJ.');
+                }
+            }
+        }
     }
 
 }

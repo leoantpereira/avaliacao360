@@ -25,7 +25,7 @@ class EnderecoController extends Controller {
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('index', 'view', 'create'),
+                'actions' => array('index', 'view', 'create', 'getCidades'),
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -61,7 +61,7 @@ class EnderecoController extends Controller {
 
         // Uncomment the following line if AJAX validation is needed
         $this->performAjaxValidation($model);
-        
+
         // usuário está cadastrando uma nova empresa
         if (isset($_SESSION['empresa'])) {
             if (isset($_POST['Endereco'])) {
@@ -141,6 +141,13 @@ class EnderecoController extends Controller {
         $this->render('admin', array(
             'model' => $model,
         ));
+    }
+
+    public function actionGetCidades() {
+        $uf = $_POST['uf'];
+        $data = Yii::app()->db->createCommand("SELECT * FROM cidade WHERE estado='$uf' ORDER BY nome ASC")->queryAll(true);
+
+        echo CJSON::encode(array('nome' => $data));
     }
 
     /**

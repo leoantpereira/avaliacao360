@@ -57,21 +57,58 @@ class EmpresaController extends Controller {
      * If creation is successful, the browser will be redirected to the 'view' page.
      */
     public function actionCreate() {
-        $model = new Empresa;
+        $modelEmpresa = new Empresa;
+        $modelEndereco = new Endereco;
+        $modelFuncionario = new Funcionario;
 
-        // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($model);
+        if (isset($_POST['Empresa']) &&
+                isset($_POST['Endereco']) &&
+                isset($_POST['Funcionario'])) {
 
-        if (isset($_POST['Empresa'])) {
-            $model->attributes = $_POST['Empresa'];
-            //if ($model->save())
-            $_SESSION['empresa'] = $model;
+            // ============= cadastro da empresa
+            $modelEmpresa->attributes = $_POST['Empresa'];
+            $modelEmpresa->validaCpfCnpj($modelEmpresa, PESSOA_JURIDICA);
+            // ============= fim cadastro da empresa
+            // ============= cadastro do endereço
+            $modelEndereco->attributes = $_POST['Endereco'];
+            // ============= fim cadastro do endereço
+            // ============= cadastro do funcionário
+            $modelFuncionario->attributes = $_POST['Funcionario'];
+            $modelFuncionario->permissao = USER_ADMIN;
+            $modelFuncionario->foto = CUploadedFile::getInstance($modelFuncionario, 'foto');
+            // ============= fim cadastro do funcionário
 
-            $this->redirect(array('endereco/create'));
+            if ($modelEmpresa->validate(null, false) &&
+                    $modelEndereco->validate() &&
+                    $modelFuncionario->validate()) {
+
+                Funcionario::model()->verificaSenhasCadastro($modelFuncionario);
+                if (Funcionario::model()->findByAttributes(array('email' => $modelFuncionario->email))) {
+                    $modelFuncionario->addError('email', 'E-mail já existe.');
+                }
+                if (!$modelFuncionario->getErrors()) {
+                    if ($modelFuncionario->foto) {
+                        $modelFuncionario->salvaImagem($modelFuncionario);
+                    }
+
+                    if ($modelEndereco->save()) {
+                        $modelEmpresa->endereco_id = $modelEndereco->id;
+                        if ($modelEmpresa->save()) {
+                            $modelFuncionario->empresa_id = $modelEmpresa->id;
+                            if ($modelFuncionario->save()) {
+                                $_SESSION['empresa'] = $modelEmpresa;
+                                $this->redirect(array('view', 'id' => $modelEmpresa->id));
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         $this->render('create', array(
-            'model' => $model,
+            'modelEmpresa' => $modelEmpresa,
+            'modelEndereco' => $modelEndereco,
+            'modelFuncionario' => $modelFuncionario,
         ));
     }
 
@@ -83,8 +120,8 @@ class EmpresaController extends Controller {
     public function actionUpdate($id) {
         $model = $this->loadModel($id);
 
-// Uncomment the following line if AJAX validation is needed
-// $this->performAjaxValidation($model);
+        // Uncomment the following line if AJAX validation is needed
+        // $this->performAjaxValidation($model);
 
         if (isset($_POST['Empresa'])) {
             $model->attributes = $_POST['Empresa'];

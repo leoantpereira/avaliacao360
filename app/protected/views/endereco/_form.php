@@ -5,7 +5,7 @@ $form = $this->beginWidget('booster.widgets.TbActiveForm', array(
         ));
 ?>
 
-<p class="help-block">Fields with <span class="required">*</span> are required.</p>
+<h2>Endereço</h2>
 
 <?php echo $form->errorSummary($model); ?>
 
@@ -19,16 +19,20 @@ $form = $this->beginWidget('booster.widgets.TbActiveForm', array(
 
 <?php echo $form->textFieldGroup($model, 'cep', array('widgetOptions' => array('htmlOptions' => array('class' => 'span5', 'maxlength' => 8)))); ?>
 
-<?php echo $form->textFieldGroup($model, 'cidade_id', array('widgetOptions' => array('htmlOptions' => array('class' => 'span5')))); ?>
+<?php
+echo $form->dropDownListGroup(
+        $model, 'estado', array(
+    'wrapperHtmlOptions' => array(
+        'class' => 'col-sm-5',
+    ),
+    'widgetOptions' => array(
+        'data' => $model->estados,
+        'htmlOptions' => array(),
+    )
+        )
+);
+?>
 
-<div class="form-actions">
-    <?php
-    $this->widget('booster.widgets.TbButton', array(
-        'buttonType' => 'submit',
-        'context' => 'primary',
-        'label' => $model->isNewRecord ? 'Create' : 'Save',
-    ));
-    ?>
-</div>
+<?php echo $form->textFieldGroup($model, 'cidade_id', array('widgetOptions' => array('htmlOptions' => array('class' => 'span5')))); ?>
 
 <?php $this->endWidget(); ?>

@@ -18,6 +18,36 @@
  */
 class Endereco extends CActiveRecord {
 
+    public $estado;
+    public $estados = array(
+        '1' => 'AC',
+        '2' => 'AL',
+        '3' => 'AM',
+        '4' => 'AP',
+        '5' => 'BA',
+        '6' => 'CE',
+        '7' => 'DF',
+        '8' => 'ES',
+        '9' => 'GO',
+        '10' => 'MA',
+        '11' => 'MG',
+        '12' => 'MS',
+        '13' => 'MT',
+        '14' => 'PA',
+        '15' => 'PB',
+        '16' => 'PE',
+        '17' => 'PI',
+        '18' => 'PR',
+        '19' => 'RJ',
+        '20' => 'RN',
+        '21' => 'RO',
+        '22' => 'RR',
+        '23' => 'RS',
+        '24' => 'SC',
+        '25' => 'SE',
+        '26' => 'SP',
+        '27' => 'TO');
+
     /**
      * @return string the associated database table name
      */
@@ -32,12 +62,13 @@ class Endereco extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('logradouro, numero, complemento, bairro, cep, cidade_id', 'required'),
+            array('logradouro, numero, bairro, cep, cidade_id, estado', 'required'),
             array('cidade_id', 'numerical', 'integerOnly' => true),
             array('logradouro', 'length', 'max' => 200),
             array('numero, complemento', 'length', 'max' => 10),
             array('bairro', 'length', 'max' => 100),
             array('cep', 'length', 'max' => 8),
+            array('cidade_id', 'numerical', 'min' => 1, 'tooSmall' => 'Selecione a cidade.'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
             array('id, logradouro, numero, complemento, bairro, cep, cidade_id', 'safe', 'on' => 'search'),
@@ -63,10 +94,10 @@ class Endereco extends CActiveRecord {
         return array(
             'id' => 'ID',
             'logradouro' => 'Logradouro',
-            'numero' => 'Numero',
+            'numero' => 'Número',
             'complemento' => 'Complemento',
             'bairro' => 'Bairro',
-            'cep' => 'Cep',
+            'cep' => 'CEP',
             'cidade_id' => 'Cidade',
         );
     }

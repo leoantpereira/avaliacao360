@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `avaliacao360`.`funcionario` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(100) NOT NULL,
   `email` VARCHAR(100) NOT NULL,
-  `senha` VARCHAR(30) NOT NULL,
+  `senha` VARCHAR(32) NOT NULL,
   `permissao` INT(2) NOT NULL,
   `foto` VARCHAR(100) NULL,
   `empresa_id` INT NOT NULL,

@@ -43,7 +43,7 @@ class Funcionario extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('nome, email, senha, permissao, empresa_id, repetirSenha', 'required'),
+            array('nome, email, senha, permissao, repetirSenha', 'required'),
             array('permissao, empresa_id', 'numerical', 'integerOnly' => true),
             array('nome, email, foto', 'length', 'max' => 100),
             array('email', 'email'),
@@ -135,7 +135,7 @@ class Funcionario extends CActiveRecord {
         foreach ($funcionarios as $func) {
             $nomesTodosFunc[$func->id] = $func->id . ' - ' . $func->nome;
         }
-        
+
         return $nomesTodosFunc;
     }
 
@@ -144,7 +144,7 @@ class Funcionario extends CActiveRecord {
      * 
      * @param Funcionario $model Funcionário
      */
-    public function verificaSenhasCadastro($model) {
+    public static function verificaSenhasCadastro($model) {
         if (isset($model->senha)) {
             if ($model->senha != $model->repetirSenha) {
                 $model->addError('repetirSenha', 'Senhas não conferem.');

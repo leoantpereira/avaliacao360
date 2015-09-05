@@ -23,7 +23,7 @@ class UserIdentity extends CUserIdentity {
         if ($funcLogado === null) { // usuário inválido
             $this->errorCode = self::ERROR_USERNAME_INVALID;
             $this->errorMessage = 'E-mail inválido.';
-        } else if ($funcLogado->senha != $this->password) { // senha inválida
+        } else if ($funcLogado->senha != md5($this->password)) { // senha inválida
             $this->errorCode = self::ERROR_PASSWORD_INVALID;
             $this->errorMessage = 'Senha inválida.';
         } else {

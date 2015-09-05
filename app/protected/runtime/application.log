@@ -3687,3 +3687,1027 @@ Stack trace:
 REQUEST_URI=/avaliacao360/app/index.php?r=admin/departamento/create
 HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/departamento/update&id=2
 ---
+2015/09/03 03:08:51 [error] [php] Undefined variable: departamentos (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\_form.php:61)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(869): FuncionarioController->renderFile()
+#1 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\update.php(17): FuncionarioController->renderPartial()
+#2 C:\xampp\php\yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\php\yii\framework\web\CBaseController.php(95): FuncionarioController->renderInternal()
+#4 C:\xampp\php\yii\framework\web\CController.php(869): FuncionarioController->renderFile()
+#5 C:\xampp\php\yii\framework\web\CController.php(782): FuncionarioController->renderPartial()
+#6 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php(121): FuncionarioController->render()
+#7 unknown(0): FuncionarioController->actionUpdate()
+#8 C:\xampp\php\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): FuncionarioController->runAction()
+#12 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): FuncionarioController->filterAccessControl()
+#15 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\php\yii\framework\web\CController.php(265): FuncionarioController->runActionWithFilters()
+#18 C:\xampp\php\yii\framework\web\CWebApplication.php(282): FuncionarioController->run()
+#19 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/update&id=1
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\_form.php (61)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\update.php (17)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (121)
+2015/09/03 03:10:35 [error] [php] Undefined variable: departamentos (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\_form.php:61)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(869): FuncionarioController->renderFile()
+#1 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\update.php(17): FuncionarioController->renderPartial()
+#2 C:\xampp\php\yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\php\yii\framework\web\CBaseController.php(95): FuncionarioController->renderInternal()
+#4 C:\xampp\php\yii\framework\web\CController.php(869): FuncionarioController->renderFile()
+#5 C:\xampp\php\yii\framework\web\CController.php(782): FuncionarioController->renderPartial()
+#6 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php(121): FuncionarioController->render()
+#7 unknown(0): FuncionarioController->actionUpdate()
+#8 C:\xampp\php\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): FuncionarioController->runAction()
+#12 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): FuncionarioController->filterAccessControl()
+#15 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\php\yii\framework\web\CController.php(265): FuncionarioController->runActionWithFilters()
+#18 C:\xampp\php\yii\framework\web\CWebApplication.php(282): FuncionarioController->run()
+#19 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/update&id=1
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\_form.php (61)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\update.php (17)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (121)
+2015/09/03 03:11:02 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (75)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/03 03:29:50 [error] [exception.CException] exception 'CException' with message 'A propriedade "Empresa.logradouro" não está definida.' in C:\xampp\php\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('logradouro')
+#1 C:\xampp\php\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('logradouro')
+#2 C:\xampp\php\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Empresa), 'logradouro')
+#3 C:\xampp\php\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Empresa), 'logradouro', Array)
+#4 C:\xampp\php\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Empresa), 'logradouro', Array)
+#5 [internal function]: CActiveForm->textField(Object(Empresa), 'logradouro', Array)
+#6 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(1293): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(1152): TbActiveForm->verticalGroup(Array, Object(Empresa), 'logradouro', Array)
+#8 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(389): TbActiveForm->customFieldGroupInternal(Array, Object(Empresa), 'logradouro', Array)
+#9 C:\xampp\htdocs\avaliacao360\app\protected\views\endereco\_form.php(12): TbActiveForm->textFieldGroup(Object(Empresa), 'logradouro', Array)
+#10 C:\xampp\php\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\php\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\php\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\avaliacao360\app\protected\views\empresa\create.php(16): CController->renderPartial('../endereco/_fo...', Array)
+#14 C:\xampp\php\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#15 C:\xampp\php\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#16 C:\xampp\php\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#17 C:\xampp\php\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#18 C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php(79): CController->render('create', Array)
+#19 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): EmpresaController->actionCreate()
+#20 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#21 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#22 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#23 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#24 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#25 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#26 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#27 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#28 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#29 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empresa/create')
+#30 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#31 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#32 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=empresa/create
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?
+---
+2015/09/04 00:33:01 [error] [exception.CException] exception 'CException' with message 'A propriedade "Endereco.nome" não está definida.' in C:\xampp\php\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('nome')
+#1 C:\xampp\php\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('nome')
+#2 C:\xampp\php\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Endereco), 'nome')
+#3 C:\xampp\php\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Endereco), 'nome', Array)
+#4 C:\xampp\php\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Endereco), 'nome', Array)
+#5 [internal function]: CActiveForm->textField(Object(Endereco), 'nome', Array)
+#6 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(1293): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(1152): TbActiveForm->verticalGroup(Array, Object(Endereco), 'nome', Array)
+#8 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(389): TbActiveForm->customFieldGroupInternal(Array, Object(Endereco), 'nome', Array)
+#9 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\_form.php(13): TbActiveForm->textFieldGroup(Object(Endereco), 'nome', Array)
+#10 C:\xampp\php\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\php\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\php\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\avaliacao360\app\protected\views\empresa\create.php(17): CController->renderPartial('../../modules/a...', Array)
+#14 C:\xampp\php\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#15 C:\xampp\php\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#16 C:\xampp\php\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#17 C:\xampp\php\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#18 C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php(81): CController->render('create', Array)
+#19 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): EmpresaController->actionCreate()
+#20 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#21 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#22 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#23 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#24 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#25 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#26 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#27 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#28 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#29 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empresa/create')
+#30 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#31 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#32 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=empresa/create
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=empresa/create
+---
+2015/09/04 00:42:34 [error] [php] Undefined index: funcLogado (C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php:89)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): EmpresaController->runAction()
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): EmpresaController->filterAccessControl()
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): EmpresaController->runActionWithFilters()
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): EmpresaController->run()
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=empresa/create
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (89)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 00:43:05 [error] [php] Undefined variable: departamentos (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\_form.php:61)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(869): EmpresaController->renderFile()
+#1 C:\xampp\htdocs\avaliacao360\app\protected\views\empresa\create.php(17): EmpresaController->renderPartial()
+#2 C:\xampp\php\yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\php\yii\framework\web\CBaseController.php(95): EmpresaController->renderInternal()
+#4 C:\xampp\php\yii\framework\web\CController.php(869): EmpresaController->renderFile()
+#5 C:\xampp\php\yii\framework\web\CController.php(782): EmpresaController->renderPartial()
+#6 C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php(118): EmpresaController->render()
+#7 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): EmpresaController->actionCreate()
+#8 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): EmpresaController->runAction()
+#10 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): EmpresaController->filterAccessControl()
+#13 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\php\yii\framework\web\CController.php(265): EmpresaController->runActionWithFilters()
+#16 C:\xampp\php\yii\framework\web\CWebApplication.php(282): EmpresaController->run()
+#17 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=empresa/create
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\_form.php (61)
+in C:\xampp\htdocs\avaliacao360\app\protected\views\empresa\create.php (17)
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (118)
+2015/09/04 12:48:51 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (96)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 12:48:51 [error] [php] Undefined index: funcLogado (C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php:97)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): EmpresaController->runAction()
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): EmpresaController->filterAccessControl()
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): EmpresaController->runActionWithFilters()
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): EmpresaController->run()
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=empresa/create
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (97)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 12:58:10 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (98)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 12:58:10 [error] [php] Undefined index: funcLogado (C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php:99)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): EmpresaController->runAction()
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): EmpresaController->filterAccessControl()
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): EmpresaController->runActionWithFilters()
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): EmpresaController->run()
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=empresa/create
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (99)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 12:58:22 [error] [php] Undefined variable: departamentos (C:\xampp\htdocs\avaliacao360\app\protected\views\empresa\_form.php:103)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(869): EmpresaController->renderFile()
+#1 C:\xampp\htdocs\avaliacao360\app\protected\views\empresa\create.php(19): EmpresaController->renderPartial()
+#2 C:\xampp\php\yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\php\yii\framework\web\CBaseController.php(95): EmpresaController->renderInternal()
+#4 C:\xampp\php\yii\framework\web\CController.php(869): EmpresaController->renderFile()
+#5 C:\xampp\php\yii\framework\web\CController.php(782): EmpresaController->renderPartial()
+#6 C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php(125): EmpresaController->render()
+#7 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): EmpresaController->actionCreate()
+#8 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): EmpresaController->runAction()
+#10 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): EmpresaController->filterAccessControl()
+#13 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\php\yii\framework\web\CController.php(265): EmpresaController->runActionWithFilters()
+#16 C:\xampp\php\yii\framework\web\CWebApplication.php(282): EmpresaController->run()
+#17 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=empresa/create
+in C:\xampp\htdocs\avaliacao360\app\protected\views\empresa\_form.php (103)
+in C:\xampp\htdocs\avaliacao360\app\protected\views\empresa\create.php (19)
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (125)
+2015/09/04 12:58:25 [error] [php] Undefined variable: departamentos (C:\xampp\htdocs\avaliacao360\app\protected\views\empresa\_form.php:103)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(869): EmpresaController->renderFile()
+#1 C:\xampp\htdocs\avaliacao360\app\protected\views\empresa\create.php(19): EmpresaController->renderPartial()
+#2 C:\xampp\php\yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\php\yii\framework\web\CBaseController.php(95): EmpresaController->renderInternal()
+#4 C:\xampp\php\yii\framework\web\CController.php(869): EmpresaController->renderFile()
+#5 C:\xampp\php\yii\framework\web\CController.php(782): EmpresaController->renderPartial()
+#6 C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php(125): EmpresaController->render()
+#7 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): EmpresaController->actionCreate()
+#8 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): EmpresaController->runAction()
+#10 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): EmpresaController->filterAccessControl()
+#13 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\php\yii\framework\web\CController.php(265): EmpresaController->runActionWithFilters()
+#16 C:\xampp\php\yii\framework\web\CWebApplication.php(282): EmpresaController->run()
+#17 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=empresa/create
+in C:\xampp\htdocs\avaliacao360\app\protected\views\empresa\_form.php (103)
+in C:\xampp\htdocs\avaliacao360\app\protected\views\empresa\create.php (19)
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (125)
+2015/09/04 12:59:03 [error] [php] Undefined variable: model (C:\xampp\htdocs\avaliacao360\app\protected\views\empresa\_form.php:102)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(869): EmpresaController->renderFile()
+#1 C:\xampp\htdocs\avaliacao360\app\protected\views\empresa\create.php(19): EmpresaController->renderPartial()
+#2 C:\xampp\php\yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\php\yii\framework\web\CBaseController.php(95): EmpresaController->renderInternal()
+#4 C:\xampp\php\yii\framework\web\CController.php(869): EmpresaController->renderFile()
+#5 C:\xampp\php\yii\framework\web\CController.php(782): EmpresaController->renderPartial()
+#6 C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php(125): EmpresaController->render()
+#7 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): EmpresaController->actionCreate()
+#8 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): EmpresaController->runAction()
+#10 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): EmpresaController->filterAccessControl()
+#13 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\php\yii\framework\web\CController.php(265): EmpresaController->runActionWithFilters()
+#16 C:\xampp\php\yii\framework\web\CWebApplication.php(282): EmpresaController->run()
+#17 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=empresa/create
+in C:\xampp\htdocs\avaliacao360\app\protected\views\empresa\_form.php (102)
+in C:\xampp\htdocs\avaliacao360\app\protected\views\empresa\create.php (19)
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (125)
+2015/09/04 13:01:03 [error] [php] include(ValidaCPFCNPJ.php): failed to open stream: No such file or directory (C:\xampp\php\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\avaliacao360\app\protected\models\Empresa.php(134): spl_autoload_call()
+#1 C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php(67): Empresa->validaCpfCnpj()
+#2 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): EmpresaController->actionCreate()
+#3 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): EmpresaController->runAction()
+#5 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#7 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): EmpresaController->filterAccessControl()
+#8 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#9 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\php\yii\framework\web\CController.php(265): EmpresaController->runActionWithFilters()
+#11 C:\xampp\php\yii\framework\web\CWebApplication.php(282): EmpresaController->run()
+#12 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=empresa/create
+in C:\xampp\htdocs\avaliacao360\app\protected\models\Empresa.php (134)
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (67)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:03:19 [error] [php] require_once(./class-valida-cpf-cnpj.php): failed to open stream: No such file or directory (C:\xampp\htdocs\avaliacao360\app\protected\models\Empresa.php:5)
+Stack trace:
+#0 unknown(0): autoload()
+#1 C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php(63): spl_autoload_call()
+#2 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): EmpresaController->actionCreate()
+#3 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): EmpresaController->runAction()
+#5 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#7 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): EmpresaController->filterAccessControl()
+#8 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#9 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\php\yii\framework\web\CController.php(265): EmpresaController->runActionWithFilters()
+#11 C:\xampp\php\yii\framework\web\CWebApplication.php(282): EmpresaController->run()
+#12 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=empresa/create
+in C:\xampp\htdocs\avaliacao360\app\protected\models\Empresa.php (5)
+in C:\xampp\htdocs\avaliacao360\app\protected\models\Empresa.php (5)
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (63)
+2015/09/04 13:28:08 [error] [php] require_once(./class-valida-cpf-cnpj.php): failed to open stream: No such file or directory (C:\xampp\htdocs\avaliacao360\app\protected\models\Empresa.php:5)
+Stack trace:
+#0 unknown(0): autoload()
+#1 C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php(63): spl_autoload_call()
+#2 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): EmpresaController->actionCreate()
+#3 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): EmpresaController->runAction()
+#5 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#7 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): EmpresaController->filterAccessControl()
+#8 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#9 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\php\yii\framework\web\CController.php(265): EmpresaController->runActionWithFilters()
+#11 C:\xampp\php\yii\framework\web\CWebApplication.php(282): EmpresaController->run()
+#12 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=empresa/create
+in C:\xampp\htdocs\avaliacao360\app\protected\models\Empresa.php (5)
+in C:\xampp\htdocs\avaliacao360\app\protected\models\Empresa.php (5)
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (63)
+2015/09/04 13:29:02 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (91)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:29:02 [error] [php] Undefined index: funcLogado (C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php:92)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): EmpresaController->runAction()
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): EmpresaController->filterAccessControl()
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): EmpresaController->runActionWithFilters()
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): EmpresaController->run()
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=empresa/create
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (92)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:32:11 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (91)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:32:11 [error] [php] Undefined variable: funcLogado (C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php:92)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): EmpresaController->runAction()
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): EmpresaController->filterAccessControl()
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): EmpresaController->runActionWithFilters()
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): EmpresaController->run()
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=empresa/create
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (92)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:33:27 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (91)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:35:04 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (91)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:35:34 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (91)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:35:50 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (91)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:37:57 [warning] [application] Failed to set unsafe attribute "estado" of "Endereco".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (84)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:37:57 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (97)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:38:38 [warning] [application] Failed to set unsafe attribute "estado" of "Endereco".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (84)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:38:38 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (97)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:38:49 [warning] [application] Failed to set unsafe attribute "estado" of "Endereco".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (84)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:38:49 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (97)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:39:02 [warning] [application] Failed to set unsafe attribute "estado" of "Endereco".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (84)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:39:02 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (97)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:39:11 [warning] [application] Failed to set unsafe attribute "estado" of "Endereco".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (84)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:39:11 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (97)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:39:38 [warning] [application] Failed to set unsafe attribute "estado" of "Endereco".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (84)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:39:38 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (97)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:39:49 [warning] [application] Failed to set unsafe attribute "estado" of "Endereco".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (84)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:39:49 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (97)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:54:28 [warning] [application] Failed to set unsafe attribute "estado" of "Endereco".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (74)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:54:28 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:55:22 [warning] [application] Failed to set unsafe attribute "estado" of "Endereco".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (74)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:55:22 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:55:44 [warning] [application] Failed to set unsafe attribute "estado" of "Endereco".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (74)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:55:44 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:57:13 [warning] [application] Failed to set unsafe attribute "estado" of "Endereco".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (74)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:57:13 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:57:25 [warning] [application] Failed to set unsafe attribute "estado" of "Endereco".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (74)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:57:25 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:57:44 [warning] [application] Failed to set unsafe attribute "estado" of "Endereco".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (74)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:57:44 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:58:36 [warning] [application] Failed to set unsafe attribute "estado" of "Endereco".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (74)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:58:36 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:58:45 [warning] [application] Failed to set unsafe attribute "estado" of "Endereco".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (74)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:58:45 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:59:06 [warning] [application] Failed to set unsafe attribute "estado" of "Endereco".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (74)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 13:59:06 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:00:14 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:00:35 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:00:43 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:22:56 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:25:51 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:25:56 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login requerido' in C:\xampp\php\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#2 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('getCidades')
+#9 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('endereco/getCid...')
+#10 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=endereco/getCidades
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=empresa/create
+---
+2015/09/04 14:26:16 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:26:21 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login requerido' in C:\xampp\php\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#2 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('getCidades')
+#9 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('endereco/getCid...')
+#10 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=endereco/getCidades
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=empresa/create
+---
+2015/09/04 14:31:15 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:31:19 [error] [php] Undefined index: Endereco (C:\xampp\htdocs\avaliacao360\app\protected\controllers\EnderecoController.php:147)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): EnderecoController->runAction()
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): EnderecoController->filterAccessControl()
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): EnderecoController->runActionWithFilters()
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): EnderecoController->run()
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=endereco/getCidades
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EnderecoController.php (147)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:33:00 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:33:02 [error] [php] Undefined index: Endereco (C:\xampp\htdocs\avaliacao360\app\protected\controllers\EnderecoController.php:147)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): EnderecoController->runAction()
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): EnderecoController->filterAccessControl()
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): EnderecoController->runActionWithFilters()
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): EnderecoController->run()
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=endereco/getCidades
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EnderecoController.php (147)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:33:49 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:33:51 [error] [php] Undefined index: Endereco (C:\xampp\htdocs\avaliacao360\app\protected\controllers\EnderecoController.php:147)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): EnderecoController->runAction()
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): EnderecoController->filterAccessControl()
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): EnderecoController->runActionWithFilters()
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): EnderecoController->run()
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=endereco/getCidades
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EnderecoController.php (147)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:34:19 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:34:40 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:34:42 [error] [php] Undefined index: Endereco (C:\xampp\htdocs\avaliacao360\app\protected\controllers\EnderecoController.php:147)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): EnderecoController->runAction()
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): EnderecoController->filterAccessControl()
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): EnderecoController->runActionWithFilters()
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): EnderecoController->run()
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=endereco/getCidades
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EnderecoController.php (147)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:35:01 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:35:19 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:37:08 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:39:03 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'codigo' in 'where clause'. A declaração SQL executada foi: SELECT nome FROM cidade WHERE codigo='2'.
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EnderecoController.php (148)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:39:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'codigo' in 'where clause'. The SQL statement executed was: SELECT nome FROM cidade WHERE codigo='2'' in C:\xampp\php\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', 3, Array)
+#1 C:\xampp\htdocs\avaliacao360\app\protected\controllers\EnderecoController.php(148): CDbCommand->queryRow(false)
+#2 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): EnderecoController->actionGetCidades()
+#3 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('getCidades')
+#12 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('endereco/getCid...')
+#13 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=endereco/getCidades
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=empresa/create
+---
+2015/09/04 14:42:11 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:44:29 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:45:26 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:51:51 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:51:54 [error] [php] Undefined index: uf (C:\xampp\htdocs\avaliacao360\app\protected\controllers\EnderecoController.php:147)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): EnderecoController->runAction()
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): EnderecoController->filterAccessControl()
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): EnderecoController->runActionWithFilters()
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): EnderecoController->run()
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=endereco/getCidades
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EnderecoController.php (147)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:52:13 [error] [php] Undefined index: uf (C:\xampp\htdocs\avaliacao360\app\protected\controllers\EnderecoController.php:147)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): EnderecoController->runAction()
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): EnderecoController->filterAccessControl()
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): EnderecoController->runActionWithFilters()
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): EnderecoController->run()
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=endereco/getCidades
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EnderecoController.php (147)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:52:26 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:55:42 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:56:19 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:57:14 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 14:57:59 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 15:01:54 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 15:02:32 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 15:02:34 [error] [php] Undefined index: nome (C:\xampp\htdocs\avaliacao360\app\protected\controllers\EnderecoController.php:150)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): EnderecoController->runAction()
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): EnderecoController->filterAccessControl()
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): EnderecoController->runActionWithFilters()
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): EnderecoController->run()
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=endereco/getCidades
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EnderecoController.php (150)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 15:02:45 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/04 15:03:03 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 16:20:37 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 16:23:10 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 16:23:44 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 16:26:02 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 16:36:36 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 16:36:39 [error] [php] Undefined index: uf (C:\xampp\htdocs\avaliacao360\app\protected\controllers\EnderecoController.php:147)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): EnderecoController->runAction()
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): EnderecoController->filterAccessControl()
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): EnderecoController->runActionWithFilters()
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): EnderecoController->run()
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=endereco/getCidades
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EnderecoController.php (147)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 16:37:51 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 16:38:37 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 16:40:22 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 16:40:46 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 16:41:03 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 16:44:58 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 16:53:48 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 16:54:32 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 17:01:55 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 17:06:00 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 17:06:24 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 17:06:38 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 17:11:36 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 17:11:52 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 17:22:37 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 17:29:03 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 17:30:11 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 17:31:07 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 17:31:54 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 17:32:37 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 17:33:32 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 17:34:00 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 18:33:17 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 18:34:29 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 18:35:03 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 18:36:11 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 18:38:38 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 18:39:18 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 18:40:03 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 18:51:13 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 18:51:20 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 18:51:57 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (78)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 18:56:30 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (76)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 18:57:00 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (76)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 18:57:24 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (76)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 18:58:59 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (76)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 18:59:13 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (76)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 18:59:13 [error] [exception.CException] exception 'CException' with message 'Funcionario and its behaviors do not have a method or closure named "pesqPorEmail".' in C:\xampp\php\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('pesqPorEmail', Array)
+#1 C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php(86): CActiveRecord->__call('pesqPorEmail', Array)
+#2 C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php(86): Funcionario->pesqPorEmail('leoccuit@gmail....')
+#3 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): EmpresaController->actionCreate()
+#4 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empresa/create')
+#14 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=empresa/create
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=empresa/create
+---
+2015/09/05 19:00:15 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (76)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 19:00:15 [error] [exception.CException] exception 'CException' with message 'Funcionario and its behaviors do not have a method or closure named "pesqPorEmail".' in C:\xampp\php\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('pesqPorEmail', Array)
+#1 C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php(86): CActiveRecord->__call('pesqPorEmail', Array)
+#2 C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php(86): Funcionario->pesqPorEmail('leoccuit@gmail....')
+#3 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): EmpresaController->actionCreate()
+#4 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empresa/create')
+#14 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=empresa/create
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=empresa/create
+---
+2015/09/05 19:01:46 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (76)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 19:01:55 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (76)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 19:02:24 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (76)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 19:02:32 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (76)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 19:02:32 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`avaliacao360`.`endereco`, CONSTRAINT `fk_endereco_cidade1` FOREIGN KEY (`cidade_id`) REFERENCES `cidade` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). A declaração SQL executada foi: INSERT INTO `endereco` (`logradouro`, `numero`, `complemento`, `bairro`, `cep`, `cidade_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5).
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (93)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 19:02:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`avaliacao360`.`endereco`, CONSTRAINT `fk_endereco_cidade1` FOREIGN KEY (`cidade_id`) REFERENCES `cidade` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `endereco` (`logradouro`, `numero`, `complemento`, `bairro`, `cep`, `cidade_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5)' in C:\xampp\php\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\php\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php(93): CActiveRecord->save()
+#3 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): EmpresaController->actionCreate()
+#4 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empresa/create')
+#14 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=empresa/create
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=empresa/create
+---
+2015/09/05 19:08:39 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (76)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 19:09:10 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (76)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 19:10:14 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (76)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 19:11:52 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (76)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 19:12:00 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (76)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 19:12:20 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (76)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 19:12:40 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (76)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/05 19:12:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php:186
+Stack trace:
+#0 C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php(51): EmpresaController->loadModel('21')
+#1 [internal function]: EmpresaController->actionView('21')
+#2 C:\xampp\php\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(EmpresaController), Array)
+#3 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(EmpresaController), Object(ReflectionMethod), Array)
+#4 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empresa/view')
+#14 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=empresa/view&id=21
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=empresa/create
+---
