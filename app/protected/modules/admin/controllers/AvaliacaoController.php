@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 require_once 'Funcoes.php';
 
@@ -25,12 +26,14 @@ class AvaliacaoController extends Controller {
      * @return array access control rules
      */
     public function accessRules() {
-        $empresa_id = $_SESSION['funcLogado']->empresa_id;
-        
         return array(
             array('allow',
-                'actions' => array('index', 'create', 'admin', 'update', 'delete'),
-                'users' => Funcoes::pesqEmailFuncAdmin($empresa_id),
+                'actions' => array('index', 'create', 'update', 'delete', 'view', 'admin'),
+                'roles' => array('admin'),
+            ),
+            array('allow',
+                'actions' => array('view', 'admin'),
+                'roles' => array('chefeDepartamento', 'funcionario'),
             ),
             array('deny', // deny all users
                 'users' => array('*'),
@@ -56,7 +59,7 @@ class AvaliacaoController extends Controller {
         $model = new Avaliacao;
         $funcLogado = $_SESSION['funcLogado'];
         $nomesTodosFunc = Funcionario::pesqTodosNomes($funcLogado->empresa_id);
-        $questionarios = Questionario::model()->findAllDescricao();
+        $questionarios = Questionario::model()->findAllDescricao($funcLogado->empresa_id);
 
         /** organiza o nomes dos funcionários a serem avaliados,
          * retirando o primeiro elemento "selecione" e renumerando os 
@@ -141,6 +144,12 @@ class AvaliacaoController extends Controller {
      * Lists all models.
      */
     public function actionIndex() {
+        echo 'id usuário: ' . Yii::app()->user->id;
+        if (Yii::app()->authManager->checkAccess('viewAvaliacao', Yii::app()->user->id))
+            echo 'tem acesso';
+        else
+            echo 'não tem acesso';
+        exit();
         $dataProvider = new CActiveDataProvider('Avaliacao');
         $this->render('index', array(
             'dataProvider' => $dataProvider,

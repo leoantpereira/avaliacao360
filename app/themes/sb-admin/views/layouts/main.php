@@ -153,38 +153,56 @@
                         <li>
                             <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Gráficos</a>
                         </li>
-                        <li>
+                        <li <?php if (!Yii::app()->authManager->checkAccess('viewAvaliacao', Yii::app()->user->id)) { ?> 
+                            style="display: none;"
+                            <?php } ?>>
                             <a href="javascript:;" data-toggle="collapse" data-target="#avaliacoes"><i class="fa fa-fw fa-table"></i> Avaliação de Desempenho<i class="fa fa-fw fa-caret-down"></i></a>
                             <ul id="avaliacoes" class="collapse">
-                                <li>
+                                <li <?php if (!Yii::app()->authManager->checkAccess('createAvaliacao', Yii::app()->user->id)) { ?> 
+                                        style="display: none;"
+                                    <?php } ?>>
                                     <a href="<?php echo Yii::app()->createUrl('admin/avaliacao/create'); ?>">Cadastrar</a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo Yii::app()->createUrl('admin/avaliacao/admin'); ?>">Gerenciar</a>
                                 </li>
                             </ul>
                         </li>
-                        <li>
+                        <li <?php if (!Yii::app()->authManager->checkAccess('viewQuestionario', Yii::app()->user->id)) { ?> 
+                                style="display: none;"
+                            <?php } ?>>
                             <a href="javascript:;" data-toggle="collapse" data-target="#questionarios"><i class="fa fa-fw fa-edit"></i> Questionários <i class="fa fa-fw fa-caret-down"></i></a>
                             <ul id="questionarios" class="collapse">
-                                <li>
+                                <li <?php if (!Yii::app()->authManager->checkAccess('createQuestionario', Yii::app()->user->id)) { ?> 
+                                        style="display: none;"
+                                    <?php } ?>>
                                     <a href="<?php echo Yii::app()->createUrl('admin/questionario/create'); ?>">Cadastrar Questionário</a>
                                 </li>
-                                <li>
+                                <li <?php if (!Yii::app()->authManager->checkAccess('createQuestao', Yii::app()->user->id)) { ?> 
+                                        style="display: none;"
+                                    <?php } ?>>
                                     <a href="<?php echo Yii::app()->createUrl('admin/questao/create'); ?>">Cadastrar Questão</a>
                                 </li>
-                                <li>
-                                    <a href="<?php echo Yii::app()->createUrl('admin/questionario/#'); ?>">Responder Questionário</a>
+                                <li <?php if (!Yii::app()->authManager->checkAccess('responderQuestionario', Yii::app()->user->id)) { ?> 
+                                        style="display: none;"
+                                    <?php } ?>>
+                                    <a href="<?php echo Yii::app()->createUrl('admin/questionario/responder'); ?>">Responder Questionário</a>
                                 </li>
-                                <li>
+                                <li <?php if (!Yii::app()->authManager->checkAccess('viewQuestionario', Yii::app()->user->id)) { ?> 
+                                        style="display: none;"
+                                    <?php } ?>>
                                     <a href="<?php echo Yii::app()->createUrl('admin/questionario/admin'); ?>">Gerenciar Questionários</a>
                                 </li>
-                                <li>
+                                <li <?php if (!Yii::app()->authManager->checkAccess('adminQuestao', Yii::app()->user->id)) { ?> 
+                                        style="display: none;"
+                                    <?php } ?>>
                                     <a href="<?php echo Yii::app()->createUrl('admin/questao/admin'); ?>">Gerenciar Questões</a>
                                 </li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
-                        </li>
-                        <li>
+                        <li <?php if (!Yii::app()->authManager->checkAccess('adminDepartamento', Yii::app()->user->id)) { ?> 
+                                style="display: none;"
+                            <?php } ?>>
                             <a href="javascript:;" data-toggle="collapse" data-target="#departamentos"><span class="fa fa-fw fa-wrench" aria-hidden="true"></span> Departamentos<i class="fa fa-fw fa-caret-down"></i></a>
                             <ul id="departamentos" class="collapse">
                                 <li>
@@ -195,22 +213,22 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
+                        <li <?php if (!Yii::app()->authManager->checkAccess('viewFuncionario', Yii::app()->user->id)) { ?> 
+                                style="display: none;"
+                            <?php } ?>>
                             <a href="javascript:;" data-toggle="collapse" data-target="#demo"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Funcionários <i class="fa fa-fw fa-caret-down"></i></a>
                             <ul id="demo" class="collapse">
-                                <li>
+                                <li <?php if (!Yii::app()->authManager->checkAccess('createFuncionario', Yii::app()->user->id)) { ?> 
+                                        style="display: none;"
+                                    <?php } ?>>
                                     <a href="<?php echo Yii::app()->createUrl('admin/funcionario/create'); ?>">Cadastrar</a>
                                 </li>
-                                <li>
+                                <li <?php if (!Yii::app()->authManager->checkAccess('viewFuncionario', Yii::app()->user->id)) { ?> 
+                                        style="display: none;"
+                                    <?php } ?>>
                                     <a href="<?php echo Yii::app()->createUrl('admin/funcionario/admin'); ?>">Gerenciar</a>
                                 </li>
                             </ul>
-                        </li>
-                        <li>
-                            <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
-                        </li>
-                        <li>
-                            <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
                         </li>
                     </ul>
                 </div>

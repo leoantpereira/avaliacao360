@@ -34,6 +34,7 @@ class AvaliacaoHasFuncionario extends CActiveRecord {
             array('idAvaliacao, idFuncAvaliado, idQuestao', 'required'),
             array('idAvaliacao, idFuncAvaliado, idQuestao', 'numerical', 'integerOnly' => true),
             array('resposta', 'length', 'max' => 1),
+            array('idAvaliacao', 'numerical', 'min' => 1, 'tooSmall' => 'Selecione a avaliação.'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
             array('idAvaliacao, idFuncAvaliado, idQuestao, resposta, dataHora', 'safe', 'on' => 'search'),
@@ -58,11 +59,11 @@ class AvaliacaoHasFuncionario extends CActiveRecord {
      */
     public function attributeLabels() {
         return array(
-            'idAvaliacao' => 'Id Avaliacao',
-            'idFuncAvaliado' => 'Id Func Avaliado',
-            'idQuestao' => 'Id Questao',
+            'idAvaliacao' => 'Questionário',
+            'idFuncAvaliado' => 'Funcionário Avaliado',
+            'idQuestao' => 'Questão',
             'resposta' => 'Resposta',
-            'dataHora' => 'Data Hora',
+            'dataHora' => 'Data',
         );
     }
 

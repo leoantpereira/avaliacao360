@@ -14,7 +14,12 @@ $form = $this->beginWidget('booster.widgets.TbActiveForm', array(
 
 <?php echo $form->textFieldGroup($model, 'email', array('widgetOptions' => array('htmlOptions' => array('class' => 'span5', 'maxlength' => 100)))); ?>
 
-<?php echo $form->passwordFieldGroup($model, 'senha', array('widgetOptions' => array('htmlOptions' => array('class' => 'span5', 'maxlength' => 10)))); ?>
+<?php
+// verifica se está cadastrando novo usuário
+if ($model->isNewRecord) {
+    echo $form->passwordFieldGroup($model, 'senha', array('widgetOptions' => array('htmlOptions' => array('class' => 'span5', 'maxlength' => 10))));
+}
+?>
 
 <?php
 // verifica se está cadastrando novo usuário
@@ -43,8 +48,7 @@ echo $form->dropDownListGroup(
         'data' => array(
             'Selecione', 'Chefe de departamento', 'Funcionário'
         ),
-        'htmlOptions' => array(
-        ),
+        'htmlOptions' => array(),
     ),
         )
 );
@@ -53,20 +57,20 @@ echo $form->dropDownListGroup(
 <?php
 // Select para escolha do departamento
 echo $form->dropDownListGroup(
-        $model, 'departamento', array(
+        $model, 'departamento_id', array(
     'wrapperHtmlOptions' => array(
         'class' => 'col-sm-5',
     ),
     'widgetOptions' => array(
         'data' => $departamentos,
         'htmlOptions' => array(
-        ),
+            'selected' => 'selected',),
     ),
         )
 );
 ?>
 
-<?php echo $form->fileFieldGroup($model, 'foto', array('widgetOptions' => array('htmlOptions' => array('class' => 'span5', 'maxlength' => 100)))); ?>
+<?php echo $form->fileFieldGroup($model, 'foto', array('widgetOptions' => array('htmlOptions' => array('class' => 'span5', 'maxlength' => 100)))); ?> 
 
 <div class="form-actions">
     <?php

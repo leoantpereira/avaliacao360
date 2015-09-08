@@ -14,7 +14,10 @@
  * @property Empresa $empresa
  */
 class Questionario extends CActiveRecord {
-
+    
+    //variável temporária
+    public $idFuncAvaliado;
+    
     /**
      * @return string the associated database table name
      */
@@ -29,7 +32,7 @@ class Questionario extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('descricao, empresa_id', 'required'),
+            array('descricao, empresa_id', 'required', 'on' => 'create'),
             array('empresa_id', 'numerical', 'integerOnly' => true),
             array('descricao', 'length', 'max' => 500),
             // The following rule is used by search().
@@ -56,9 +59,10 @@ class Questionario extends CActiveRecord {
      */
     public function attributeLabels() {
         return array(
-            'id' => 'Número',
+            'id' => 'Questionário',
             'descricao' => 'Descrição',
             'empresa_id' => 'Empresa',
+            'idFuncAvaliado' => 'Funcionário Avaliado',
         );
     }
 

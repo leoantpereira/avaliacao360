@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 require_once 'Funcoes.php';
 
 class FuncionarioController extends Controller {
@@ -32,17 +33,13 @@ class FuncionarioController extends Controller {
      */
     public function accessRules() {
         return array(
-            array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('index', 'view', 'admin', 'delete'),
-                'users' => array('*'),
+            array('allow',
+                'actions' => array('view', 'admin'),
+                'roles' => array('chefeDepartamento'),
             ),
-            array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('create', 'update'),
-                'users' => array('@'),
-            ),
-            array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete'),
-                'users' => array('admin'),
+            array('allow',
+                'actions' => array('create', 'update', 'delete', 'view', 'admin', 'index'),
+                'roles' => array('admin')
             ),
             array('deny', // deny all users
                 'users' => array('*'),
@@ -79,7 +76,7 @@ class FuncionarioController extends Controller {
 
             if ($model->validate()) {
                 $model->verificaSenhasCadastro($model);
-                if ($model->pesqPorEmail($model->email)) {
+                if (Funcionario::model()->findByAttributes(array('email' => $model->email))) {
                     $model->addError('email', 'E-mail já existe.');
                 }
                 if (!$model->getErrors()) {
@@ -87,6 +84,7 @@ class FuncionarioController extends Controller {
                         $model->salvaImagem($model);
                     }
                     if ($model->save()) {
+                        Funcionario::model()->setaAutorizacao($model);
                         $this->redirect(array('view', 'id' => $model->id));
                     }
                 }
@@ -106,6 +104,7 @@ class FuncionarioController extends Controller {
      */
     public function actionUpdate($id) {
         $model = $this->loadModel($id);
+        $departamentos = Departamento::model()->pesqTodosNomes($_SESSION['funcLogado']->empresa_id);
 
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
@@ -118,6 +117,7 @@ class FuncionarioController extends Controller {
 
         $this->render('update', array(
             'model' => $model,
+            'departamentos' => $departamentos,
         ));
     }
 
@@ -139,21 +139,17 @@ class FuncionarioController extends Controller {
     }
 
     /**
-     * Lists all models.
-     */
-    public function actionIndex() {
-        $dataProvider = new CActiveDataProvider('Funcionario');
-        $this->render('index', array(
-            'dataProvider' => $dataProvider,
-        ));
-    }
-
-    /**
      * Manages all models.
      */
     public function actionAdmin() {
         $model = new Funcionario('search');
         $model->unsetAttributes();  // clear any default values
+        $funcLogado = $_SESSION['funcLogado'];
+        $model->empresa_id = $funcLogado->empresa_id;
+               
+        if ($funcLogado->permissao == USER_CHEFE_DEPARTAMENTO)
+            $model->departamento_id = $funcLogado->departamento_id;
+
         if (isset($_GET['Funcionario']))
             $model->attributes = $_GET['Funcionario'];
 
@@ -171,6 +167,8 @@ class FuncionarioController extends Controller {
         $model = Funcionario::model()->findByPk($id);
         if ($model === null)
             throw new CHttpException(404, 'The requested page does not exist.');
+        else if ($model->empresa_id != $_SESSION['funcLogado']->empresa_id)
+            throw new CHttpException(401, 'Você não está autorizado a realizar esta operação.');
         return $model;
     }
 

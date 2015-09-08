@@ -24,9 +24,13 @@ class QuestaoController extends Controller {
      */
     public function accessRules() {
         return array(
-            array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('create', 'index', 'view', 'admin', 'update'),
-                'users' => array('@'),
+            array('allow',
+                'actions' => array('create', 'index', 'view', 'admin', 'update', 'delete'),
+                'roles' => array('admin'),
+            ),
+            array('allow',
+                'actions' => array('view', 'admin', 'update'),
+                'roles' => array('chefeDepartamento', 'funcionario'),
             ),
             array('deny', // deny all users
                 'users' => array('*'),

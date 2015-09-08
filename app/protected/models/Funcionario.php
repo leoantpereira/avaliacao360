@@ -16,22 +16,19 @@ define('USER_ADMIN', 3);
  * @property integer $permissao
  * @property string $foto
  * @property integer $empresa_id
+ * @property integer $departamento_id
  *
  * The followings are the available model relations:
  * @property Avaliacao[] $avaliacaos
- * @property Avaliacao[] $avaliacaos1
  * @property Empresa $empresa
- * @property Departamento[] $departamentos
  */
 class Funcionario extends CActiveRecord {
 
     public $repetirSenha;
-    public $departamento; // colocada provisioriamente
 
     /**
      * @return string the associated database table name
      */
-
     public function tableName() {
         return 'funcionario';
     }
@@ -43,12 +40,12 @@ class Funcionario extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('nome, email, senha, permissao, repetirSenha', 'required'),
+            array('nome, email, senha, permissao, repetirSenha, departamento_id', 'required'),
             array('permissao, empresa_id', 'numerical', 'integerOnly' => true),
             array('nome, email, foto', 'length', 'max' => 100),
             array('email', 'email'),
             array('permissao', 'numerical', 'min' => 1, 'tooSmall' => 'Selecione a permissão.'),
-            array('departamento', 'numerical', 'min' => 1, 'tooSmall' => 'Selecione o departamento.'),
+            array('departamento_id', 'numerical', 'min' => 1, 'tooSmall' => 'Selecione o departamento.'),
             array('senha', 'length', 'min' => 6, 'max' => 10),
             array('foto', 'file', 'types' => 'jpg, gif, png', 'allowEmpty' => true),
             // The following rule is used by search().
@@ -67,7 +64,6 @@ class Funcionario extends CActiveRecord {
             'avaliacaos' => array(self::HAS_MANY, 'Avaliacao', 'idFuncAvaliado'),
             'avaliacaos1' => array(self::HAS_MANY, 'Avaliacao', 'idAvaliador'),
             'empresa' => array(self::BELONGS_TO, 'Empresa', 'empresa_id'),
-            'departamentos' => array(self::MANY_MANY, 'Departamento', 'funcionario_has_departamento(funcionario_id, departamento_id)'),
         );
     }
 
@@ -83,6 +79,7 @@ class Funcionario extends CActiveRecord {
             'permissao' => 'Permissão',
             'foto' => 'Foto',
             'empresa_id' => 'Empresa',
+            'departamento_id' => 'Departamento',
         );
     }
 
@@ -110,7 +107,8 @@ class Funcionario extends CActiveRecord {
         $criteria->compare('permissao', $this->permissao);
         $criteria->compare('foto', $this->foto, true);
         $criteria->compare('empresa_id', $this->empresa_id);
-
+        $criteria->compare('departamento_id', $this->departamento_id);
+        
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));
@@ -139,6 +137,12 @@ class Funcionario extends CActiveRecord {
         return $nomesTodosFunc;
     }
 
+    public static function verificaUserAdmin($funcionario) {
+        if ($funcionario->permissao == USER_ADMIN)
+            return array($funcionario->email);
+        return array(null);
+    }
+
     /**
      * Verifica se o usuário digitou as senhas iguais nos dois campos na hora do cadastro.
      * 
@@ -165,6 +169,147 @@ class Funcionario extends CActiveRecord {
         $nomeArquivo = str_shuffle($nomeFoto . $numeros) . '.' . $extensaoFoto;
         $model->foto->saveAs($path . $nomeArquivo);
         $model->foto = $nomeArquivo;
+    }
+
+    public static function setaAutorizacao($funcionario) {
+        $auth = Yii::app()->authManager;
+
+        //Funcionario::model()->criaAutorizacoes();
+
+        if ($funcionario->permissao == USER_ADMIN)
+            $auth->assign('admin', $funcionario->id);
+        else if ($funcionario->permissao == USER_CHEFE_DEPARTAMENTO)
+            $auth->assign('chefeDepartamento', $funcionario->id);
+        else
+            $auth->assign('funcionario', $funcionario->id);
+    }
+
+    public static function criaAutorizacoes() {
+        $auth = Yii::app()->authManager;
+
+        // funcionários
+        $auth->createOperation('createFuncionario', 'Cadastro de funcionário.');
+        $auth->createOperation('viewFuncionario', 'Visualização de funcionário.');
+        $auth->createOperation('deleteFuncionario', 'Exclusão de funcionário.');
+        $auth->createOperation('adminFuncionario', 'Área administrativa de funcionários.');
+        $auth->createOperation('updateFuncionario', 'Alteração de funcionário.');
+        // avaliações
+        $auth->createOperation('createAvaliacao', 'Cadastro de avaliação.');
+        $auth->createOperation('viewAvaliacao', 'Visualização de avaliação.');
+        $auth->createOperation('deleteAvaliacao', 'Exclusão de avaliação.');
+        $auth->createOperation('adminAvaliacao', 'Área administrativa de avaliações.');
+        $auth->createOperation('updateAvaliacao', 'Alteração de avaliação.');
+        // departamentos
+        $auth->createOperation('createDepartamento', 'Cadastro de departamento.');
+        $auth->createOperation('viewDepartamento', 'Visualização de departamento.');
+        $auth->createOperation('deleteDepartamento', 'Exclusão de departamento.');
+        $auth->createOperation('adminDepartamento', 'Área administrativa de departamentos.');
+        $auth->createOperation('updateDepartamento', 'Alteração de departamento.');
+        // questões
+        $auth->createOperation('createQuestao', 'Cadastro de questão.');
+        $auth->createOperation('viewQuestao', 'Visualização de questão.');
+        $auth->createOperation('deleteQuestao', 'Exclusão de questão.');
+        $auth->createOperation('adminQuestao', 'Área administrativa de questões.');
+        $auth->createOperation('updateQuestao', 'Alteração de questão.');
+        // questionários
+        $auth->createOperation('createQuestionario', 'Cadastro de questionário.');
+        $auth->createOperation('viewQuestionario', 'Visualização de questionário.');
+        $auth->createOperation('deleteQuestionario', 'Exclusão de questionário.');
+        $auth->createOperation('adminQuestionario', 'Área administrativa de questionários.');
+        $auth->createOperation('updateQuestionario', 'Alteração de questionário.');
+        $auth->createOperation('responderQuestionario', 'Resposta a um questionário.');
+
+        $task = $auth->createTask('tarefaEdicao', 'Esta é uma tarefa de edição.');
+        $task->addChild('updateFuncionario');
+        $task->addChild('updateAvaliacao');
+        $task->addChild('updateDepartamento');
+        $task->addChild('updateQuestao');
+        $task->addChild('updateQuestionario');
+
+        $task = $auth->createTask('tarefaCriacao', 'Esta é uma tarefa de criação.');
+        $task->addChild('createFuncionario');
+        $task->addChild('createAvaliacao');
+        $task->addChild('createDepartamento');
+        $task->addChild('createQuestao');
+        $task->addChild('createQuestionario');
+
+        $task = $auth->createTask('tarefaVisualizacao', 'Esta é uma tarefa de visualização.');
+        $task->addChild('viewFuncionario');
+        $task->addChild('viewAvaliacao');
+        $task->addChild('viewDepartamento');
+        $task->addChild('viewQuestao');
+        $task->addChild('viewQuestionario');
+
+        $task = $auth->createTask('tarefaAdministracao', 'Esta é uma tarefa de administração.');
+        $task->addChild('adminFuncionario');
+        $task->addChild('adminAvaliacao');
+        $task->addChild('adminDepartamento');
+        $task->addChild('adminQuestao');
+        $task->addChild('adminQuestionario');
+
+        $task = $auth->createTask('tarefaExclusao', 'Esta é uma tarefa de exclusão.');
+        $task->addChild('deleteFuncionario');
+        $task->addChild('deleteAvaliacao');
+        $task->addChild('deleteDepartamento');
+        $task->addChild('deleteQuestao');
+        $task->addChild('deleteQuestionario');
+
+        $task = $auth->createTask('tarefaResponder', 'Esta é uma tarefa de resposta.');
+        $task->addChild('responderQuestionario');
+
+        $role = $auth->createRole('admin');
+        // funcionários
+        $role->addChild('createFuncionario');
+        $role->addChild('viewFuncionario');
+        $role->addChild('deleteFuncionario');
+        $role->addChild('adminFuncionario');
+        $role->addChild('updateFuncionario');
+        // avaliações
+        $role->addChild('createAvaliacao');
+        $role->addChild('viewAvaliacao');
+        $role->addChild('deleteAvaliacao');
+        $role->addChild('adminAvaliacao');
+        $role->addChild('updateAvaliacao');
+        // departamentos
+        $role->addChild('createDepartamento');
+        $role->addChild('viewDepartamento');
+        $role->addChild('deleteDepartamento');
+        $role->addChild('adminDepartamento');
+        $role->addChild('updateDepartamento');
+        // questões
+        $role->addChild('createQuestao');
+        $role->addChild('viewQuestao');
+        $role->addChild('deleteQuestao');
+        $role->addChild('adminQuestao');
+        $role->addChild('updateQuestao');
+        // questionários
+        $role->addChild('createQuestionario');
+        $role->addChild('viewQuestionario');
+        $role->addChild('deleteQuestionario');
+        $role->addChild('adminQuestionario');
+        $role->addChild('updateQuestionario');
+
+        $role = $auth->createRole('chefeDepartamento');
+        // funcionários
+        $role->addChild('viewFuncionario');
+        // avaliações
+        $role->addChild('viewAvaliacao');
+        // questões
+        $role->addChild('viewQuestao');
+        $role->addChild('updateQuestao');
+        // questionários
+        $role->addChild('responderQuestionario');
+        $role->addChild('viewQuestionario');
+
+        $role = $auth->createRole('funcionario');
+        // avaliações
+        $role->addChild('viewAvaliacao');
+        // questões
+        $role->addChild('viewQuestao');
+        $role->addChild('updateQuestao');
+        // questionários
+        $role->addChild('responderQuestionario');
+        $role->addChild('viewQuestionario');
     }
 
     /**

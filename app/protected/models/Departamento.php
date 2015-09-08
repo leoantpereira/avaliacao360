@@ -8,7 +8,6 @@
  * @property string $nome
  * @property string $descricao
  * @property integer $empresa_id
- *
  * The followings are the available model relations:
  * @property Empresa $empresa
  * @property Funcionario[] $funcionarios
@@ -47,7 +46,6 @@ class Departamento extends CActiveRecord {
         // class name for the relations automatically generated below.
         return array(
             'empresa' => array(self::BELONGS_TO, 'Empresa', 'empresa_id'),
-            'funcionarios' => array(self::MANY_MANY, 'Funcionario', 'funcionario_has_departamento(departamento_id, funcionario_id)'),
         );
     }
 

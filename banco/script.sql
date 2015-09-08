@@ -60,6 +60,24 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
+-- Table `avaliacao360`.`departamento`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `avaliacao360`.`departamento` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(100) NOT NULL,
+  `descricao` VARCHAR(500) NULL,
+  `empresa_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_departamento_empresa1_idx` (`empresa_id` ASC),
+  CONSTRAINT `fk_departamento_empresa1`
+    FOREIGN KEY (`empresa_id`)
+    REFERENCES `avaliacao360`.`empresa` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `avaliacao360`.`funcionario`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `avaliacao360`.`funcionario` (
@@ -70,12 +88,19 @@ CREATE TABLE IF NOT EXISTS `avaliacao360`.`funcionario` (
   `permissao` INT(2) NOT NULL,
   `foto` VARCHAR(100) NULL,
   `empresa_id` INT NOT NULL,
+  `departamento_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_funcionario_empresa1_idx` (`empresa_id` ASC),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC),
+  INDEX `fk_funcionario_departamento1_idx` (`departamento_id` ASC),
   CONSTRAINT `fk_funcionario_empresa1`
     FOREIGN KEY (`empresa_id`)
     REFERENCES `avaliacao360`.`empresa` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_funcionario_departamento1`
+    FOREIGN KEY (`departamento_id`)
+    REFERENCES `avaliacao360`.`departamento` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -161,46 +186,6 @@ CREATE TABLE IF NOT EXISTS `avaliacao360`.`endereco` (
   CONSTRAINT `fk_endereco_cidade1`
     FOREIGN KEY (`cidade_id`)
     REFERENCES `avaliacao360`.`cidade` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `avaliacao360`.`departamento`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `avaliacao360`.`departamento` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(100) NOT NULL,
-  `descricao` VARCHAR(500) NULL,
-  `empresa_id` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_departamento_empresa1_idx` (`empresa_id` ASC),
-  CONSTRAINT `fk_departamento_empresa1`
-    FOREIGN KEY (`empresa_id`)
-    REFERENCES `avaliacao360`.`empresa` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `avaliacao360`.`funcionario_has_departamento`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `avaliacao360`.`funcionario_has_departamento` (
-  `funcionario_id` INT NOT NULL,
-  `departamento_id` INT NOT NULL,
-  PRIMARY KEY (`funcionario_id`, `departamento_id`),
-  INDEX `fk_funcionario_has_departamento_departamento1_idx` (`departamento_id` ASC),
-  INDEX `fk_funcionario_has_departamento_funcionario1_idx` (`funcionario_id` ASC),
-  CONSTRAINT `fk_funcionario_has_departamento_funcionario1`
-    FOREIGN KEY (`funcionario_id`)
-    REFERENCES `avaliacao360`.`funcionario` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_funcionario_has_departamento_departamento1`
-    FOREIGN KEY (`departamento_id`)
-    REFERENCES `avaliacao360`.`departamento` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

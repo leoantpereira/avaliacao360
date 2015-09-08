@@ -24,9 +24,9 @@ class DepartamentoController extends Controller {
      */
     public function accessRules() {
         return array(
-            array('allow', // allow all users to perform 'index' and 'view' actions
+            array('allow',
                 'actions' => array('index', 'view', 'admin', 'update', 'delete', 'create'),
-                'users' => array('@'),
+                'roles' => array('admin'),
             ),
             array('deny', // deny all users
                 'users' => array('*'),
@@ -107,21 +107,13 @@ class DepartamentoController extends Controller {
     }
 
     /**
-     * Lists all models.
-     */
-    public function actionIndex() {
-        $dataProvider = new CActiveDataProvider('Departamento');
-        $this->render('index', array(
-            'dataProvider' => $dataProvider,
-        ));
-    }
-
-    /**
      * Manages all models.
      */
     public function actionAdmin() {
         $model = new Departamento('search');
         $model->unsetAttributes();  // clear any default values
+        $model->empresa_id = $_SESSION['funcLogado']->empresa_id;
+
         if (isset($_GET['Departamento']))
             $model->attributes = $_GET['Departamento'];
 
@@ -139,6 +131,8 @@ class DepartamentoController extends Controller {
         $model = Departamento::model()->findByPk($id);
         if ($model === null)
             throw new CHttpException(404, 'The requested page does not exist.');
+        else if ($model->empresa_id != $_SESSION['funcLogado']->empresa_id)
+            throw new CHttpException(401, 'Você não está autorizado a realizar esta operação.');
         return $model;
     }
 

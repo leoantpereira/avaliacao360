@@ -60,6 +60,7 @@ class EmpresaController extends Controller {
         $modelEmpresa = new Empresa;
         $modelEndereco = new Endereco;
         $modelFuncionario = new Funcionario;
+        $modelFuncionario->departamento_id = 1;
 
         if (isset($_POST['Empresa']) &&
                 isset($_POST['Endereco']) &&
@@ -95,8 +96,17 @@ class EmpresaController extends Controller {
                         $modelEmpresa->endereco_id = $modelEndereco->id;
                         if ($modelEmpresa->save()) {
                             $modelFuncionario->empresa_id = $modelEmpresa->id;
+                            
+                            // cria um departamento para o administrador
+                            $departamento = new Departamento;
+                            $departamento->nome = 'DIRETORIA';
+                            $departamento->empresa_id = $modelEmpresa->id;
+                            $departamento->save();
+                            
+                            $modelFuncionario->departamento_id = $departamento->id;
                             if ($modelFuncionario->save()) {
                                 $_SESSION['empresa'] = $modelEmpresa;
+                                Funcionario::model()->setaAutorizacao($modelFuncionario);
                                 $this->redirect(array('view', 'id' => $modelEmpresa->id));
                             }
                         }
@@ -141,10 +151,10 @@ class EmpresaController extends Controller {
      */
     public function actionDelete($id) {
         if (Yii::app()->request->isPostRequest) {
-// we only allow deletion via POST request
+            // we only allow deletion via POST request
             $this->loadModel($id)->delete();
 
-// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+            // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
             if (!isset($_GET['ajax']))
                 $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
         } else
