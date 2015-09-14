@@ -29,7 +29,7 @@ class QuestionarioController extends Controller {
                 'roles' => array('admin'),
             ),
             array('allow',
-                'actions' => array('responder', 'view', 'admin', 'teste', 'getFuncAvaliados'),
+                'actions' => array('escolher', 'view', 'admin', 'responder', 'getFuncAvaliados'),
                 'roles' => array('chefeDepartamento', 'funcionario'),
             ),
             array('deny', // deny all users
@@ -126,111 +126,114 @@ class QuestionarioController extends Controller {
         ));
     }
 
-    public function actionResponder() {
-        $modelQuestionario = new Questionario;
+    public function actionEscolher() {
+        $modelQuestionario = new Questionario('escolher');
 
-        if (isset($_POST['Questionario'])) {
+        if (isset($_POST['Questionario']['id']) && isset($_POST['Questionario']['idFuncAvaliado'])) {
             $modelQuestionario->id = $_POST['Questionario']['id'];
+            $funcAvaliado = Funcionario::model()->findByPk($_POST['Questionario']['idFuncAvaliado']);
+            $_SESSION['funcAvaliado'] = $funcAvaliado;
 
             if ($modelQuestionario->validate()) {
                 // converte id questionário de string para integer
                 $modelQuestionario->id = intval($modelQuestionario->id);
 
-                $this->redirect(array('teste', 'questionario' => $modelQuestionario->id));
+                $this->redirect(array('responder', 'avaliacao' => $modelQuestionario->id));
             } else {
                 
             }
-        } else {
-            $idFuncLogado = Yii::app()->user->id;
-
-            $criteria = new CDbCriteria();
-            $criteria->condition = 'idAvaliador = :idAvaliador';
-            $criteria->group = 'idAvaliacao';
-            $criteria->params = array(':idAvaliador' => $idFuncLogado);
-            $criteria->join = 'JOIN avaliacao AS a ON t.idAvaliacao = a.id';
-
-            $avaliacoes = AvaliacaoHasFuncionario::model()->findAll($criteria);
-
-
-            $questAResponder = array('Selecione');
-
-            foreach ($avaliacoes as $a) {
-                $questAResponder[$a->idAvaliacao0->questionario->id] = $a->idAvaliacao0->questionario->descricao;
-            }
         }
+        $idFuncLogado = Yii::app()->user->id;
 
-        $this->render('responder', array(
-            'questAResponder' => $questAResponder,
-            'modelQuestionario' => $modelQuestionario,
-        ));
+        $criteria = new CDbCriteria();
+        $criteria->condition = 'idAvaliador = :idAvaliador AND resposta IS NULL';
+        $criteria->group = 'idAvaliacao';
+        $criteria->params = array(':idAvaliador' => $idFuncLogado);
+        $criteria->join = 'JOIN avaliacao AS a ON t.idAvaliacao = a.id';
+
+        $avaliacoes = AvaliacaoHasFuncionario::model()->findAll($criteria);
+
+        // se achar questionários a responder
+        if (!empty($avaliacoes)) {
+            foreach ($avaliacoes as $a) {
+                $questAResponder[$a->idAvaliacao] = $a->idAvaliacao0->questionario->descricao;
+            }
+
+            $this->render('escolher', array(
+                'questAResponder' => $questAResponder,
+                'modelQuestionario' => $modelQuestionario,
+            ));
+        } else {
+            throw new CHttpException(404, 'Não existem questionários a responder.');
+        }
     }
 
     /**
      * Capturar nomes dos funcionários a serem avaliados.
      */
-    public function actionGetFuncAvaliados() {               
+    public function actionGetFuncAvaliados() {
+        $criteria = new CDbCriteria();
+
+        $criteria->group = 'idFuncAvaliado';
+
         $avaliacoes = AvaliacaoHasFuncionario::model()->findAllByAttributes(array(
-            'idAvaliacao' => $_POST['idAvaliacao'],
-        ));
+            'idAvaliacao' => $_POST['idAvaliacao']), $criteria);
         $funcionarios = array();
-        
-        foreach($avaliacoes as $a){
-            $funcionarios[$a->idFuncAvalido0->id] = $a->idFuncAvalido0->nome;
+
+        foreach ($avaliacoes as $a) {
+            $funcionarios[] = array('idFuncAvaliado' => $a->idFuncAvaliado0->id,
+                'nomeFuncAvaliado' => $a->idFuncAvaliado0->nome);
         }
-        var_dump($avaliacoes);
-        exit();
-        
+
         echo CJSON::encode(array('funcionarios' => $funcionarios));
     }
 
-    public function actionTeste() {
+    public function actionResponder() {
         if (isset($_POST['AvaliacaoHasFuncionario'])) {
-            $questaoRespondida = new AvaliacaoHasFuncionario;
-            $questaoRespondida->attributes = $_POST['AvaliacaoHasFuncionario'];
-
-            $idQuestionario = $_GET['questionario'];
-            $questionario = Questionario::model()->findByPk($idQuestionario);
-
-            $avaliacao = Avaliacao::model()->findByAttributes(array(
-                'questionario_id' => $questionario->id,
-            ));
-
-            $questaoRespondida->idAvaliacao = $avaliacao->id;
-            $questaoRespondida->idFuncAvaliado = $_SESSION['funcAvaliado']->id;
-
+            $avaliacao = Avaliacao::model()->findByPk($_GET['avaliacao']);
             $questoes = $_SESSION['questoes'];
             $numQuestResp = $_SESSION['numQuestao'];
-            $questaoRespondida->idQuestao = $questoes[$numQuestResp]->id;
+
+            $questaoRespondida = AvaliacaoHasFuncionario::model()->findByPk(array(
+                'idAvaliacao' => $avaliacao->id,
+                'idFuncAvaliado' => $_SESSION['funcAvaliado']->id,
+                'idQuestao' => $questoes[$numQuestResp]->id,
+            ));
+
+            $questaoRespondida->dataHora = date('Y-m-d H:i:s');
+            $questaoRespondida->resposta = $_POST['AvaliacaoHasFuncionario']['resposta'];
+            $questaoRespondida->scenario = 'responder';
 
             if ($questaoRespondida->validate()) {
-                echo 'entrei 1';
-                exit();
                 if ($questaoRespondida->save()) {
-                    echo 'entrei 2';
-                    exit();
-                    $questoes = $_SESSION['questoes'];
-                    $numQuestao = $_SESSION['numoQuestao'];
-
-                    // respondeu a última qusetão
-                    if (sizeof($questoes) == $numQuestao) {
-                        echo 'entrei 3';
-                        exit();
+                    // respondeu a última questão
+                    if (sizeof($questoes) == $numQuestResp + 1) {
+                        $_SESSION['questoes'] = NULL;
+                        $_SESSION['numQuestoes'] = NULL;
+                        $_SESSION['funcAvaliado'] = NULL;
+                        $this->render('final');
                     } else {
-                        echo 'entrei 4';
-                        exit();
-                        $numQuestao++;
+                        $_SESSION['numQuestao'] = $numQuestResp + 1;
                         $this->refresh();
                     }
                 }
+            } else {
+                $this->render('responder', array(
+                    'avaliacao' => $questaoRespondida,
+                ));
             }
         } else {
-            $avalicao = new AvaliacaoHasFuncionario;
-            $questoes = Questao::model()->findAllByAttributes(array('questionario_id' => $_GET['questionario']));
-            $_SESSION['questoes'] = $questoes;
-            $_SESSION['numQuestao'] = 1;
+            $avaliaHasFunc = new AvaliacaoHasFuncionario('responder');
 
-            $this->render('teste', array('questoes' => $questoes,
-                'avaliacao' => $avalicao));
+            if (!isset($_SESSION['questoes'])) {
+                $avaliacao = Avaliacao::model()->findByPk($_GET['avaliacao']);
+                $questoes = Questao::model()->findAllByAttributes(array('questionario_id' => $avaliacao->questionario_id));
+                $_SESSION['questoes'] = $questoes;
+                $_SESSION['numQuestao'] = 0;
+            }
+
+            $this->render('responder', array(
+                'avaliacao' => $avaliaHasFunc));
         }
     }
 

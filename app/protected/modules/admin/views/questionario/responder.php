@@ -1,88 +1,61 @@
 <?php
+$form = $this->beginWidget('booster.widgets.TbActiveForm', array(
+    'id' => 'questionario-form',
+    'enableAjaxValidation' => false,
+        ));
+
 $this->breadcrumbs = array(
     'Questionários' => array('index'),
     'Responder',
 );
 ?>
 
-<h1>Responder Questionário</h1>
+<h1>Questionário</h1>
 
 <?php
-$form = $this->beginWidget('booster.widgets.TbActiveForm', array(
-    'id' => 'questionario-form',
-    'enableAjaxValidation' => false,
-        ));
+$numQuestao = $_SESSION['numQuestao'];
+$questao = $_SESSION['questoes'][$numQuestao];
+$alternativas = array();
 
-$optionsFuncAvaliados = array(
-    'id' => 'funcAvaliado',
-    'prompt' => 'Selecione',
-    'ajax' => array('type' => 'POST',
-        'dataType' => 'json',
-        'url' => CController::createUrl('questionario/getFuncAvaliados'),
-        'data' => array('idAvaliacao' => 'js:$(this).val()'),
-        'success' => "function(data) {
-            var funcAvalidos = document.getElementById('Questionario_idFuncAvaliado');
-            
-            // limpa o select
-            if (funcAvalidos.length > 0){
-                $('#Questionario_idFuncAvaliado').empty();
-            }
-                        
-            for (i = 0; i < data.funcionarios.length; i++) {
-                var option = document.createElement('option');
-                option.text = data.nome[i].nome;
-                option.value = data.nome[i].id;
- 
-                try {
-                    funcAvalidos.options.add(option);
-                } catch (e) {
-                    alert(e);
-                }
-            }        
-        }
-",
-    ),
-);
+if (!empty($questao->alternativa01))
+    $alternativas[1] = $questao->alternativa01;
+if (!empty($questao->alternativa02))
+    $alternativas[2] = $questao->alternativa02;
+if (!empty($questao->alternativa03))
+    $alternativas[3] = $questao->alternativa03;
+if (!empty($questao->alternativa04))
+    $alternativas[4] = $questao->alternativa04;
+if (!empty($questao->alternativa05))
+    $alternativas[5] = $questao->alternativa05;
 ?>
 
-<p class="help-block">Campos marcados com <span class="required">*</span> são de preenchimento obrigatório.</p>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Pergunta <?php echo $numQuestao + 1; ?></h3>
+    </div>
+    <div class="panel-body">
+        <h4><?php echo $questao->pergunta; ?></h4>
 
-<?php echo $form->errorSummary($modelQuestionario); ?>
-
-<?php
-echo $form->dropDownListGroup(
-        $modelQuestionario, 'id', array(
-    'wrapperHtmlOptions' => array(
-        'class' => 'col-sm-5',
-    ),
-    'widgetOptions' => array(
-        'data' => $questAResponder,
-        'htmlOptions' => $optionsFuncAvaliados,
-    ),
-        )
-);
-
-echo $form->dropDownListGroup(
-        $modelQuestionario, 'idFuncAvaliado', array(
-    'wrapperHtmlOptions' => array(
-        'class' => 'col-sm-5',
-    ),
-    'widgetOptions' => array(
-        'data' => array(
-            'Selecione'
-        ),
-        'htmlOptions' => array(),
-    ),
-        )
-);
-?>
+        <?php
+        echo $form->radioButtonListGroup(
+                $avaliacao, 'resposta', array(
+            'widgetOptions' => array(
+                'data' => $alternativas,
+                'htmlOptions' => array(
+                ),
+            )
+                )
+        );
+        ?>
+    </div>
+</div>
 
 <div class="form-actions">
     <?php
     $this->widget('booster.widgets.TbButton', array(
         'buttonType' => 'submit',
         'context' => 'primary',
-        'label' => $modelQuestionario->isNewRecord ? 'Responder' : 'Salvar',
+        'label' => 'Responder',
     ));
     ?>
 </div>

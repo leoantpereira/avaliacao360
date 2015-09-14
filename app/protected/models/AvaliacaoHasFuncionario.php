@@ -32,8 +32,8 @@ class AvaliacaoHasFuncionario extends CActiveRecord {
         // will receive user inputs.
         return array(
             array('idAvaliacao, idFuncAvaliado, idQuestao', 'required'),
+            array('resposta', 'required', 'on' => 'responder'),
             array('idAvaliacao, idFuncAvaliado, idQuestao', 'numerical', 'integerOnly' => true),
-            array('resposta', 'length', 'max' => 1),
             array('idAvaliacao', 'numerical', 'min' => 1, 'tooSmall' => 'Selecione a avaliação.'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.

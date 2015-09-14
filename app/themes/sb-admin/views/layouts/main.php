@@ -186,7 +186,7 @@
                                 <li <?php if (!Yii::app()->authManager->checkAccess('responderQuestionario', Yii::app()->user->id)) { ?> 
                                         style="display: none;"
                                     <?php } ?>>
-                                    <a href="<?php echo Yii::app()->createUrl('admin/questionario/responder'); ?>">Responder Questionário</a>
+                                    <a href="<?php echo Yii::app()->createUrl('admin/questionario/escolher'); ?>">Responder Questionário</a>
                                 </li>
                                 <li <?php if (!Yii::app()->authManager->checkAccess('viewQuestionario', Yii::app()->user->id)) { ?> 
                                         style="display: none;"

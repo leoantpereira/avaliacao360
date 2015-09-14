@@ -32,7 +32,9 @@ class Questionario extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('descricao, empresa_id', 'required', 'on' => 'create'),
+            array('descricao, empresa_id', 'required', 'on' => 'create, update'),
+            array('id', 'required', 'on' => 'escolher'),
+            array('id', 'numerical', 'min' => 1, 'tooSmall' => 'Selecione o questionário.', 'on' => 'escolher'),
             array('empresa_id', 'numerical', 'integerOnly' => true),
             array('descricao', 'length', 'max' => 500),
             // The following rule is used by search().
