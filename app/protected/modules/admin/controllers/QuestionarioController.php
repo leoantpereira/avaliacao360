@@ -174,6 +174,7 @@ class QuestionarioController extends Controller {
     public function actionGetFuncAvaliados() {
         $criteria = new CDbCriteria();
 
+        $criteria->condition = 'resposta IS NULL';
         $criteria->group = 'idFuncAvaliado';
 
         $avaliacoes = AvaliacaoHasFuncionario::model()->findAllByAttributes(array(

@@ -8742,3 +8742,688 @@ Stack trace:
 REQUEST_URI=/avaliacao360/app/index.php?r=admin/questionario/escolher
 HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/questionario/responder&avaliacao=1
 ---
+2015/09/14 15:02:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não existem questionários a responder.' in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\QuestionarioController.php:167
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): QuestionarioController->actionEscolher()
+#1 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('escolher')
+#10 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/questiona...')
+#11 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/questionario/escolher
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/questionario/escolher
+---
+2015/09/15 01:01:50 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (72)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/15 01:04:44 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. A declaração SQL executada foi: SELECT * FROM `avaliacao_has_funcionario` `t` WHERE `t`.`idAvaliacao`=:yp0 AND (idAvaliador = :idAvaliador AND resposta IS NULL) GROUP BY idFuncAvaliado.
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\QuestionarioController.php (181)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/15 01:04:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `avaliacao_has_funcionario` `t` WHERE `t`.`idAvaliacao`=:yp0 AND (idAvaliador = :idAvaliador AND resposta IS NULL) GROUP BY idFuncAvaliado' in C:\xampp\php\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\php\yii\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 C:\xampp\php\yii\framework\db\ar\CActiveRecord.php(1536): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\QuestionarioController.php(181): CActiveRecord->findAllByAttributes(Array, Object(CDbCriteria))
+#4 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): QuestionarioController->actionGetFuncAvaliados()
+#5 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('getFuncAvaliado...')
+#14 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/questiona...')
+#15 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/questionario/getFuncAvaliados
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/questionario/escolher
+---
+2015/09/15 01:07:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não existem questionários a responder.' in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\QuestionarioController.php:167
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): QuestionarioController->actionEscolher()
+#1 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('escolher')
+#10 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/questiona...')
+#11 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/questionario/escolher
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/questionario/responder&avaliacao=3
+---
+2015/09/15 01:08:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/funcionar...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/update&id=3
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/funcionario/admin
+---
+2015/09/15 01:08:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/funcionar...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/create
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/funcionario/admin
+---
+2015/09/15 01:08:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/funcionar...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?ajax=funcionario-grid&id=3&r=admin%2Ffuncionario%2Fdelete
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/funcionario/admin
+---
+2015/09/15 01:14:29 [error] [php] Missing argument 2 for CDbAuthManager::checkAccess(), called in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\view.php on line 9 and defined (C:\xampp\php\yii\framework\web\auth\CDbAuthManager.php:72)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CBaseController.php(95): FuncionarioController->renderInternal()
+#1 C:\xampp\php\yii\framework\web\CController.php(869): FuncionarioController->renderFile()
+#2 C:\xampp\php\yii\framework\web\CController.php(782): FuncionarioController->renderPartial()
+#3 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php(57): FuncionarioController->render()
+#4 unknown(0): FuncionarioController->actionView()
+#5 C:\xampp\php\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#6 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): FuncionarioController->runAction()
+#9 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#11 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): FuncionarioController->filterAccessControl()
+#12 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#13 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\php\yii\framework\web\CController.php(265): FuncionarioController->runActionWithFilters()
+#15 C:\xampp\php\yii\framework\web\CWebApplication.php(282): FuncionarioController->run()
+#16 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/view&id=3
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\view.php (9)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (57)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/15 01:14:56 [error] [php] Missing argument 2 for CDbAuthManager::checkAccess(), called in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\view.php on line 9 and defined (C:\xampp\php\yii\framework\web\auth\CDbAuthManager.php:72)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CBaseController.php(95): FuncionarioController->renderInternal()
+#1 C:\xampp\php\yii\framework\web\CController.php(869): FuncionarioController->renderFile()
+#2 C:\xampp\php\yii\framework\web\CController.php(782): FuncionarioController->renderPartial()
+#3 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php(57): FuncionarioController->render()
+#4 unknown(0): FuncionarioController->actionView()
+#5 C:\xampp\php\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#6 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): FuncionarioController->runAction()
+#9 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#11 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): FuncionarioController->filterAccessControl()
+#12 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#13 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\php\yii\framework\web\CController.php(265): FuncionarioController->runActionWithFilters()
+#15 C:\xampp\php\yii\framework\web\CWebApplication.php(282): FuncionarioController->run()
+#16 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/view&id=3
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\view.php (9)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (57)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/15 01:14:58 [error] [php] Missing argument 2 for CDbAuthManager::checkAccess(), called in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\view.php on line 9 and defined (C:\xampp\php\yii\framework\web\auth\CDbAuthManager.php:72)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CBaseController.php(95): FuncionarioController->renderInternal()
+#1 C:\xampp\php\yii\framework\web\CController.php(869): FuncionarioController->renderFile()
+#2 C:\xampp\php\yii\framework\web\CController.php(782): FuncionarioController->renderPartial()
+#3 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php(57): FuncionarioController->render()
+#4 unknown(0): FuncionarioController->actionView()
+#5 C:\xampp\php\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#6 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): FuncionarioController->runAction()
+#9 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#11 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): FuncionarioController->filterAccessControl()
+#12 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#13 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\php\yii\framework\web\CController.php(265): FuncionarioController->runActionWithFilters()
+#15 C:\xampp\php\yii\framework\web\CWebApplication.php(282): FuncionarioController->run()
+#16 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/view&id=3
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\view.php (9)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (57)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/15 01:20:02 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/funcionar...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/create
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/funcionario/admin
+---
+2015/09/15 01:21:13 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/funcionar...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/update&id=3
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/funcionario/admin
+---
+2015/09/15 01:22:07 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/avaliacao...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/avaliacao/update&id=1
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/avaliacao/admin
+---
+2015/09/15 13:22:48 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchColumn(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. A declaração SQL executada foi: SELECT COUNT(*) FROM `funcionario` `t` WHERE ((id != :idFuncLogado) AND (empresa_id=:ycp0)) AND (departamento_id=:ycp1).
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbGridView.php (68)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\admin.php (40)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (158)
+2015/09/15 13:22:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT COUNT(*) FROM `funcionario` `t` WHERE ((id != :idFuncLogado) AND (empresa_id=:ycp0)) AND (departamento_id=:ycp1)' in C:\xampp\php\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\php\yii\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 C:\xampp\php\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\xampp\php\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\xampp\php\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\xampp\php\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\xampp\php\yii\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 C:\xampp\php\yii\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#8 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbGridView.php(68): CGridView->init()
+#9 C:\xampp\php\yii\framework\web\CBaseController.php(147): TbGridView->init()
+#10 C:\xampp\php\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('booster.widgets...', Array)
+#11 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\admin.php(40): CBaseController->widget('booster.widgets...', Array)
+#12 C:\xampp\php\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#13 C:\xampp\php\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\php\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\php\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#16 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php(158): CController->render('admin', Array)
+#17 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): FuncionarioController->actionAdmin()
+#18 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#27 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/funcionar...')
+#28 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#29 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/admin
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/avaliacao/admin
+---
+2015/09/15 13:24:39 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchColumn(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. A declaração SQL executada foi: SELECT COUNT(*) FROM `funcionario` `t` WHERE (((id != :idFuncLogado) AND (id=:ycp0)) AND (empresa_id=:ycp1)) AND (departamento_id=:ycp2).
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbGridView.php (68)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\admin.php (40)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (159)
+2015/09/15 13:24:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT COUNT(*) FROM `funcionario` `t` WHERE (((id != :idFuncLogado) AND (id=:ycp0)) AND (empresa_id=:ycp1)) AND (departamento_id=:ycp2)' in C:\xampp\php\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\php\yii\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 C:\xampp\php\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\xampp\php\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\xampp\php\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\xampp\php\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\xampp\php\yii\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 C:\xampp\php\yii\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#8 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbGridView.php(68): CGridView->init()
+#9 C:\xampp\php\yii\framework\web\CBaseController.php(147): TbGridView->init()
+#10 C:\xampp\php\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('booster.widgets...', Array)
+#11 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\admin.php(40): CBaseController->widget('booster.widgets...', Array)
+#12 C:\xampp\php\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#13 C:\xampp\php\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\php\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\php\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#16 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php(159): CController->render('admin', Array)
+#17 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): FuncionarioController->actionAdmin()
+#18 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#27 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/funcionar...')
+#28 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#29 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/admin
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/avaliacao/admin
+---
+2015/09/15 13:24:41 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchColumn(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. A declaração SQL executada foi: SELECT COUNT(*) FROM `funcionario` `t` WHERE (((id != :idFuncLogado) AND (id=:ycp0)) AND (empresa_id=:ycp1)) AND (departamento_id=:ycp2).
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbGridView.php (68)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\admin.php (40)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (159)
+2015/09/15 13:24:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT COUNT(*) FROM `funcionario` `t` WHERE (((id != :idFuncLogado) AND (id=:ycp0)) AND (empresa_id=:ycp1)) AND (departamento_id=:ycp2)' in C:\xampp\php\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\php\yii\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 C:\xampp\php\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\xampp\php\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\xampp\php\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\xampp\php\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\xampp\php\yii\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 C:\xampp\php\yii\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#8 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbGridView.php(68): CGridView->init()
+#9 C:\xampp\php\yii\framework\web\CBaseController.php(147): TbGridView->init()
+#10 C:\xampp\php\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('booster.widgets...', Array)
+#11 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\admin.php(40): CBaseController->widget('booster.widgets...', Array)
+#12 C:\xampp\php\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#13 C:\xampp\php\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\php\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\php\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#16 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php(159): CController->render('admin', Array)
+#17 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): FuncionarioController->actionAdmin()
+#18 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#27 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/funcionar...')
+#28 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#29 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/admin
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/avaliacao/admin
+---
+2015/09/15 13:25:04 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchColumn(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. A declaração SQL executada foi: SELECT COUNT(*) FROM `funcionario` `t` WHERE (((id != :idFuncLogado) AND (id=:ycp0)) AND (empresa_id=:ycp1)) AND (departamento_id=:ycp2).
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbGridView.php (68)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\admin.php (40)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (159)
+2015/09/15 13:25:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT COUNT(*) FROM `funcionario` `t` WHERE (((id != :idFuncLogado) AND (id=:ycp0)) AND (empresa_id=:ycp1)) AND (departamento_id=:ycp2)' in C:\xampp\php\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\php\yii\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 C:\xampp\php\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\xampp\php\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\xampp\php\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\xampp\php\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\xampp\php\yii\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 C:\xampp\php\yii\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#8 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbGridView.php(68): CGridView->init()
+#9 C:\xampp\php\yii\framework\web\CBaseController.php(147): TbGridView->init()
+#10 C:\xampp\php\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('booster.widgets...', Array)
+#11 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\admin.php(40): CBaseController->widget('booster.widgets...', Array)
+#12 C:\xampp\php\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#13 C:\xampp\php\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\php\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\php\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#16 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php(159): CController->render('admin', Array)
+#17 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): FuncionarioController->actionAdmin()
+#18 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#27 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/funcionar...')
+#28 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#29 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/admin
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/avaliacao/admin
+---
+2015/09/15 13:29:42 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchColumn(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. A declaração SQL executada foi: SELECT COUNT(*) FROM `funcionario` `t` WHERE (((id <> :idFuncLogado) AND (id=:ycp0)) AND (empresa_id=:ycp1)) AND (departamento_id=:ycp2).
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbGridView.php (68)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\admin.php (40)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (161)
+2015/09/15 13:29:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT COUNT(*) FROM `funcionario` `t` WHERE (((id <> :idFuncLogado) AND (id=:ycp0)) AND (empresa_id=:ycp1)) AND (departamento_id=:ycp2)' in C:\xampp\php\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\php\yii\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 C:\xampp\php\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\xampp\php\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\xampp\php\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\xampp\php\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\xampp\php\yii\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 C:\xampp\php\yii\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#8 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbGridView.php(68): CGridView->init()
+#9 C:\xampp\php\yii\framework\web\CBaseController.php(147): TbGridView->init()
+#10 C:\xampp\php\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('booster.widgets...', Array)
+#11 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\admin.php(40): CBaseController->widget('booster.widgets...', Array)
+#12 C:\xampp\php\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#13 C:\xampp\php\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\php\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\php\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#16 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php(161): CController->render('admin', Array)
+#17 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): FuncionarioController->actionAdmin()
+#18 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#27 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/funcionar...')
+#28 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#29 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/admin
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/avaliacao/admin
+---
+2015/09/15 13:31:04 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchColumn(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. A declaração SQL executada foi: SELECT COUNT(*) FROM `funcionario` `t` WHERE ((id <> :idFuncLogado) AND (empresa_id=:ycp0)) AND (departamento_id=:ycp1).
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbGridView.php (68)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\admin.php (40)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (161)
+2015/09/15 13:31:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT COUNT(*) FROM `funcionario` `t` WHERE ((id <> :idFuncLogado) AND (empresa_id=:ycp0)) AND (departamento_id=:ycp1)' in C:\xampp\php\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\php\yii\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 C:\xampp\php\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\xampp\php\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\xampp\php\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\xampp\php\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\xampp\php\yii\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 C:\xampp\php\yii\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#8 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbGridView.php(68): CGridView->init()
+#9 C:\xampp\php\yii\framework\web\CBaseController.php(147): TbGridView->init()
+#10 C:\xampp\php\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('booster.widgets...', Array)
+#11 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\admin.php(40): CBaseController->widget('booster.widgets...', Array)
+#12 C:\xampp\php\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#13 C:\xampp\php\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\php\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\php\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#16 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php(161): CController->render('admin', Array)
+#17 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): FuncionarioController->actionAdmin()
+#18 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#27 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/funcionar...')
+#28 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#29 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/admin
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/avaliacao/admin
+---
+2015/09/15 13:32:50 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchColumn(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. A declaração SQL executada foi: SELECT COUNT(*) FROM `funcionario` `t` WHERE ((id <> :idFuncLogado) AND (empresa_id=:ycp0)) AND (departamento_id=:ycp1).
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbGridView.php (68)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\admin.php (40)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (162)
+2015/09/15 13:32:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT COUNT(*) FROM `funcionario` `t` WHERE ((id <> :idFuncLogado) AND (empresa_id=:ycp0)) AND (departamento_id=:ycp1)' in C:\xampp\php\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\php\yii\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 C:\xampp\php\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\xampp\php\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\xampp\php\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\xampp\php\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\xampp\php\yii\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 C:\xampp\php\yii\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#8 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbGridView.php(68): CGridView->init()
+#9 C:\xampp\php\yii\framework\web\CBaseController.php(147): TbGridView->init()
+#10 C:\xampp\php\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('booster.widgets...', Array)
+#11 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\admin.php(40): CBaseController->widget('booster.widgets...', Array)
+#12 C:\xampp\php\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#13 C:\xampp\php\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\php\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\php\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#16 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php(162): CController->render('admin', Array)
+#17 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): FuncionarioController->actionAdmin()
+#18 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#27 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/funcionar...')
+#28 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#29 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/admin
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/avaliacao/admin
+---
+2015/09/15 13:38:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não existem questionários a responder.' in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\QuestionarioController.php:167
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): QuestionarioController->actionEscolher()
+#1 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('escolher')
+#10 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/questiona...')
+#11 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/questionario/escolher
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/funcionario/admin
+---
+2015/09/15 13:49:31 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('perfil')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/funcionar...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/perfil
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/questionario/admin
+---
+2015/09/15 13:49:50 [error] [php] Undefined variable: data (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\_view.php:3)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(869): FuncionarioController->renderFile()
+#1 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\perfil.php(3): FuncionarioController->renderPartial()
+#2 C:\xampp\php\yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\php\yii\framework\web\CBaseController.php(95): FuncionarioController->renderInternal()
+#4 C:\xampp\php\yii\framework\web\CController.php(869): FuncionarioController->renderFile()
+#5 C:\xampp\php\yii\framework\web\CController.php(782): FuncionarioController->renderPartial()
+#6 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php(166): FuncionarioController->render()
+#7 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): FuncionarioController->actionPerfil()
+#8 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): FuncionarioController->runAction()
+#10 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): FuncionarioController->filterAccessControl()
+#13 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\php\yii\framework\web\CController.php(265): FuncionarioController->runActionWithFilters()
+#16 C:\xampp\php\yii\framework\web\CWebApplication.php(282): FuncionarioController->run()
+#17 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/perfil
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\_view.php (3)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\perfil.php (3)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (166)
+2015/09/15 13:50:19 [error] [php] Undefined variable: model (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\_form.php:11)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(869): FuncionarioController->renderFile()
+#1 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\perfil.php(3): FuncionarioController->renderPartial()
+#2 C:\xampp\php\yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\php\yii\framework\web\CBaseController.php(95): FuncionarioController->renderInternal()
+#4 C:\xampp\php\yii\framework\web\CController.php(869): FuncionarioController->renderFile()
+#5 C:\xampp\php\yii\framework\web\CController.php(782): FuncionarioController->renderPartial()
+#6 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php(166): FuncionarioController->render()
+#7 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): FuncionarioController->actionPerfil()
+#8 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): FuncionarioController->runAction()
+#10 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): FuncionarioController->filterAccessControl()
+#13 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\php\yii\framework\web\CController.php(265): FuncionarioController->runActionWithFilters()
+#16 C:\xampp\php\yii\framework\web\CWebApplication.php(282): FuncionarioController->run()
+#17 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/perfil
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\_form.php (11)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\perfil.php (3)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (166)
+2015/09/15 13:50:26 [error] [php] Undefined variable: departamentos (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\_form.php:65)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(869): FuncionarioController->renderFile()
+#1 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\perfil.php(3): FuncionarioController->renderPartial()
+#2 C:\xampp\php\yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\php\yii\framework\web\CBaseController.php(95): FuncionarioController->renderInternal()
+#4 C:\xampp\php\yii\framework\web\CController.php(869): FuncionarioController->renderFile()
+#5 C:\xampp\php\yii\framework\web\CController.php(782): FuncionarioController->renderPartial()
+#6 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php(166): FuncionarioController->render()
+#7 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): FuncionarioController->actionPerfil()
+#8 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): FuncionarioController->runAction()
+#10 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): FuncionarioController->filterAccessControl()
+#13 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\php\yii\framework\web\CController.php(265): FuncionarioController->runActionWithFilters()
+#16 C:\xampp\php\yii\framework\web\CWebApplication.php(282): FuncionarioController->run()
+#17 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/perfil
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\_form.php (65)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\perfil.php (3)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (166)
+2015/09/15 13:52:00 [error] [php] Undefined variable: model (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\perfil.php:4)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(869): FuncionarioController->renderFile()
+#1 C:\xampp\php\yii\framework\web\CController.php(782): FuncionarioController->renderPartial()
+#2 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php(166): FuncionarioController->render()
+#3 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): FuncionarioController->actionPerfil()
+#4 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): FuncionarioController->runAction()
+#6 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): FuncionarioController->filterAccessControl()
+#9 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\php\yii\framework\web\CController.php(265): FuncionarioController->runActionWithFilters()
+#12 C:\xampp\php\yii\framework\web\CWebApplication.php(282): FuncionarioController->run()
+#13 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/perfil
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\perfil.php (4)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (166)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/15 13:52:29 [error] [php] Undefined variable: model (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\perfil.php:4)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(869): FuncionarioController->renderFile()
+#1 C:\xampp\php\yii\framework\web\CController.php(782): FuncionarioController->renderPartial()
+#2 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php(166): FuncionarioController->render()
+#3 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): FuncionarioController->actionPerfil()
+#4 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): FuncionarioController->runAction()
+#6 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): FuncionarioController->filterAccessControl()
+#9 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\php\yii\framework\web\CController.php(265): FuncionarioController->runActionWithFilters()
+#12 C:\xampp\php\yii\framework\web\CWebApplication.php(282): FuncionarioController->run()
+#13 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/perfil
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\funcionario\perfil.php (4)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (166)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/15 14:53:15 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (72)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)

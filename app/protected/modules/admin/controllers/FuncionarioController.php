@@ -34,7 +34,7 @@ class FuncionarioController extends Controller {
     public function accessRules() {
         return array(
             array('allow',
-                'actions' => array('view', 'admin'),
+                'actions' => array('view', 'admin', 'perfil'),
                 'roles' => array('chefeDepartamento'),
             ),
             array('allow',
@@ -146,16 +146,24 @@ class FuncionarioController extends Controller {
         $model->unsetAttributes();  // clear any default values
         $funcLogado = $_SESSION['funcLogado'];
         $model->empresa_id = $funcLogado->empresa_id;
-               
+        $model->id = intval($funcLogado->id);
+
         if ($funcLogado->permissao == USER_CHEFE_DEPARTAMENTO)
             $model->departamento_id = $funcLogado->departamento_id;
 
         if (isset($_GET['Funcionario']))
             $model->attributes = $_GET['Funcionario'];
 
+        //var_dump($model);
+        //exit();
+
         $this->render('admin', array(
             'model' => $model,
         ));
+    }
+
+    public function actionPerfil() {
+        $this->render('perfil', array('model'=>$_SESSION['funcLogado']));
     }
 
     /**

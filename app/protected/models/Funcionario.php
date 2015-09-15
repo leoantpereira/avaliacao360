@@ -64,6 +64,7 @@ class Funcionario extends CActiveRecord {
             'avaliacaos' => array(self::HAS_MANY, 'Avaliacao', 'idFuncAvaliado'),
             'avaliacaos1' => array(self::HAS_MANY, 'Avaliacao', 'idAvaliador'),
             'empresa' => array(self::BELONGS_TO, 'Empresa', 'empresa_id'),
+            'departamento' => array(self::BELONGS_TO, 'Departamento', 'departamento_id'),
         );
     }
 
@@ -100,7 +101,7 @@ class Funcionario extends CActiveRecord {
 
         $criteria = new CDbCriteria;
 
-        $criteria->compare('id', $this->id);
+        $criteria->compare('id', '<>'.$this->id, true);
         $criteria->compare('nome', $this->nome, true);
         $criteria->compare('email', $this->email, true);
         $criteria->compare('senha', $this->senha, true);
@@ -108,7 +109,7 @@ class Funcionario extends CActiveRecord {
         $criteria->compare('foto', $this->foto, true);
         $criteria->compare('empresa_id', $this->empresa_id);
         $criteria->compare('departamento_id', $this->departamento_id);
-        
+
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));

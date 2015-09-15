@@ -5,7 +5,7 @@ $this->breadcrumbs = array(
 );
 
 $this->menu = array(
-    array('label' => 'Cadastrar Novo', 'url' => array('create')),
+    array('label' => 'Cadastrar Novo', 'url' => array('create'), 'visible' => Yii::app()->authManager->checkAccess('createFuncionario', Yii::app()->user->id)),
 );
 
 Yii::app()->clientScript->registerScript('search', "

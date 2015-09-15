@@ -12,7 +12,8 @@ return array(
     'charset' => 'utf-8',
     'theme' => 'front',
     'aliases' => array(
-        'bootstrap' => realpath(__DIR__ . '/../extensions/yiibooster')
+        'bootstrap' => realpath(__DIR__ . '/../extensions/yiibooster'),
+        'fotos' => realpath(__DIR__ . '/../../images/funcionarios/'),
     ),
     // preloading 'log' component
     'preload' => array('log', 'bootstrap'),

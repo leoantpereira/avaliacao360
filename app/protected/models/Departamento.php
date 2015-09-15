@@ -46,6 +46,7 @@ class Departamento extends CActiveRecord {
         // class name for the relations automatically generated below.
         return array(
             'empresa' => array(self::BELONGS_TO, 'Empresa', 'empresa_id'),
+            'funcionario' => array(self::HAS_ONE, 'Funcionario', 'id'),
         );
     }
 
