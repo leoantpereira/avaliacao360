@@ -18,7 +18,7 @@
     <body>
         <div class="container-fluid" id="page">
             <div class="row" id="cabecalho">
-                <div class="col-xs-4" id="logo">AVALIAÇÃO 360º</div>
+                <div class="col-xs-4" id="logo"><a href="<?php echo Yii::app()->createUrl('/'); ?>"><img  src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo.png"/></a></div>
                 <div class="col-xs-8" id="menu">
                     <?php
                     $this->widget(
@@ -39,11 +39,6 @@
                                     array(
                                         'label' => 'Como funciona?',
                                         'url' => Yii::app()->createUrl('#como-funciona'),
-                                        'visible' => true,
-                                    ),
-                                    array(
-                                        'label' => 'Contato',
-                                        'url' => Yii::app()->createUrl('#contato'),
                                         'visible' => true,
                                     ),
                                     array(
@@ -79,7 +74,7 @@
             <div class="clear"></div>
 
             <footer>
-                Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
+                Copyright &copy; <?php echo date('Y'); ?> by Leonardo Antônio.<br/>
                 All Rights Reserved.<br/>
                 <?php echo Yii::powered(); ?>
             </footer>

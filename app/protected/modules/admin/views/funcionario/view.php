@@ -22,7 +22,7 @@ $this->widget('booster.widgets.TbDetailView', array(
         'id',
         'nome',
         'email',
-        'foto',
+        array('label'=>'Foto', 'type'=>'raw', 'value'=> html_entity_decode(CHtml::image(Yii::app()->baseUrl.'/images/funcionarios/'.$model->empresa->cnpj.'/'.$model->foto,'alt',array('width'=>100,'height'=>150)))),
     ),
 ));
 ?>

@@ -31,7 +31,10 @@ $this->widget('booster.widgets.TbGridView', array(
     'filter' => $model,
     'columns' => array(
         'id',
-        'idAvaliador',
+        array(
+            'name'=>'funcAvaliador',
+            'value'=>'$data->idAvaliador0->nome',
+        ),        
         'questionario_id',
         array(
             'class' => 'booster.widgets.TbButtonColumn',

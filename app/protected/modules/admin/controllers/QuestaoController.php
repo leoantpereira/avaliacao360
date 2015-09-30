@@ -79,7 +79,7 @@ class QuestaoController extends Controller {
      */
     public function actionUpdate($id) {
         $model = $this->loadModel($id);
-        $allQuestionarios = Questionario::findAllDescricao();
+        $allQuestionarios = Questionario::findAllDescricao($_SESSION['funcLogado']->empresa_id);
         // adiciona o item selecione na primeira posição do array
         $questSelecionado = array($allQuestionarios[$model->questionario_id]);
         // Uncomment the following line if AJAX validation is needed

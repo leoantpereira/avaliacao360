@@ -9427,3 +9427,793 @@ in C:\xampp\htdocs\avaliacao360\app\index.php (13)
 2015/09/15 14:53:15 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
 in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\FuncionarioController.php (72)
 in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/19 00:59:22 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`avaliacao360`.`funcionario`, CONSTRAINT `fk_funcionario_departamento1` FOREIGN KEY (`departamento_id`) REFERENCES `departamento` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). A declaração SQL executada foi: DELETE FROM `departamento` WHERE `departamento`.`id`=5.
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\DepartamentoController.php (100)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/19 00:59:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`avaliacao360`.`funcionario`, CONSTRAINT `fk_funcionario_departamento1` FOREIGN KEY (`departamento_id`) REFERENCES `departamento` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: DELETE FROM `departamento` WHERE `departamento`.`id`=5' in C:\xampp\php\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\ar\CActiveRecord.php(1802): CDbCommand->execute()
+#1 C:\xampp\php\yii\framework\db\ar\CActiveRecord.php(1222): CActiveRecord->deleteByPk('5')
+#2 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\DepartamentoController.php(100): CActiveRecord->delete()
+#3 [internal function]: DepartamentoController->actionDelete('5')
+#4 C:\xampp\php\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DepartamentoController), Array)
+#5 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DepartamentoController), Object(ReflectionMethod), Array)
+#6 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#15 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/departame...')
+#16 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/avaliacao360/app/index.php?ajax=departamento-grid&id=5&r=admin%2Fdepartamento%2Fdelete
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/departamento/admin
+---
+2015/09/19 15:59:30 [error] [php] Missing argument 1 for Questionario::findAllDescricao(), called in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\QuestaoController.php on line 82 and defined (C:\xampp\htdocs\avaliacao360\app\protected\models\Questionario.php:107)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): QuestaoController->runAction()
+#4 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): QuestaoController->filterAccessControl()
+#7 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\php\yii\framework\web\CController.php(265): QuestaoController->runActionWithFilters()
+#10 C:\xampp\php\yii\framework\web\CWebApplication.php(282): QuestaoController->run()
+#11 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/questao/update&id=1
+in C:\xampp\htdocs\avaliacao360\app\protected\models\Questionario.php (107)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\QuestaoController.php (82)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/19 16:16:03 [warning] [application] Failed to set unsafe attribute "funcAvaliador" of "Avaliacao".
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\AvaliacaoController.php (166)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/19 16:32:32 [warning] [application] Failed to set unsafe attribute "funcAvaliador" of "Avaliacao".
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\AvaliacaoController.php (166)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/19 16:33:28 [warning] [application] Failed to set unsafe attribute "funcAvaliador" of "Avaliacao".
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\AvaliacaoController.php (166)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/19 16:36:00 [warning] [application] Failed to set unsafe attribute "funcAvaliador" of "Avaliacao".
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\AvaliacaoController.php (166)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/19 16:36:07 [warning] [application] Failed to set unsafe attribute "funcAvaliador" of "Avaliacao".
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\AvaliacaoController.php (166)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/19 16:41:44 [error] [php] Undefined variable: data (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\avaliacao\view.php:24)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(869): AvaliacaoController->renderFile()
+#1 C:\xampp\php\yii\framework\web\CController.php(782): AvaliacaoController->renderPartial()
+#2 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\AvaliacaoController.php(51): AvaliacaoController->render()
+#3 unknown(0): AvaliacaoController->actionView()
+#4 C:\xampp\php\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(133): AvaliacaoController->runAction()
+#8 C:\xampp\php\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\php\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): AvaliacaoController->filterAccessControl()
+#11 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\php\yii\framework\web\CController.php(265): AvaliacaoController->runActionWithFilters()
+#14 C:\xampp\php\yii\framework\web\CWebApplication.php(282): AvaliacaoController->run()
+#15 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/avaliacao/view&id=1
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\avaliacao\view.php (24)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\AvaliacaoController.php (51)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/19 17:32:03 [error] [php] include(CdbCriteria.php): failed to open stream: No such file or directory (C:\xampp\php\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(7): spl_autoload_call()
+#1 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionIndex()
+#2 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\php\yii\framework\web\CController.php(286): RelatoriosController->runAction()
+#4 C:\xampp\php\yii\framework\web\CController.php(265): RelatoriosController->runActionWithFilters()
+#5 C:\xampp\php\yii\framework\web\CWebApplication.php(282): RelatoriosController->run()
+#6 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php (7)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/19 17:32:41 [error] [php] Object of class Funcionario could not be converted to string (C:\xampp\php\yii\framework\web\helpers\CHtml.php:2343)
+Stack trace:
+#0 unknown(0): TbActiveForm->dropDownList()
+#1 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(1293): call_user_func_array()
+#2 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(1152): TbActiveForm->verticalGroup()
+#3 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(627): TbActiveForm->customFieldGroupInternal()
+#4 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\relatorios\index.php(18): TbActiveForm->dropDownListGroup()
+#5 C:\xampp\php\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\php\yii\framework\web\CBaseController.php(95): RelatoriosController->renderInternal()
+#7 C:\xampp\php\yii\framework\web\CController.php(869): RelatoriosController->renderFile()
+#8 C:\xampp\php\yii\framework\web\CController.php(782): RelatoriosController->renderPartial()
+#9 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(14): RelatoriosController->render()
+#10 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionIndex()
+#11 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\php\yii\framework\web\CController.php(286): RelatoriosController->runAction()
+#13 C:\xampp\php\yii\framework\web\CController.php(265): RelatoriosController->runActionWithFilters()
+#14 C:\xampp\php\yii\framework\web\CWebApplication.php(282): RelatoriosController->run()
+#15 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php (1293)
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php (1152)
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php (627)
+2015/09/19 17:35:11 [error] [php] Undefined variable: _SESSION (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php:8)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(286): RelatoriosController->runAction()
+#1 C:\xampp\php\yii\framework\web\CController.php(265): RelatoriosController->runActionWithFilters()
+#2 C:\xampp\php\yii\framework\web\CWebApplication.php(282): RelatoriosController->run()
+#3 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php (8)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/19 17:36:26 [error] [exception.CException] exception 'CException' with message 'A propriedade "RelatoriosController.breadcrumbs" não está definida.' in C:\xampp\php\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\relatorios\index.php(3): CComponent->__set('breadcrumbs', Array)
+#1 C:\xampp\php\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\php\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\php\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\php\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#5 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(13): CController->render('index', Array)
+#6 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionIndex()
+#7 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\php\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/relatorio...')
+#12 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/funcionario/create
+---
+2015/09/19 17:37:38 [error] [exception.CException] exception 'CException' with message 'A propriedade "RelatoriosController.breadcrumbs" não está definida.' in C:\xampp\php\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\relatorios\index.php(3): CComponent->__set('breadcrumbs', Array)
+#1 C:\xampp\php\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\php\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\php\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\php\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#5 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(14): CController->render('index', Array)
+#6 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionIndex()
+#7 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\php\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/relatorio...')
+#12 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/funcionario/create
+---
+2015/09/19 17:37:39 [error] [exception.CException] exception 'CException' with message 'A propriedade "RelatoriosController.breadcrumbs" não está definida.' in C:\xampp\php\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\relatorios\index.php(3): CComponent->__set('breadcrumbs', Array)
+#1 C:\xampp\php\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\php\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\php\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\php\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#5 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(14): CController->render('index', Array)
+#6 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionIndex()
+#7 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\php\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/relatorio...')
+#12 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/funcionario/create
+---
+2015/09/19 17:38:40 [error] [php] Undefined variable: _SESSION (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php:8)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(286): RelatoriosController->runAction()
+#1 C:\xampp\php\yii\framework\web\CController.php(265): RelatoriosController->runActionWithFilters()
+#2 C:\xampp\php\yii\framework\web\CWebApplication.php(282): RelatoriosController->run()
+#3 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php (8)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/19 22:03:58 [error] [php] Undefined variable: idFuncAvaliado (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php:19)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(286): RelatoriosController->runAction()
+#1 C:\xampp\php\yii\framework\web\CController.php(265): RelatoriosController->runActionWithFilters()
+#2 C:\xampp\php\yii\framework\web\CWebApplication.php(282): RelatoriosController->run()
+#3 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios/getQuestionarios
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php (19)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/19 22:04:23 [error] [php] Undefined variable: idFuncAvaliado (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php:19)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(286): RelatoriosController->runAction()
+#1 C:\xampp\php\yii\framework\web\CController.php(265): RelatoriosController->runActionWithFilters()
+#2 C:\xampp\php\yii\framework\web\CWebApplication.php(282): RelatoriosController->run()
+#3 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios/getQuestionarios
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php (19)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/19 22:05:22 [error] [php] Undefined variable: idFuncAvaliado (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php:19)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(286): RelatoriosController->runAction()
+#1 C:\xampp\php\yii\framework\web\CController.php(265): RelatoriosController->runActionWithFilters()
+#2 C:\xampp\php\yii\framework\web\CWebApplication.php(282): RelatoriosController->run()
+#3 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios/getQuestionarios
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php (19)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/19 22:06:13 [error] [php] Undefined variable: idFuncAvaliado (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php:19)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(286): RelatoriosController->runAction()
+#1 C:\xampp\php\yii\framework\web\CController.php(265): RelatoriosController->runActionWithFilters()
+#2 C:\xampp\php\yii\framework\web\CWebApplication.php(282): RelatoriosController->run()
+#3 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios/getQuestionarios
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php (19)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/19 22:06:34 [error] [php] Undefined variable: idFuncAvaliado (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php:19)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(286): RelatoriosController->runAction()
+#1 C:\xampp\php\yii\framework\web\CController.php(265): RelatoriosController->runActionWithFilters()
+#2 C:\xampp\php\yii\framework\web\CWebApplication.php(282): RelatoriosController->run()
+#3 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios/getQuestionarios
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php (19)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/21 01:40:09 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN questao AS q ON q.id = t.idQuestao  JOIN questionario AS qt ON q.questionar' at line 1. A declaração SQL executada foi: SELECT qt.descricao, qt.id FROM avaliacao_has_funcionario WHERE idFuncAvaliado=3 JOIN questao AS q ON q.id = t.idQuestao  JOIN questionario AS qt ON q.questionario_id = qt.id.
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php (21)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/21 01:40:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN questao AS q ON q.id = t.idQuestao  JOIN questionario AS qt ON q.questionar' at line 1. The SQL statement executed was: SELECT qt.descricao, qt.id FROM avaliacao_has_funcionario WHERE idFuncAvaliado=3 JOIN questao AS q ON q.id = t.idQuestao  JOIN questionario AS qt ON q.questionario_id = qt.id' in C:\xampp\php\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(21): CDbCommand->queryAll(true)
+#2 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionGetQuestionarios()
+#3 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('getQuestionario...')
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/relatorio...')
+#8 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios/getQuestionarios
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/relatorios
+---
+2015/09/21 01:40:38 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN questao AS q ON q.id = t.idQuestao JOIN questionario AS qt ON q.questionari' at line 1. A declaração SQL executada foi: SELECT qt.descricao, qt.id FROM avaliacao_has_funcionario WHERE idFuncAvaliado=3 JOIN questao AS q ON q.id = t.idQuestao JOIN questionario AS qt ON q.questionario_id = qt.id.
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php (21)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/21 01:40:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN questao AS q ON q.id = t.idQuestao JOIN questionario AS qt ON q.questionari' at line 1. The SQL statement executed was: SELECT qt.descricao, qt.id FROM avaliacao_has_funcionario WHERE idFuncAvaliado=3 JOIN questao AS q ON q.id = t.idQuestao JOIN questionario AS qt ON q.questionario_id = qt.id' in C:\xampp\php\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(21): CDbCommand->queryAll(true)
+#2 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionGetQuestionarios()
+#3 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('getQuestionario...')
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/relatorio...')
+#8 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios/getQuestionarios
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/relatorios
+---
+2015/09/21 01:49:01 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN questao AS q ON q.id = t.idQuestao JOIN questionario AS qt ON q.questionari' at line 1. A declaração SQL executada foi: SELECT qt.descricao d, qt.id id FROM avaliacao_has_funcionario WHERE idFuncAvaliado=4 JOIN questao AS q ON q.id = t.idQuestao JOIN questionario AS qt ON q.questionario_id = qt.id.
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php (21)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/21 01:49:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN questao AS q ON q.id = t.idQuestao JOIN questionario AS qt ON q.questionari' at line 1. The SQL statement executed was: SELECT qt.descricao d, qt.id id FROM avaliacao_has_funcionario WHERE idFuncAvaliado=4 JOIN questao AS q ON q.id = t.idQuestao JOIN questionario AS qt ON q.questionario_id = qt.id' in C:\xampp\php\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(21): CDbCommand->queryAll(true)
+#2 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionGetQuestionarios()
+#3 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('getQuestionario...')
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/relatorio...')
+#8 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios/getQuestionarios
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/relatorios
+---
+2015/09/21 01:58:21 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN questao AS q ON q.id = t.idQuestao JOIN questionario AS qt ON q.questionari' at line 1. A declaração SQL executada foi: SELECT qt.descricao d, qt.id id FROM avaliacao_has_funcionario WHERE idFuncAvaliado=3 JOIN questao AS q ON q.id = t.idQuestao JOIN questionario AS qt ON q.questionario_id = qt.id;.
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php (21)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/21 01:58:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN questao AS q ON q.id = t.idQuestao JOIN questionario AS qt ON q.questionari' at line 1. The SQL statement executed was: SELECT qt.descricao d, qt.id id FROM avaliacao_has_funcionario WHERE idFuncAvaliado=3 JOIN questao AS q ON q.id = t.idQuestao JOIN questionario AS qt ON q.questionario_id = qt.id;' in C:\xampp\php\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(21): CDbCommand->queryAll(true)
+#2 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionGetQuestionarios()
+#3 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('getQuestionario...')
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/relatorio...')
+#8 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios/getQuestionarios
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/relatorios
+---
+2015/09/21 02:01:31 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN questao AS q ON q.id=t.idQuestao' at line 1. A declaração SQL executada foi: SELECT * FROM avaliacao_has_funcionario WHERE idFuncAvaliado=3 JOIN questao AS q ON q.id=t.idQuestao.
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php (20)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/21 02:01:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN questao AS q ON q.id=t.idQuestao' at line 1. The SQL statement executed was: SELECT * FROM avaliacao_has_funcionario WHERE idFuncAvaliado=3 JOIN questao AS q ON q.id=t.idQuestao' in C:\xampp\php\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(20): CDbCommand->queryAll(true)
+#2 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionGetQuestionarios()
+#3 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('getQuestionario...')
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/relatorio...')
+#8 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios/getQuestionarios
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/relatorios
+---
+2015/09/21 02:02:14 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN questao AS q ON q.id = t.idQuestao' at line 1. A declaração SQL executada foi: SELECT * FROM avaliacao_has_funcionario WHERE idFuncAvaliado = 4 JOIN questao AS q ON q.id = t.idQuestao.
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php (19)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/21 02:02:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN questao AS q ON q.id = t.idQuestao' at line 1. The SQL statement executed was: SELECT * FROM avaliacao_has_funcionario WHERE idFuncAvaliado = 4 JOIN questao AS q ON q.id = t.idQuestao' in C:\xampp\php\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(19): CDbCommand->queryAll(true)
+#2 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionGetQuestionarios()
+#3 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('getQuestionario...')
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/relatorio...')
+#8 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios/getQuestionarios
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/relatorios
+---
+2015/09/21 02:04:01 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN questao AS q ON q.id = af.idQuestao' at line 1. A declaração SQL executada foi: SELECT * FROM avaliacao_has_funcionario AS af WHERE idFuncAvaliado = 3 JOIN questao AS q ON q.id = af.idQuestao.
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php (19)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/21 02:04:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN questao AS q ON q.id = af.idQuestao' at line 1. The SQL statement executed was: SELECT * FROM avaliacao_has_funcionario AS af WHERE idFuncAvaliado = 3 JOIN questao AS q ON q.id = af.idQuestao' in C:\xampp\php\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(19): CDbCommand->queryAll(true)
+#2 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionGetQuestionarios()
+#3 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('getQuestionario...')
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/relatorio...')
+#8 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios/getQuestionarios
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/relatorios
+---
+2015/09/21 02:06:10 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN questao AS q ON q.id = af.idQuestao' at line 1. A declaração SQL executada foi: SELECT * FROM avaliacao_has_funcionario AS af WHERE idFuncAvaliado = '2' JOIN questao AS q ON q.id = af.idQuestao.
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php (19)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/21 02:06:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN questao AS q ON q.id = af.idQuestao' at line 1. The SQL statement executed was: SELECT * FROM avaliacao_has_funcionario AS af WHERE idFuncAvaliado = '2' JOIN questao AS q ON q.id = af.idQuestao' in C:\xampp\php\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(19): CDbCommand->queryAll(true)
+#2 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionGetQuestionarios()
+#3 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('getQuestionario...')
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/relatorio...')
+#8 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios/getQuestionarios
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/relatorios
+---
+2015/09/21 02:07:06 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN questao AS q ON q.id = af.idQuestao' at line 1. A declaração SQL executada foi: SELECT * FROM avaliacao_has_funcionario af WHERE idFuncAvaliado = '2' JOIN questao AS q ON q.id = af.idQuestao.
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php (19)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/21 02:07:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN questao AS q ON q.id = af.idQuestao' at line 1. The SQL statement executed was: SELECT * FROM avaliacao_has_funcionario af WHERE idFuncAvaliado = '2' JOIN questao AS q ON q.id = af.idQuestao' in C:\xampp\php\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(19): CDbCommand->queryAll(true)
+#2 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionGetQuestionarios()
+#3 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('getQuestionario...')
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/relatorio...')
+#8 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios/getQuestionarios
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/relatorios
+---
+2015/09/21 02:08:30 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN questao AS q ON q.id=af.idQuestao' at line 1. A declaração SQL executada foi: SELECT * FROM avaliacao_has_funcionario af WHERE idFuncAvaliado=3 JOIN questao AS q ON q.id=af.idQuestao.
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php (19)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/21 02:08:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN questao AS q ON q.id=af.idQuestao' at line 1. The SQL statement executed was: SELECT * FROM avaliacao_has_funcionario af WHERE idFuncAvaliado=3 JOIN questao AS q ON q.id=af.idQuestao' in C:\xampp\php\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(19): CDbCommand->queryAll(true)
+#2 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionGetQuestionarios()
+#3 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('getQuestionario...')
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/relatorio...')
+#8 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios/getQuestionarios
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/relatorios
+---
+2015/09/21 14:13:52 [error] [exception.CException] exception 'CException' with message 'A propriedade "Relatorios.isNewRecord" não está definida.' in C:\xampp\php\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\relatorios\index.php(76): CComponent->__get('isNewRecord')
+#1 C:\xampp\php\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\php\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\php\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\php\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#5 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(13): CController->render('index', Array)
+#6 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionIndex()
+#7 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\php\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/relatorio...')
+#12 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/avaliacao/create
+---
+2015/09/21 14:17:12 [error] [php] Undefined index: Relatorios (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php:9)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(286): RelatoriosController->runAction()
+#1 C:\xampp\php\yii\framework\web\CController.php(265): RelatoriosController->runActionWithFilters()
+#2 C:\xampp\php\yii\framework\web\CWebApplication.php(282): RelatoriosController->run()
+#3 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php (9)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/21 14:26:01 [error] [php] Undefined variable: repostas (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\relatorios\gerar.php:3)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(869): RelatoriosController->renderFile()
+#1 C:\xampp\php\yii\framework\web\CController.php(782): RelatoriosController->renderPartial()
+#2 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(25): RelatoriosController->render()
+#3 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionIndex()
+#4 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\php\yii\framework\web\CController.php(286): RelatoriosController->runAction()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): RelatoriosController->runActionWithFilters()
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): RelatoriosController->run()
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\relatorios\gerar.php (3)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php (25)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/21 14:26:09 [error] [php] Invalid argument supplied for foreach() (C:\xampp\php\yii\framework\web\helpers\CHtml.php:2325)
+Stack trace:
+#0 unknown(0): TbActiveForm->dropDownList()
+#1 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(1293): call_user_func_array()
+#2 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(1152): TbActiveForm->verticalGroup()
+#3 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(627): TbActiveForm->customFieldGroupInternal()
+#4 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\relatorios\index.php(68): TbActiveForm->dropDownListGroup()
+#5 C:\xampp\php\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\php\yii\framework\web\CBaseController.php(95): RelatoriosController->renderInternal()
+#7 C:\xampp\php\yii\framework\web\CController.php(869): RelatoriosController->renderFile()
+#8 C:\xampp\php\yii\framework\web\CController.php(782): RelatoriosController->renderPartial()
+#9 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(32): RelatoriosController->render()
+#10 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionIndex()
+#11 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\php\yii\framework\web\CController.php(286): RelatoriosController->runAction()
+#13 C:\xampp\php\yii\framework\web\CController.php(265): RelatoriosController->runActionWithFilters()
+#14 C:\xampp\php\yii\framework\web\CWebApplication.php(282): RelatoriosController->run()
+#15 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php (1293)
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php (1152)
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php (627)
+2015/09/21 14:27:27 [error] [php] Invalid argument supplied for foreach() (C:\xampp\php\yii\framework\web\helpers\CHtml.php:2325)
+Stack trace:
+#0 unknown(0): TbActiveForm->dropDownList()
+#1 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(1293): call_user_func_array()
+#2 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(1152): TbActiveForm->verticalGroup()
+#3 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(627): TbActiveForm->customFieldGroupInternal()
+#4 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\relatorios\index.php(68): TbActiveForm->dropDownListGroup()
+#5 C:\xampp\php\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\php\yii\framework\web\CBaseController.php(95): RelatoriosController->renderInternal()
+#7 C:\xampp\php\yii\framework\web\CController.php(869): RelatoriosController->renderFile()
+#8 C:\xampp\php\yii\framework\web\CController.php(782): RelatoriosController->renderPartial()
+#9 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(32): RelatoriosController->render()
+#10 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionIndex()
+#11 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\php\yii\framework\web\CController.php(286): RelatoriosController->runAction()
+#13 C:\xampp\php\yii\framework\web\CController.php(265): RelatoriosController->runActionWithFilters()
+#14 C:\xampp\php\yii\framework\web\CWebApplication.php(282): RelatoriosController->run()
+#15 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php (1293)
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php (1152)
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php (627)
+2015/09/21 14:33:00 [error] [exception.CException] exception 'CException' with message 'A propriedade "Questionario.nome" não está definida.' in C:\xampp\php\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('nome')
+#1 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\relatorios\gerar.php(3): CActiveRecord->__get('nome')
+#2 C:\xampp\php\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\php\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\php\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\php\yii\framework\web\CController.php(782): CController->renderPartial('gerar', Array, true)
+#6 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(29): CController->render('gerar', Array)
+#7 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionIndex()
+#8 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\php\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('')
+#12 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/relatorio...')
+#13 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/relatorios
+---
+2015/09/21 14:33:14 [error] [exception.CException] exception 'CException' with message 'A propriedade "AvaliacaoHasFuncionario.respota" não está definida.' in C:\xampp\php\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\php\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('respota')
+#1 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\relatorios\gerar.php(8): CActiveRecord->__get('respota')
+#2 C:\xampp\php\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\php\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\php\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\php\yii\framework\web\CController.php(782): CController->renderPartial('gerar', Array, true)
+#6 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(29): CController->render('gerar', Array)
+#7 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionIndex()
+#8 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\php\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('')
+#12 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/relatorio...')
+#13 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/relatorios
+---
+2015/09/21 14:33:21 [error] [php] Invalid argument supplied for foreach() (C:\xampp\php\yii\framework\web\helpers\CHtml.php:2325)
+Stack trace:
+#0 unknown(0): TbActiveForm->dropDownList()
+#1 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(1293): call_user_func_array()
+#2 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(1152): TbActiveForm->verticalGroup()
+#3 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(627): TbActiveForm->customFieldGroupInternal()
+#4 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\relatorios\index.php(68): TbActiveForm->dropDownListGroup()
+#5 C:\xampp\php\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\php\yii\framework\web\CBaseController.php(95): RelatoriosController->renderInternal()
+#7 C:\xampp\php\yii\framework\web\CController.php(869): RelatoriosController->renderFile()
+#8 C:\xampp\php\yii\framework\web\CController.php(782): RelatoriosController->renderPartial()
+#9 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(36): RelatoriosController->render()
+#10 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionIndex()
+#11 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\php\yii\framework\web\CController.php(286): RelatoriosController->runAction()
+#13 C:\xampp\php\yii\framework\web\CController.php(265): RelatoriosController->runActionWithFilters()
+#14 C:\xampp\php\yii\framework\web\CWebApplication.php(282): RelatoriosController->run()
+#15 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php (1293)
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php (1152)
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php (627)
+2015/09/21 14:39:08 [error] [php] Invalid argument supplied for foreach() (C:\xampp\php\yii\framework\web\helpers\CHtml.php:2325)
+Stack trace:
+#0 unknown(0): TbActiveForm->dropDownList()
+#1 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(1293): call_user_func_array()
+#2 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(1152): TbActiveForm->verticalGroup()
+#3 C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php(627): TbActiveForm->customFieldGroupInternal()
+#4 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\relatorios\index.php(68): TbActiveForm->dropDownListGroup()
+#5 C:\xampp\php\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\php\yii\framework\web\CBaseController.php(95): RelatoriosController->renderInternal()
+#7 C:\xampp\php\yii\framework\web\CController.php(869): RelatoriosController->renderFile()
+#8 C:\xampp\php\yii\framework\web\CController.php(782): RelatoriosController->renderPartial()
+#9 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(39): RelatoriosController->render()
+#10 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionIndex()
+#11 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\php\yii\framework\web\CController.php(286): RelatoriosController->runAction()
+#13 C:\xampp\php\yii\framework\web\CController.php(265): RelatoriosController->runActionWithFilters()
+#14 C:\xampp\php\yii\framework\web\CWebApplication.php(282): RelatoriosController->run()
+#15 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php (1293)
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php (1152)
+in C:\xampp\htdocs\avaliacao360\app\protected\extensions\yiibooster\widgets\TbActiveForm.php (627)
+2015/09/22 14:03:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "gerar" solicitada.' in C:\xampp\php\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(270): CController->missingAction('gerar')
+#1 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('gerar')
+#2 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/relatorio...')
+#3 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios/gerar
+---
+2015/09/22 14:10:04 [error] [exception.CException] exception 'CException' with message 'A propriedade "CWebApplication.clientScrip" não está definida.' in C:\xampp\php\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\php\yii\framework\base\CModule.php(105): CComponent->__get('clientScrip')
+#1 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\relatorios\gerar.php(28): CModule->__get('clientScrip')
+#2 C:\xampp\php\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\php\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\php\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\php\yii\framework\web\CController.php(782): CController->renderPartial('gerar', Array, true)
+#6 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(32): CController->render('gerar', Array)
+#7 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionIndex()
+#8 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\php\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('')
+#12 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/relatorio...')
+#13 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios/
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/relatorios/
+---
+2015/09/22 14:10:26 [error] [php] Missing argument 2 for CClientScript::registerScript(), called in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\relatorios\gerar.php on line 28 and defined (C:\xampp\php\yii\framework\web\CClientScript.php:676)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CBaseController.php(95): RelatoriosController->renderInternal()
+#1 C:\xampp\php\yii\framework\web\CController.php(869): RelatoriosController->renderFile()
+#2 C:\xampp\php\yii\framework\web\CController.php(782): RelatoriosController->renderPartial()
+#3 C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php(32): RelatoriosController->render()
+#4 C:\xampp\php\yii\framework\web\actions\CInlineAction.php(49): RelatoriosController->actionIndex()
+#5 C:\xampp\php\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\php\yii\framework\web\CController.php(286): RelatoriosController->runAction()
+#7 C:\xampp\php\yii\framework\web\CController.php(265): RelatoriosController->runActionWithFilters()
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(282): RelatoriosController->run()
+#9 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios/
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\views\relatorios\gerar.php (28)
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php (32)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/09/29 11:56:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "index" solicitada.' in C:\xampp\php\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(270): CController->missingAction('index')
+#1 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#2 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/questao/i...')
+#3 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/questao/index
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/questao/create
+---
+2015/09/29 13:13:44 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('perfil')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/funcionar...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/perfil
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/relatorios
+---
+2015/09/29 13:13:49 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc\xC3\xAA n\xC3\xA3o est\xC3...')
+#1 C:\xampp\php\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\php\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\php\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\php\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\php\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\php\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('perfil')
+#8 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/funcionar...')
+#9 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/perfil
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/funcionario/perfil
+---
+2015/09/29 13:15:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "index" solicitada.' in C:\xampp\php\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(270): CController->missingAction('index')
+#1 C:\xampp\php\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#2 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/funcionar...')
+#3 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/funcionario/index
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=admin/funcionario/perfil
+---
+2015/09/29 14:03:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "index".' in C:\xampp\php\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('index')
+#1 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=index
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php
+---
+2015/09/29 14:04:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "index".' in C:\xampp\php\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('index')
+#1 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=index
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php
+---
+2015/09/29 14:04:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "index".' in C:\xampp\php\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('index')
+#1 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=index
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=index
+---
+2015/09/29 14:04:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "index".' in C:\xampp\php\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('index')
+#1 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=index
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=index
+---
+2015/09/29 14:04:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "index".' in C:\xampp\php\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('index')
+#1 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\avaliacao360\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/avaliacao360/app/index.php?r=index
+HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=index
+---
+2015/09/30 04:59:23 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (77)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)

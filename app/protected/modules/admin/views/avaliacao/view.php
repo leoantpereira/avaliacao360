@@ -19,7 +19,10 @@ $this->widget('booster.widgets.TbDetailView', array(
     'data' => $model,
     'attributes' => array(
         'id',
-        'idAvaliador',
+        array(
+            'name' => 'funcAvaliador',
+            'value' => $model->idAvaliador0->nome,
+        ),
         'questionario_id',
     ),
 ));

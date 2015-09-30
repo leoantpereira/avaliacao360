@@ -1,5 +1,8 @@
-#cabecalho{height: 90px;}
-#logo{}
+#cabecalho{height: auto;}
+#logo a img {width: 110px; height: 105px; margin: 2%;}
 #slide{display: block;}
 #menu{padding-top: 30px;}
 #conteudo div {height: 500px;}
+.navbar-default{background-color: #565d55 !important;}
+.navbar-default .navbar-nav>li>a{color: #ffffff !important;}
+.navbar-default .navbar-nav>li>a:hover{background-color: #dbf6c5 !important; color: #757b71 !important;}

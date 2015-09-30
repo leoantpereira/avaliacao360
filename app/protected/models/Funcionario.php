@@ -101,7 +101,10 @@ class Funcionario extends CActiveRecord {
 
         $criteria = new CDbCriteria;
 
-        $criteria->compare('id', '<>'.$this->id, true);
+        if ($this->scenario == 'viewPerfil')
+            $criteria->compare('id', '<>' . $this->id, true);
+        else
+            $criteria->compare('id', $this->id, true);
         $criteria->compare('nome', $this->nome, true);
         $criteria->compare('email', $this->email, true);
         $criteria->compare('senha', $this->senha, true);

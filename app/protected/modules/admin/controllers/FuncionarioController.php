@@ -38,7 +38,7 @@ class FuncionarioController extends Controller {
                 'roles' => array('chefeDepartamento'),
             ),
             array('allow',
-                'actions' => array('create', 'update', 'delete', 'view', 'admin', 'index'),
+                'actions' => array('create', 'update', 'delete', 'view', 'admin', 'index', 'perfil'),
                 'roles' => array('admin')
             ),
             array('deny', // deny all users
@@ -146,7 +146,6 @@ class FuncionarioController extends Controller {
         $model->unsetAttributes();  // clear any default values
         $funcLogado = $_SESSION['funcLogado'];
         $model->empresa_id = $funcLogado->empresa_id;
-        $model->id = intval($funcLogado->id);
 
         if ($funcLogado->permissao == USER_CHEFE_DEPARTAMENTO)
             $model->departamento_id = $funcLogado->departamento_id;
@@ -154,16 +153,16 @@ class FuncionarioController extends Controller {
         if (isset($_GET['Funcionario']))
             $model->attributes = $_GET['Funcionario'];
 
-        //var_dump($model);
-        //exit();
-
         $this->render('admin', array(
             'model' => $model,
         ));
     }
 
     public function actionPerfil() {
-        $this->render('perfil', array('model'=>$_SESSION['funcLogado']));
+        $funcLogado = $_SESSION['funcLogado'];
+        $funcLogado->scenario = 'viewPerfil';
+        
+        $this->render('perfil', array('model'=>$funcLogado));
     }
 
     /**

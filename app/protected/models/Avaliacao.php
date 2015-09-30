@@ -14,8 +14,9 @@
  * @property AvaliacaoHasFuncionario[] $avaliacaoHasFuncionarios
  */
 class Avaliacao extends CActiveRecord {
-    
+
     public $funcAvaliados;
+    public $funcAvaliador;
 
     /**
      * @return string the associated database table name
@@ -63,6 +64,7 @@ class Avaliacao extends CActiveRecord {
             'idAvaliador' => 'Avaliador',
             'questionario_id' => 'Questionario',
             'funcAvaliados' => 'Funcionários Avaliados',
+            'funcAvaliador' => 'Avaliador',
         );
     }
 
@@ -86,6 +88,7 @@ class Avaliacao extends CActiveRecord {
         $criteria->compare('id', $this->id);
         $criteria->compare('idAvaliador', $this->idAvaliador);
         $criteria->compare('questionario_id', $this->questionario_id);
+        $criteria->compare('idAvaliador0.nome', $this->funcAvaliador);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
