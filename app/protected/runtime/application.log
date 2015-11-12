@@ -10217,3 +10217,12 @@ HTTP_REFERER=http://localhost/avaliacao360/app/index.php?r=index
 2015/09/30 04:59:23 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
 in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (77)
 in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/10/05 13:52:07 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (77)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/10/05 13:52:18 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (77)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/10/05 13:52:39 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (77)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)

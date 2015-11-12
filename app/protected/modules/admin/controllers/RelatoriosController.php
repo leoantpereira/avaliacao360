@@ -74,13 +74,14 @@ class RelatoriosController extends Controller {
     }
 
     public function actionGetQuestionarios() {
-        $funcionario = $_POST['funcionario'];
+        $funcAvalSelec = $_POST['funcionario'];
+        
         $data = Yii::app()->db->createCommand("SELECT qt.descricao, qt.id "
                         . "FROM avaliacao_has_funcionario AS af "
                         . "INNER JOIN questao AS q "
                         . "INNER JOIN questionario as qt "
                         . "WHERE qt.id=q.questionario_id "
-                        . "AND af.idFuncAvaliado=2 "
+                        . "AND af.idFuncAvaliado=".$funcAvalSelec." "
                         . "AND q.id=af.idQuestao "
                         . "GROUP BY qt.descricao")->queryAll(true);
 
