@@ -1,8 +1,20 @@
+@font-face {
+    font-family: quicksand;
+    font-style: normal;
+    font-weight: normal;
+    src: url(css/quicksand/Quicksand-Regular.eot);
+}
 #cabecalho{height: auto;}
 #logo a img {width: 110px; height: 105px; margin: 2%;}
 #slide{display: block;}
 #menu{padding-top: 30px;}
-#conteudo div {height: 500px;}
+#conteudo div {height: auto;padding: 40px 15px; font-family: quicksand fantasy;font-size: 1.2em;}
+div#criador{background-color: #e9e7e7;}
+div#como-funciona{background-color: #cdf6d1;}
 .navbar-default{background-color: #565d55 !important;}
+img#foto-perfil{width: 159px; height: 159px; float: left; margin: 10px;}
 .navbar-default .navbar-nav>li>a{color: #ffffff !important;}
 .navbar-default .navbar-nav>li>a:hover{background-color: #dbf6c5 !important; color: #757b71 !important;}
+footer{
+    text-align: center;
+}

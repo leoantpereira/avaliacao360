@@ -10226,3 +10226,20 @@ in C:\xampp\htdocs\avaliacao360\app\index.php (13)
 2015/10/05 13:52:39 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
 in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (77)
 in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/11/12 11:53:39 [error] [php] Undefined variable: qtdResp (C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php:44)
+Stack trace:
+#0 C:\xampp\php\yii\framework\web\CController.php(286): RelatoriosController->runAction()
+#1 C:\xampp\php\yii\framework\web\CController.php(265): RelatoriosController->runActionWithFilters()
+#2 C:\xampp\php\yii\framework\web\CWebApplication.php(282): RelatoriosController->run()
+#3 C:\xampp\php\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\php\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\avaliacao360\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/avaliacao360/app/index.php?r=admin/relatorios
+in C:\xampp\htdocs\avaliacao360\app\protected\modules\admin\controllers\RelatoriosController.php (44)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/11/13 11:52:22 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (77)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)
+2015/11/13 11:52:39 [warning] [application] Failed to set unsafe attribute "foto" of "Funcionario".
+in C:\xampp\htdocs\avaliacao360\app\protected\controllers\EmpresaController.php (77)
+in C:\xampp\htdocs\avaliacao360\app\index.php (13)

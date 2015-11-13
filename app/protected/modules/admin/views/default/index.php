@@ -4,4 +4,4 @@
     para acessar as funcionalidades disponíveis.
 </p>
 
-<?php echo Yii::app()->user->id; ?>
+<?php echo 'usuário'.Yii::app()->user->id; ?>

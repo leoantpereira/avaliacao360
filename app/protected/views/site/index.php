@@ -25,6 +25,9 @@
 </div>
 <div class="row" id="conteudo">
     <div class="col-xs-12" id="criador">
+        <figure>
+            <img class="img-responsive img-circle" id="foto-perfil" src="css/foto-perfil.jpg"/>
+        </figure>
         <h1 class="text-center">Criador</h1>
         <p>Graduado em Ciência da Computação pela Universidade de Itaúna-MG, 
             atualmente cursando Pós-Graduação em desenvolvimento de aplicações WEB 
@@ -45,8 +48,13 @@
             alcança, do seu comportamento e do seu potencial de desenvolvimento. A Avaliação de Desempenho 360° é
             uma forma de avaliação em que todos os profissionais avaliam todos os outros com quem se relacionam. O
             objetivo final da Avaliação de Desempenho é contribuir para o desenvolvimento das pessoas na organização.</p>
-        <p>Faço o cadastro de sua empresa e comece a desfrutar dos benefícios
+        <p>Faça o cadastro de sua empresa e comece a desfrutar dos benefícios
             que a avaliação de desempenho 360º proporciona ao seu negócio. 
         </p>
+        <div class="text-center">
+            <a href="<?php echo Yii::app()->createUrl('empresa/create'); ?>">
+                <button type="button" class="btn btn-success btn-lg" >Cadastre-se</button>
+            </a>
+        </div>
     </div>
 </div>
